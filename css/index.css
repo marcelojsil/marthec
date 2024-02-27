@@ -8,7 +8,7 @@
     --color1: #0070c0;
     --color2: #081f2c;
     --color3: #384043;
-    --color4: yellow;
+    --color4: #eaaa00;
     --color5: brown;
     --border: 1px solid #000000;
     --border-link: 2px solid #0070c0;
@@ -26,7 +26,7 @@ a{
 header{
     background-color: var(--color2);
     color: var(--text-white);
-    width: 100vw;
+    width: 100%;
     height: 12vh;
     display: flex;
     flex-direction: row;
@@ -53,12 +53,74 @@ header{
     justify-content: end;
 }
 .menu p{
-    width: 7vw;
+    width: 9vw;
     height: 5vh;
+    font-size: 1.2em;
     justify-content: center;
     border-bottom: 2px solid var(--color2);
 }
 .menu p:hover{
     color: var(--color1);
     border-bottom: var(--border-link);
+}
+
+/* === SECTION === */
+
+section, .section-main, .section-main-left, .section-main-right{
+    display: flex;
+    align-items: center;
+}
+section{
+    flex-direction: column;
+    justify-content: center;
+}
+.section-main{
+    flex-direction: row;
+    justify-content: space-around;
+
+    width: 100%;
+    height: 88vh;
+    background-image:linear-gradient(rgb(8 ,31, 44 ,.8), rgb(8, 31, 44, .8)), url("../img/fundo.jpg");
+    background-size: cover;
+}
+.section-main-left, .section-main-right{
+    width: 48%;
+    height: 90%;
+}
+.section-main-left{
+    flex-direction: row;
+    justify-content: space-around;
+}
+.section-main-left h2{
+    font-size: 3em;
+    text-align: center;
+    padding: 0 1.5em;
+    color: var(--text-white);
+}
+.section-main-right{
+    flex-direction: column;
+    justify-content: space-around;
+}
+.section-main-right p{
+    font-size: 1.5em;
+    text-align: center;
+    padding: 0 1.5em;
+    color: var(--text-white);
+}
+.button{
+    width: 20em;
+    height: 3em;
+    color: var(--color2);
+    background-color: var(--color4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+}
+.button p{
+    font-size: 1.5em;
+    color: var(--color2);
+}
+.button:hover{
+    background-color: var(--text-white);
 }
