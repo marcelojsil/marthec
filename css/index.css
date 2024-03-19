@@ -124,3 +124,41 @@ section{
 .button:hover{
     background-color: var(--text-white);
 }
+
+/* === SERVICOS === */
+
+.servicos{
+    width: 99%;
+    height: 90vh;
+
+    flex-direction: row;
+}
+.servicos, .servicos-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.servicos-title{
+    margin-top: 2.5em;
+    color: var(--text-white);
+}
+.servicos-item{
+    width: 30%;
+    height: 85%;
+    background-color: var(--color2);
+    border: 0.3em solid var(--color2);
+    border-radius: 1em;
+
+    flex-direction: column;
+}
+.servicos-item:hover{
+    background-color: var(--color3);
+}
+.servicos-item img{
+    width: 70%;
+}
+.servicos-item p{
+    font-size: 2.5em;
+    color: var(--text-white);
+    font-weight: bolder;
+}
