@@ -1,0 +1,36 @@
+*{margin: 0;padding: 0;}
+body{display: flex;justify-content: center;}
+:root{
+    --bgcolor: #959595;
+    --fontColor: #000000;
+    --color1: blue;
+    --color2: red;
+    --color3: green;
+}
+
+/* =.=.= HEADER =.=.= */
+header{
+    width: 99%;
+    height: 9vh;
+    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header div{
+    width: 32%;
+    height: 8vh;
+    border: 1px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =.=.= SECTION =.=.= */
+/*section{}
+
+/* =.=.= FOOTER =.=.= */
+/*footer{}
