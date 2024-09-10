@@ -1,17 +1,20 @@
-body{display: flex;flex-direction:column;align-items: center;}
 :root{
-    --bgcolor: #959595;
-    --fontColor: #000000;
-    --color1: blue;
-    --color2: red;
-    --color3: green;
+    --bgcolor: #DFE0E2;
+    --fontColor: #071013;
+    --color1: #23B5D3;
+    --color2: #75ABBC;
+    --color3: #A2AEBB;
 }
+
+body{display: flex;flex-direction:column;align-items: center;
+    color: var(--fontColor);background-color: var(--color1);}
 
 /* =.=.= HEADER =.=.= */
 header{
     width: 98vw;
-    height: 12vh;
-    border: 1px solid #000;
+    height: 15vh;
+    background-color: var(--color1);
+   
 
     display: flex;
     flex-direction: row;
@@ -19,14 +22,41 @@ header{
     align-items: center;
 }
 header div{
-    width: 32vw;
+    width: 15vw;
     height: 8vh;
-    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+.logo{
+    width: 15vw;
+    height: 8vh;
 
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+.logo img{
+    height: 14vh;
+    border-radius: 0.5vh;
+}
+header nav{
+    width: 72vw;
+    height: 8vh;
+    
+    
+    display: flex;
+    justify-content:end;
+    align-items:end;
+}
+.nav-item{
+    padding-left: 3em;
+}
+.dropdown{
+    background-color: var(--color1);
 }
 
 
