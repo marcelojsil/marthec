@@ -1,0 +1,219 @@
+:root{
+    --white: #DCE0D9;
+    --black: #071013;
+    --color1: #3d3b8e;
+    --color2: #2f97c1;
+    --color3: #1D0C32;
+    --btn: #FFE74C;
+}
+
+/* =.=.= RESET CSS =.=.= */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+a{
+    text-decoration: none;
+}
+
+/* =.=.= FIM RESET CSS =.=.= */
+
+body{display: flex;flex-direction:column;align-items: center;
+    color: var(--black);background: #fff;}
+
+/* =.=.= HEADER =.=.= */
+header{
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--color1);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    height: 14vh;
+    margin-left: 5vw;
+    
+}
+.navbar{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    font-size: 1.2em;
+}
+.navbar a{
+    margin-right: 5vw;
+    color: var(--black);
+    color: var(--white);
+}
+.btn{
+    margin-right: 5vw;
+    width: 15vw;
+    height: 10vh;
+    background-color: var(--btn);
+    border: 2px solid var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5vh;
+    color: var(--black);
+    font-size: 1.2em;
+}
+.btn:hover{
+    background-color: var(--color1);
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+
+
+/* =.=.= SECTION =.=.= */
+section{
+    width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+    .back-image{
+        background: linear-gradient(
+            rgba(40, 41, 40, 0.3),rgba(40, 41, 40, 0.3)
+        ), url(/bgSection);
+        background-size: 100vw 82vh;
+        background-repeat: no-repeat;
+        height: 82vh;
+    }
+        .frases{
+            width: 100vw;
+            height: 26vh;
+            text-align: center;
+        }
+        .frases h1{
+            font-size: 2em;
+            margin-top: 4vh;
+        }
+        .frases h3{
+            font-size: 1.5em;
+            margin-top: 4vh;
+        }
+
+    .servicos{
+        width: 100vw;
+        height: 50vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        .servicos div{
+            background: linear-gradient(rgba(233, 235, 233, 0.921),rgba(40, 41, 40, 0.3));
+            width: 20vw;
+            height: 45vh;
+            border: 0.1em solid var(--black);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+/* =.=.= FOOTER =.=.= */
+
+footer{
+    width: 98vw;
+    height: 35vh;
+    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-footer{
+    width: 98vw;
+    height: 45vh;
+    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-footer div{
+    width: 98vw;
+    height: 35vh;
+    border: 1px solid #000;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.footer-footer{
+    width: 98vw;
+    height: 10vh;
+    border: 1px solid #000;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+/* =.=.= RESPONSIVIDADE =.=.= */
+
+@media (max-width: 768px) { 
+    
+    .navbar{display: none;}
+    .btn{font-size: 1em;}
+
+} 
