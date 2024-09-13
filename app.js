@@ -6,7 +6,7 @@ const cors = require('cors');
 const port = 3000;
 const bd = "marthec"
 
-// ==>> BANCO DE DADOS
+// ==>> BANCO DE DADOS (189.4.234.108)
 const db = mysql.createConnection({
   host: 'localhost',
   user: 'root',
@@ -43,7 +43,16 @@ app.use(cors());
 app.get('/', (req, res) => {
     res.sendFile(__dirname+'/index.html')
   });
-
+app.post('/visitantes', (req,res) => {
+    const { nome, idade } = req.body;
+    const query = `INSERT INTO visitante (nome, idade) VALUES (?, ?)`;
+    db.query(query, [nome, idade], (err, result) => {
+        if (err) {
+            return res.status(500).send('Erro ao inserir dados no banco de dados');
+        }
+        res.sendFile(__dirname+'/index.html');
+    });
+})
 
 // === ROTAS DE ARQUIVOS
 

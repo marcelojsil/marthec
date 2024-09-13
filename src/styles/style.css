@@ -1,7 +1,7 @@
 :root{
     --white: #DCE0D9;
     --black: #071013;
-    --color1: #3d3b8e;
+    --color1: #04033d;
     --color2: #2f97c1;
     --color3: #1D0C32;
     --btn: #FFE74C;
@@ -128,7 +128,7 @@ section{
 }
     .back-image{
         background: linear-gradient(
-            rgba(40, 41, 40, 0.3),rgba(40, 41, 40, 0.3)
+            rgba(4, 3, 61, 0.3),rgba(4, 3, 61, 0.3)
         ), url(/bgSection);
         background-size: 100vw 82vh;
         background-repeat: no-repeat;
@@ -157,7 +157,7 @@ section{
         align-items: center;
     }
         .servicos div{
-            background: linear-gradient(rgba(233, 235, 233, 0.921),rgba(40, 41, 40, 0.3));
+            background: linear-gradient(rgba(4, 3, 61, 0.921),rgba(4, 3, 61, 0.3));
             width: 20vw;
             height: 45vh;
             border: 0.1em solid var(--black);
@@ -165,6 +165,26 @@ section{
             justify-content: center;
             align-items: center;
         }
+
+.visao-missao{
+    width: 98vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+    .visao-missao div{
+        width: 40vw;
+        height: 80vh;
+        background-color: var(--color1);
+        border-radius: 1em;
+        color: var(--white);
+        text-align: center;
+    }
+    .visao-missao div p{
+        margin: 1em;
+    }
 
 
 /* =.=.= FOOTER =.=.= */
