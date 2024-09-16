@@ -14,4 +14,11 @@
     -->>  "predeploy": "npm run build",
     -->>  "deploy": "gh-pages -d build",
 
+- git add --all
+- git commit -m "message"
+- git branch -M main
+- git push origin main
+
 - npm run deploy
+
+- alterar no Github a branch de main para gh-pages

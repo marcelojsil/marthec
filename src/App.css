@@ -10,11 +10,13 @@
 
 .App {
   text-align: center;
+  width: 100vw;
 }
+
 .section-main {
   background: linear-gradient(
     rgba(4, 3, 61, 0.4),rgba(4, 3, 61, 0.3)
-), url(../public/img/fundo_section.jpg) no-repeat;
-background-size:cover;
-background-size: 100vw 89vh;
+    ), url(./img/fundo_section.jpg) no-repeat;
+  background-size:cover;
+  background-size: 100vw 89vh;
 }
