@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-gh-pages/static/css/main.047dbd24.css",
-    "main.js": "/react-gh-pages/static/js/main.a24c15e8.js",
-    "static/media/fundo_section.jpg": "/react-gh-pages/static/media/fundo_section.a4fbd401f1e9cd03162f.jpg",
-    "index.html": "/react-gh-pages/index.html",
-    "main.047dbd24.css.map": "/react-gh-pages/static/css/main.047dbd24.css.map",
-    "main.a24c15e8.js.map": "/react-gh-pages/static/js/main.a24c15e8.js.map"
+    "main.css": "/marthec/static/css/main.5423494a.css",
+    "main.js": "/marthec/static/js/main.a24c15e8.js",
+    "static/media/fundo_section.jpg": "/marthec/static/media/fundo_section.a4fbd401f1e9cd03162f.jpg",
+    "index.html": "/marthec/index.html",
+    "main.5423494a.css.map": "/marthec/static/css/main.5423494a.css.map",
+    "main.a24c15e8.js.map": "/marthec/static/js/main.a24c15e8.js.map"
   },
   "entrypoints": [
-    "static/css/main.047dbd24.css",
+    "static/css/main.5423494a.css",
     "static/js/main.a24c15e8.js"
   ]
 }
