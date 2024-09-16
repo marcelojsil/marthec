@@ -1,0 +1,20 @@
+:root{
+  --white: #DCE0D9;
+  --black: #071013;
+  --color1: #04033d;
+  --color2: #2f97c1;
+  --color3: #1D0C32;
+  --btn: #FFE74C;
+}
+
+
+.App {
+  text-align: center;
+}
+.section-main {
+  background: linear-gradient(
+    rgba(4, 3, 61, 0.4),rgba(4, 3, 61, 0.3)
+), url(../public/img/fundo_section.jpg) no-repeat;
+background-size:cover;
+background-size: 100vw 89vh;
+}
