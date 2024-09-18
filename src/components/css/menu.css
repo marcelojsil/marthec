@@ -1,0 +1,25 @@
+a {
+     text-decoration: none;
+     color: var(--white);
+}
+.menu{
+     width: 70vw;
+     display:flex;
+     flex-direction:row;
+     justify-content:end;
+     align-items:center;
+}
+.menu p {
+     margin-left: 3vw;
+}
+.menu p:hover{
+     color: var(--btn);
+}
+
+@media (max-width: 768px) { 
+    
+     .menu{
+        display:none;
+     }    
+                    
+}   

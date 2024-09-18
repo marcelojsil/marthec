@@ -1,17 +1,13 @@
-import styleFlexRow from "./styleFlexRow";
-
-const divP = {
-    marginLeft:'3vw',
-}
+import "./css/menu.css";
 
 const Menu = () => {
     return(
         
-        <div style={styleFlexRow}>
-            <p style={divP}>Sobre</p>
-            <p style={divP}>Visão e Missão</p>
-            <p style={divP}>Contato</p>
-            <p style={divP}>Serviços</p>
+        <div className="menu">
+            <a href="#"><p>Sobre</p></a>
+            <a href="#"><p>Visão e Missão</p></a>
+            <a href="#"><p>Contato</p></a>
+            <a href="#"><p>Serviços</p></a>
         </div>
 
     );

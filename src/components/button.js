@@ -1,21 +1,12 @@
-const divButton = {
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-
-    backgroundColor: 'black',
-    width: '15vw',
-    height: '8vh',
-    borderRadius: '1em',
-    color: 'white',
-    fontSize: 'calc(10 + 2)',
-}
+import './css/button.css';
+import '../index.css';
 
 const Button = () => {
     return (
-        <div style={divButton}>
-            <p>Orçamento</p>
+        <div>
+            <a href='#'  className='button'>
+                <p>Orçamento</p>
+            </a>
         </div>
     );
 }
