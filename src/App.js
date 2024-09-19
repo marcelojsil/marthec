@@ -9,7 +9,6 @@ function App() {
       <Header />
       <div className='section-main'>
         <Frases />
-        <Frases />
         <Servicos />
       </div>
 
