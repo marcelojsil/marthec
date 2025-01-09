@@ -10,12 +10,16 @@
             <img src="./public/img/marthec_1.png" width="250" alt="">
         </div>
         <div class="rodape-itens">
-            <ul class="rodape-menu">
-                <li><p>Serviços</p></li>
-                <li><a href="#">Sites Institucionais</a></li>
-                <li><a href="#">Landing Pages</a></li>
-                <li><a href="#">Sites Estáticos</a></li>
-            </ul>
+            <div class="rodape-menu">
+                <a href="#"><div>Sites Institucionais</div></a>
+                <a href="#"><div>Landing Pages</div></a>
+                <a href="#"><div>Sites Estáticos</div></a>
+                <a href="#"><div>Manutenção do site</div></a>
+                <a href="#"><div>Hospedagem</div></a>
+                <a href="#"><div>Edição de vídeos</div></a>
+                <a href="#"><div>Gestão de rede Social</div></a>
+                <a href="#"><div>Melhora de desempenho SEO</div></a>
+            </div>
         </div>
         <div class="rodape-itens"></div>
     </nav>
