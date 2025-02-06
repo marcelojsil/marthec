@@ -2,8 +2,12 @@
   "name": "marthec",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage" : " https://marcelojsil.github.io/marthec " ,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build" : " npm run app.js " , 
+    "predeploy" : " npm run build " ,
+    "deploy" : " gh-pages -d build " 
   },
   "keywords": [],
   "author": "",
@@ -16,5 +20,8 @@
     "express": "^4.21.2",
     "mysql2": "^3.12.0",
     "nodemailer": "^6.10.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
