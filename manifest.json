@@ -1,6 +1,6 @@
 {
-  "short_name": "Marthec Web",
-  "name": "Site da agência Marthec",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

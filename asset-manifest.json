@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/marthec/static/css/main.5e559009.css",
-    "main.js": "/marthec/static/js/main.444da3e9.js",
-    "static/media/fundo_section.jpg": "/marthec/static/media/fundo_section.a4fbd401f1e9cd03162f.jpg",
-    "static/media/logo_branca.svg": "/marthec/static/media/logo_branca.43cd3e7619c4e7526326372081e45253.svg",
+    "main.css": "/marthec/static/css/main.f855e6bc.css",
+    "main.js": "/marthec/static/js/main.ec1d526d.js",
+    "static/media/favicon.png": "/marthec/static/media/favicon.bd62b98cd888b92db39d.png",
     "index.html": "/marthec/index.html",
-    "main.5e559009.css.map": "/marthec/static/css/main.5e559009.css.map",
-    "main.444da3e9.js.map": "/marthec/static/js/main.444da3e9.js.map"
+    "main.f855e6bc.css.map": "/marthec/static/css/main.f855e6bc.css.map",
+    "main.ec1d526d.js.map": "/marthec/static/js/main.ec1d526d.js.map"
   },
   "entrypoints": [
-    "static/css/main.5e559009.css",
-    "static/js/main.444da3e9.js"
+    "static/css/main.f855e6bc.css",
+    "static/js/main.ec1d526d.js"
   ]
 }
