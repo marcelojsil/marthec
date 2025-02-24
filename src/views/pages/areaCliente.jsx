@@ -4,7 +4,8 @@ const AreaCliente = () => {
 
     return (
         <div>
-            <p>Aqui é a área do Cliente</p>
+            <h3>Em Construção</h3>
+            <p>Aqui sera a área do Cliente!</p>
         </div>
     );
 };

@@ -1,0 +1,93 @@
+:root {
+    --cor_01: #1a2730;
+    --cor_02: #45586c;
+    --cor_03: #424048;
+    --cor_04: #b0cee2;
+    --cor_05: #a63e1b;
+    --cor_06: #e95d2c;
+    --cor_07: #f8cc53;
+    --cor_08: #e7ad0c;
+    --cor_09: #fff;
+    --cor_10: #000;
+}
+
+/* === BOTÕES === */
+button {
+    width: 12vw;
+    height: 6vh;
+    border-radius: 2vh;
+    background-color: #e7ad0c;
+    border: 1px solid #e7ad0c;
+    font-size: 1.2em;
+    color: #1a2730;
+}
+button:hover {
+    background-color: #1a2730;
+    border: 1px solid #e7ad0c;
+    color: #fff;
+    transition: 0.4s;
+}
+
+/* === MENU SUSPENSO === */
+.menu {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.menu-toggle {
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+}
+.nav {
+    width: 30vw;
+    display: flex;
+    align-items: end;
+   
+}
+.nav-list {
+    list-style-type: none;
+    margin: 20px;
+    padding: 0;
+    display: flex;
+}
+  
+  .nav-item {
+    margin: 0 10px;
+  }
+  
+  .nav-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .menu-toggle {
+      display: block;
+    }
+  
+    .nav {
+      display: none;
+      flex-direction: column;
+      background-color: #e7ad0c;
+      margin-top: 33vh;
+    }
+  
+    .nav.open {
+      display: flex;
+    }
+  
+    .nav-list {
+      flex-direction: column;
+    }
+  
+    .nav-item {
+      margin: 10px 0;
+    }
+  }

@@ -1,24 +1,27 @@
 import React from "react";
 import Logo from "../img/logo.png";
-import Button from "./partials/Button";
+import "../css/fixos.css";
+import MenuSuspenso from "./components/menuSuspenso";
+
 
 const Header = () => {
 
-
-
-    return (
+  return (
       
-      <div className="header">
-      
-        <img src={Logo} alt="Marthec, site para sua empresa" />
+      <header>
 
-        <Button to="/areaCliente" label="Área de Clientes" />
+        <nav className="header">
+      
+          <img src={Logo} alt="Marthec, site para sua empresa" className="header-img"/>
 
-        <Button to="/solicitacao" label="Solicitação" />
+          <MenuSuspenso />
+
+        </nav>
       
-      </div>
+      </header>
       
-    );
-  }
+  );
   
-  export default Header;
+}
+  
+export default Header;

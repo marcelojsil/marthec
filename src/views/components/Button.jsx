@@ -1,5 +1,6 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom";
+import "../../css/components.css";
 
 const Button = ({ to, label }) => {
     const navigate = useNavigate();
@@ -9,7 +10,7 @@ const Button = ({ to, label }) => {
     };
 
     return (
-        <button onClick={handleClick}>
+        <button onClick={handleClick} >
             {label}
         </button>
     );

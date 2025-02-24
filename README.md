@@ -24,6 +24,21 @@
 
 
 ### Acesso online do BD
-CREATE USER 'seu_usuario'@'%' IDENTIFIED BY 'sua_senha';
-GRANT ALL PRIVILEGES ON seu_banco_de_dados.* TO 'seu_usuario'@'%';
-FLUSH 
+achar o IP da máquina em https://www.whatismyip.com/ e colocar no lugar do localhost.
+
+### Servidor linux ubuntu
+sudo opt/lampp/lampp start - ou - stop
+
+### Banco de Dados
+marthec - root - M@rthe88
+
+
+1. Apresentação
+2. Solução
+3. Compromisso
+4. Serviços*
+5. Contato / Dúvidas
+6. Parceria
+7. Planos* - Orçamento
+8. Portifólio / Clientes
+9. Opiniões (futuro)

@@ -1,0 +1,29 @@
+:root {
+  --cor_01: #1a2730;
+  --cor_02: #45586c;
+  --cor_03: #424048;
+  --cor_04: #b0cee2;
+  --cor_05: #a63e1b;
+  --cor_06: #e95d2c;
+  --cor_07: #f8cc53;
+  --cor_08: #e7ad0c;
+  --cor_09: #fff;
+  --cor_10: #000;
+}
+  
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+  
+/* logo giratório */
+@keyframes header-img {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
