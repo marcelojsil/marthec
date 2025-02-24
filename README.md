@@ -14,15 +14,19 @@
 
     "homepage": "https://'usuario_do_github'.github.io/'nome_do_repositório'"
 
-# 5º Execute: npm run deploy
+# 5º Execute: 
+    npm run deploy
 
-# 6º Faça o add, commit e push
+# 6º Faça o deploy
+ git add --all 
+ git commit -m "versao x.xx.xx mensagem"
+ git push origin main
 
 # Configuração do GitHub Pages conforme abaixo
 ![Configuração GitHub Pages](/public/gh-pages.png)
 
 
-
+# __________________________________________________________________
 ### Acesso online do BD
 achar o IP da máquina em https://www.whatismyip.com/ e colocar no lugar do localhost.
 
