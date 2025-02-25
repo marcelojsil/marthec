@@ -21,21 +21,8 @@
 }
 
 
-
-
-/* === PARTIALS === */
-.solucao,.compromisso,.home-servicos,.duvidas,
-.parceria,.home-planos,.porifolio {
-  width: 100%;
-  height: 85vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #000;
-}
-
 /* === IMAGEM BACKGROUND === */
-.bg-imagem,.compromisso,.duvidas,.home-planos {
+.bg-imagem {
   background-color: var(--cor_04);
 }
 .bg-imagem {
@@ -69,7 +56,188 @@
 @media (max-width: 768px) {
 
 }
+
+
+/* === SOLUÇÃO PARA O CLIENTE === */
+.solucao {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--cor_09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.solucao-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+}
+.solucao-conteudo div {
+  width: 40%;
+  height: 65vh;
+  border: 1px solid #000;
+}
   
+
+/* === COMPROMISSO COM O CLIENTE === */
+.compromisso {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--cor_04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.comp-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+}
+.comp-conteudo div {
+  width: 40%;
+  height: 65vh;
+  border: 1px solid #000;
+}
+
+
+/* === RESUMO DE SERVIÇOS === */
+.home-servicos {
+  width: 100%;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+.home-serv-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  border: 1px solid #000;
+}
+.serv-conteudo {
+  width: 50%;
+  height: 37vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #000;
+}
+.serv-conteudo-item {
+  width: 40%;
+  height: 36vh;
+  border: 1px solid #1512d6;
+}
+
+/* === FORMULÁRIO DE DÚVIDAS === */
+.duvidas {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--cor_04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.duvidas-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+}
+.duvidas-conteudo div {
+  width: 40%;
+  height: 65vh;
+  border: 1px solid #000;
+}
+
+
+/* === PARCEIRO DO CLIENTE === */
+.parceria {
+  width: 100%;
+  height: 85vh;
+  background-color: var(--cor_09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parceria-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 1px solid #000;
+}
+.parceria-conteudo div {
+  width: 40%;
+  height: 65vh;
+  border: 1px solid #000;
+}
+
+
+/* === PLANOS DE PAGAMENTO === */
+.home-planos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor_01);
+  color: var(--cor_09);
+}
+.home-planos-conteudo {
+  width: 80%;
+  height: 75vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.home-planos-conteudo-itens {
+  width: 30%;
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #fff;
+}
+.home-planos-conteudo-itens:hover {
+  background-color: var(--cor_09);
+}
+
+
+
+/* === PORTIFÓLIO DE SERVIÇOS === */
+.portifolio {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
+.portifolio-carroussel {
+  width: 70%;
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+}
 
 
 

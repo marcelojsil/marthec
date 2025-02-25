@@ -46,3 +46,11 @@ marthec - root - M@rthe88
 7. Planos* - Orçamento
 8. Portifólio / Clientes
 9. Opiniões (futuro)
+
+npm run start:dev
+
+<Button to="/solicitacao" label="Solicitação" />
+
+npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
+
+
