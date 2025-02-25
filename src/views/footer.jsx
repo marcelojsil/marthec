@@ -20,7 +20,7 @@ const Footer = () => {
           
         </div>
 
-        <p>2024 - 2025 &copy; Desenvolvido por Marthec Web - Direitos reservados</p>
+        <p className="footer-texto">2024 - 2025 &copy; Desenvolvido por Marthec Web - Direitos reservados</p>
 
       </footer>
     );

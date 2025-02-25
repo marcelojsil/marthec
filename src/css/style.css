@@ -23,9 +23,6 @@
 
 /* === IMAGEM BACKGROUND === */
 .bg-imagem {
-  background-color: var(--cor_04);
-}
-.bg-imagem {
   width: 100%;
   height: 85vh;
   background: linear-gradient(to right, rgb(26, 39, 48, 0.9), 
@@ -49,12 +46,17 @@
 .titulos h2 {
   font-size: 2.5em;
 }
-.btn-titulos {
-  margin: 0 20px 20px 0;
-}
 
 @media (max-width: 768px) {
-
+  .titulos {
+    padding: 3vh;
+  }
+  .titulos h1 {
+    font-size: 1.7em;
+  }
+  .titulos h2 {
+    font-size: 1.1em;
+  }
 }
 
 
@@ -80,6 +82,17 @@
   height: 65vh;
   border: 1px solid #000;
 }
+@media (max-width: 768px) {
+  .solucao-conteudo {
+    width: 95%;
+    height: 82vh;
+    flex-direction: column;
+  }
+  .solucao-conteudo div {
+      width: 90%;
+      height: 40vh;
+  }
+}
   
 
 /* === COMPROMISSO COM O CLIENTE === */
@@ -103,6 +116,17 @@
   width: 40%;
   height: 65vh;
   border: 1px solid #000;
+}
+@media (max-width: 768px) {
+  .comp-conteudo {
+    width: 95%;
+    height: 82vh;
+    flex-direction: column;
+  }
+  .comp-conteudo div {
+      width: 90%;
+      height: 40vh;
+  }
 }
 
 
@@ -138,6 +162,19 @@
   height: 36vh;
   border: 1px solid #1512d6;
 }
+@media (max-width: 768px) {
+  .home-serv-conteudo {
+    width: 98%;
+  }
+  .serv-conteudo {
+  width: 98%;
+  height: 37vh;
+  }
+  .serv-conteudo-item {
+    width: 48%;
+  }
+
+}
 
 /* === FORMULÁRIO DE DÚVIDAS === */
 .duvidas {
@@ -160,6 +197,16 @@
   width: 40%;
   height: 65vh;
   border: 1px solid #000;
+}
+@media (max-width: 768px) {
+  .duvidas-conteudo {
+    width: 98%;
+    flex-direction: column;
+  }
+  .duvidas-conteudo div {
+    width: 98%;
+    height: 35vh;
+  }
 }
 
 
@@ -184,6 +231,17 @@
   width: 40%;
   height: 65vh;
   border: 1px solid #000;
+}
+@media (max-width: 768px) {
+  .parceria-conteudo {
+    width: 95%;
+    height: 82vh;
+    flex-direction: column;
+  }
+  .parceria-conteudo div {
+      width: 90%;
+      height: 40vh;
+  }
 }
 
 
@@ -216,6 +274,17 @@
 }
 .home-planos-conteudo-itens:hover {
   background-color: var(--cor_09);
+}
+@media (max-width: 768px) {
+  .home-planos-conteudo {
+    width: 98%;
+    flex-direction: column;
+  }
+  .home-planos-conteudo-itens{
+    width: 98%;
+    height: 24vh;
+  }
+
 }
 
 
