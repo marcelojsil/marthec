@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/marthec/static/css/main.98156747.css",
-    "main.js": "/marthec/static/js/main.06a55302.js",
+    "main.js": "/marthec/static/js/main.a40993f6.js",
     "static/media/bg.jpg": "/marthec/static/media/bg.99a9bb7fe69a85b04d2b.jpg",
     "index.html": "/marthec/index.html",
     "main.98156747.css.map": "/marthec/static/css/main.98156747.css.map",
-    "main.06a55302.js.map": "/marthec/static/js/main.06a55302.js.map"
+    "main.a40993f6.js.map": "/marthec/static/js/main.a40993f6.js.map"
   },
   "entrypoints": [
     "static/css/main.98156747.css",
-    "static/js/main.06a55302.js"
+    "static/js/main.a40993f6.js"
   ]
 }
