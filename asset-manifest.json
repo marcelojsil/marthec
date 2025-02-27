@@ -1,14 +1,15 @@
 {
   "files": {
-    "main.css": "/marthec/static/css/main.a9086208.css",
-    "main.js": "/marthec/static/js/main.c7291e85.js",
+    "main.css": "/marthec/static/css/main.d3a9c389.css",
+    "main.js": "/marthec/static/js/main.991d4b2c.js",
+    "static/media/solucao-1.png": "/marthec/static/media/solucao-1.42b9f992621914accd67.png",
     "static/media/bg.jpg": "/marthec/static/media/bg.99a9bb7fe69a85b04d2b.jpg",
     "index.html": "/marthec/index.html",
-    "main.a9086208.css.map": "/marthec/static/css/main.a9086208.css.map",
-    "main.c7291e85.js.map": "/marthec/static/js/main.c7291e85.js.map"
+    "main.d3a9c389.css.map": "/marthec/static/css/main.d3a9c389.css.map",
+    "main.991d4b2c.js.map": "/marthec/static/js/main.991d4b2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9086208.css",
-    "static/js/main.c7291e85.js"
+    "static/css/main.d3a9c389.css",
+    "static/js/main.991d4b2c.js"
   ]
 }
