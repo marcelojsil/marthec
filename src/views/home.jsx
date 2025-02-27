@@ -1,6 +1,7 @@
 import React from "react";
 import "../css/style.css";
 import Button from "./components/Button";
+import IMG1 from "../img/desenvolvimento-bco.png";
 
 
 const Home = () => {
@@ -35,13 +36,17 @@ const Home = () => {
                     <div></div>
                 </div>
             </div>
-
+            */}
             <div className="home-servicos">
-                <h4>Seviços prestados</h4>
-                <p>Bla bla bla </p>
+                <h4>SERVIÇOS PRESTADOS</h4>
+                <p>Transformamos sua presença digital com sites institucionais sob 
+                    medida, focados em inovação e resultados</p>
                 <div className="home-serv-conteudo">
                     <div className="serv-conteudo">
-                        <div className="serv-conteudo-item"></div>
+                        <div className="serv-conteudo-item">
+                            <img src={IMG1} alt="" />
+                            <p>Desenvolvimento</p>
+                        </div>
                         <div className="serv-conteudo-item"></div>
                     </div>
                     <div className="serv-conteudo">
@@ -50,7 +55,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
+            {/*
             <div className="duvidas">
                 <div className="duvidas-conteudo">
                     <div>Aqui é uma imagem</div>

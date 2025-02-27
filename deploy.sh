@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Pergunta a mensagem de commit
+
 read -p "Digite a mensagem do commit: " commitMessage
 
 # Executa npm run deploy
@@ -19,4 +20,4 @@ git commit -m "$commitMessage"
 echo "Fazendo push para a branch main..."
 git push origin main
 
-echo "Deploy concluído com sucesso!"
+echo -e "\e" "Deploy concluído com sucesso!"
