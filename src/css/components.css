@@ -12,7 +12,7 @@
 }
 
 /* === BOTÕES === */
-button {
+.button {
     width: 22vw;
     height: 6vh;
     border-radius: 2vh;
@@ -21,7 +21,7 @@ button {
     font-size: 1.2em;
     color: #1a2730;
 }
-button:hover {
+.button:hover {
     background-color: var(--cor_01);
     border: 1px solid var(--cor_06);
     color: var(--cor_09);
@@ -29,7 +29,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-    button {
+    .button {
         font-size: 0.8em;
     }
 
@@ -92,6 +92,30 @@ button:hover {
   .nav-list {
     flex-direction: column;
   }
+}
 
+
+/* === LINK === */
+.link {
+    font-size: 1.5em;
+    color: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+}
+.link label {
+    font-size: 1.5em;
+}
+.link:hover {
+    transition: 0.4s;
+    color: var(--cor_04);
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .link {
+        font-size: 0.8em;
+    }
 
 }

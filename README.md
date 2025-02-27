@@ -53,4 +53,8 @@ npm run start:dev
 
 npm install @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons 
 
+git log --oneline             - lista todos os commits
+git reset --hard HEAD~6       - volta a 6 commits atrás
+git push origin main --force  - força o push de atualização
+
 
