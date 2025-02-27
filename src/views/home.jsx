@@ -18,11 +18,17 @@ const Home = () => {
             
             <div className="solucao">
                 <div className="solucao-conteudo">
-                    <div></div>
-                    <div></div>
+                    <div className="solucao-conteudo-img"></div>
+                    <div className="solucao-conteudo-txt">
+                        <p>Seu negócio precisa ser visto!</p>
+                        <p>Com um site profissional, seu negócio alcança mais clientes 
+                            e expande suas oportunidades no mercado digital.
+                        </p>
+                        <h5>Marthec, levando seu negócio além!</h5>
+                    </div>
                 </div>                
             </div>
-
+            {/*
             <div className="compromisso">
                 <div className="comp-conteudo">
                     <div></div>
@@ -77,6 +83,7 @@ const Home = () => {
                 </div>
 
             </div>
+            */}
 
         </nav>
         

@@ -70,17 +70,32 @@
   align-items: center;
 }
 .solucao-conteudo {
-  width: 80%;
-  height: 75vh;
+  width: 90%;
+  height: 80vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  border: 1px solid #000;
+  
 }
 .solucao-conteudo div {
-  width: 40%;
-  height: 65vh;
-  border: 1px solid #000;
+  width: 48%;
+  height: 75vh;
+  
+}
+.solucao-conteudo-img {
+  background: linear-gradient(to left, rgb(26, 39, 48, 0.2), 
+    rgb(26, 39, 48, 0.2)), url('../img/solucao-1.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+  border-radius: 5em 0 5em 0;
+}
+.solucao-conteudo-txt {
+  text-align: center;
+  font-size: 2em;
+  color: var(--cor_01);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 @media (max-width: 768px) {
   .solucao-conteudo {

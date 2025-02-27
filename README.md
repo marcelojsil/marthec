@@ -58,3 +58,6 @@ git reset --hard HEAD~6       - volta a 6 commits atrás
 git push origin main --force  - força o push de atualização
 
 
+versao 1.00.06 tentativa de links 5
+
+
