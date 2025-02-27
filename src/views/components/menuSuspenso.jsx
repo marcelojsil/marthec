@@ -20,9 +20,9 @@ const MenuSuspenso = () => {
         </div>
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><Link to="/" label="Home" /></li>
-            <li className="nav-item"><Link to="/servicos" label="Serviços" /></li>
-            <li className="nav-item"><Link to="/planos" label="Planos" className="nav-link" /></li>
+            <li className="nav-item"><Link to="/">Home</Link></li>
+            <li className="nav-item"><Link to="/servicos">Serviços</Link></li>
+            <li className="nav-item"><Link to="/planos">Planos</Link></li>
             <li className="nav-item"><a href="/areaCliente" className="nav-link">Área do Cliente</a></li>
           </ul>
         </nav>
