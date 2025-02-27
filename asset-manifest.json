@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/marthec/static/css/main.d3a9c389.css",
-    "main.js": "/marthec/static/js/main.991d4b2c.js",
+    "main.css": "/marthec/static/css/main.226b0b7e.css",
+    "main.js": "/marthec/static/js/main.65d514d2.js",
     "static/media/solucao-1.png": "/marthec/static/media/solucao-1.42b9f992621914accd67.png",
+    "static/media/Imagem2.png": "/marthec/static/media/Imagem2.62b014ad6c5482f98156.png",
     "static/media/bg.jpg": "/marthec/static/media/bg.99a9bb7fe69a85b04d2b.jpg",
+    "static/media/desenvolvimento-bco.png": "/marthec/static/media/desenvolvimento-bco.bb11d534e723678a1331.png",
     "index.html": "/marthec/index.html",
-    "main.d3a9c389.css.map": "/marthec/static/css/main.d3a9c389.css.map",
-    "main.991d4b2c.js.map": "/marthec/static/js/main.991d4b2c.js.map"
+    "main.226b0b7e.css.map": "/marthec/static/css/main.226b0b7e.css.map",
+    "main.65d514d2.js.map": "/marthec/static/js/main.65d514d2.js.map"
   },
   "entrypoints": [
-    "static/css/main.d3a9c389.css",
-    "static/js/main.991d4b2c.js"
+    "static/css/main.226b0b7e.css",
+    "static/js/main.65d514d2.js"
   ]
 }
