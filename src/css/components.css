@@ -96,6 +96,10 @@
 
 
 /* === LINK === */
+Link {
+    font-size: 1.5em;
+    color: var(--cor_09);
+}
 .link {
     font-size: 1.5em;
     color: inherit;
