@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-//import Link from "./link";
 import { Link } from "react-router-dom";
 import '../../css/components.css';
 
@@ -20,10 +19,10 @@ const MenuSuspenso = () => {
         </div>
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><Link to="/">Home</Link></li>
-            <li className="nav-item"><Link to="/servicos">Serviços</Link></li>
-            <li className="nav-item"><Link to="/planos">Planos</Link></li>
-            <li className="nav-item"><a href="/areaCliente" className="nav-link">Área do Cliente</a></li>
+            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
+            <li className="nav-item"><Link to="/servicos" className="nav-link">Serviços</Link></li>
+            <li className="nav-item"><Link to="/planos" className="nav-link">Planos</Link></li>
+            <li className="nav-item"><Link to="/areaCliente" className="nav-link">Área do Cliente</Link></li>
           </ul>
         </nav>
       </header>

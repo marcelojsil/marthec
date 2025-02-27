@@ -10,6 +10,7 @@
     --cor_09: #fff;
     --cor_10: #000;
 }
+a {text-decoration: none;}
 
 /* === BOTÕES === */
 .button {
@@ -50,23 +51,21 @@
     display: none;
 }
 .nav {
-    width: 30vw;
     display: flex;
     align-items: center;
 }
 .nav-list {
     list-style-type: none;
-    width: 100%;
     display: flex;
 }
 .nav-item{
-    width: 100%;
     height: auto;
+    margin-right: 1.4em;
 }
 .nav-link {
     color: var(--cor_09);
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .nav-link:hover {
     color: var(--cor_04);
@@ -95,31 +94,3 @@
 }
 
 
-/* === LINK === */
-Link {
-    font-size: 1.5em;
-    color: var(--cor_09);
-}
-.link {
-    font-size: 1.5em;
-    color: inherit;
-    background: none;
-    border: none;
-    padding: 0;
-    font: inherit;
-}
-.link label {
-    font-size: 1.5em;
-}
-.link:hover {
-    transition: 0.4s;
-    color: var(--cor_04);
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .link {
-        font-size: 0.8em;
-    }
-
-}
