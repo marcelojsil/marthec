@@ -1,7 +1,11 @@
 import React from "react";
 import "../css/style.css";
 import Button from "./components/Button";
-import IMG1 from "../img/desenvolvimento-bco.png";
+import IMG1 from "../img/dev.png";
+import IMG2 from "../img/manut.png";
+import IMG3 from "../img/responsivo.png";
+import IMG4 from "../img/seo.png";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -43,15 +47,24 @@ const Home = () => {
                     medida, focados em inovação e resultados</p>
                 <div className="home-serv-conteudo">
                     <div className="serv-conteudo">
-                        <div className="serv-conteudo-item">
+                        <Link to="/servicos" className="serv-conteudo-item">
                             <img src={IMG1} alt="" />
                             <p>Desenvolvimento</p>
-                        </div>
-                        <div className="serv-conteudo-item"></div>
+                        </Link>
+                        <Link to="/servicos" className="serv-conteudo-item">
+                            <img src={IMG2} alt="" />
+                            <p>Manutenção</p>
+                        </Link>
                     </div>
                     <div className="serv-conteudo">
-                        <div className="serv-conteudo-item"></div>
-                        <div className="serv-conteudo-item"></div>
+                        <Link to="/servicos" className="serv-conteudo-item">
+                            <img src={IMG3} alt="" />
+                            <p>Responsividade</p>
+                            </Link>
+                        <Link to="/servicos" className="serv-conteudo-item">
+                            <img src={IMG4} alt="" />
+                            <p>SEO</p>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -11,6 +11,10 @@ const MenuSuspenso = () => {
     const toggleMenu = () => {
       setIsOpen(!isOpen);
     };
+
+  const handleCloseMenu = () => {
+    setIsOpen(false);
+  };
   
     return (
       <header className="menu">
@@ -19,10 +23,10 @@ const MenuSuspenso = () => {
         </div>
         <nav className={`nav ${isOpen ? 'open' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><Link to="/" className="nav-link">Home</Link></li>
-            <li className="nav-item"><Link to="/servicos" className="nav-link">Serviços</Link></li>
-            <li className="nav-item"><Link to="/planos" className="nav-link">Planos</Link></li>
-            <li className="nav-item"><Link to="/areaCliente" className="nav-link">Área do Cliente</Link></li>
+            <li className="nav-item"><Link to="/" className="nav-link" onClick={handleCloseMenu}>Home</Link></li>
+            <li className="nav-item"><Link to="/servicos" className="nav-link" onClick={handleCloseMenu}>Serviços</Link></li>
+            <li className="nav-item"><Link to="/planos" className="nav-link" onClick={handleCloseMenu}>Planos</Link></li>
+            <li className="nav-item"><Link to="/areaCliente" className="nav-link" onClick={handleCloseMenu}>Área do Cliente</Link></li>
           </ul>
         </nav>
       </header>

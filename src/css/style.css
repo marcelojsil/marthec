@@ -10,6 +10,7 @@
   --cor_09: #fff;
   --cor_10: #000;
 }
+a {text-decoration: none;}
   
 
 .app,.routes-app,.home {
@@ -35,24 +36,29 @@
  z-index: -100px;
 }
 .titulos {
-  text-align: end;
-  padding: 15vh;
+  text-align: center;
+  padding: 5vh;
   color: var(--cor_09);
-  text-shadow: 2px 2px 5px rgba(255,255,255,0.5);
 }
 .titulos h1 {
   font-size: 4em;
 }
 .titulos h2 {
-  font-size: 2.5em;
+  font-size: 2.2em;
+  margin-bottom: 8vh;
 }
 
 @media (max-width: 768px) {
+  .bg-imagem {
+    justify-content: start;
+    align-items: start;
+  }
   .titulos {
-    padding: 3vh;
+    text-align: start;
+    padding: 2vw;
   }
   .titulos h1 {
-    font-size: 1.7em;
+    font-size: 2em;
   }
   .titulos h2 {
     font-size: 1.1em;
@@ -75,12 +81,10 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  
 }
 .solucao-conteudo div {
   width: 48%;
   height: 75vh;
-  
 }
 .solucao-conteudo-img {
   background: linear-gradient(to left, rgb(26, 39, 48, 0.2), 
@@ -106,6 +110,9 @@
   .solucao-conteudo div {
       width: 90%;
       height: 40vh;
+  }
+  .solucao-conteudo-txt {
+    font-size: 1.3em;
   }
 }
   
@@ -172,16 +179,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
-  
 }
 .serv-conteudo {
   width: 50%;
   height: 37vh;
-  
   display: flex;
   justify-content: space-around;
   align-items: center;
-  
 }
 .serv-conteudo-item {
   width: 45%;
@@ -191,7 +195,14 @@
   justify-content: space-evenly;
   align-items: center;
   font-size: 1.3em;
-  border: 1px solid #1512d6;
+  color: var(--cor_09);
+  border: 1px solid var(--cor_09);
+  border-radius: 1em;
+}
+.serv-conteudo-item:hover {
+  background-color: var(--cor_02);
+  border: 1px solid var(--cor_04);
+  cursor: pointer;
 }
 .serv-conteudo-item img {
   width: 75%;
@@ -199,10 +210,15 @@
   transition: transform 1s ;
   border: 1px solid var(--cor_09);
 }
+
+
+/* Para girar a imagem 360°
 .serv-conteudo-item img:hover {
   width: 75%;
   transform: rotate(360deg);
 }
+*/
+
 @media (max-width: 768px) {
   .home-serv-conteudo {
     width: 98%;
@@ -210,6 +226,9 @@
   .serv-conteudo {
   width: 98%;
   height: 37vh;
+  }
+  .serv-conteudo-item {
+    font-size: 1em;
   }
   .serv-conteudo-item {
     width: 48%;
