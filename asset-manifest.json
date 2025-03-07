@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/marthec/static/css/main.4f6504de.css",
-    "main.js": "/marthec/static/js/main.8fb120d8.js",
+    "main.css": "/marthec/static/css/main.7958b758.css",
+    "main.js": "/marthec/static/js/main.4527daab.js",
     "static/media/solucao-1.png": "/marthec/static/media/solucao-1.42b9f992621914accd67.png",
     "static/media/Imagem2.png": "/marthec/static/media/Imagem2.62b014ad6c5482f98156.png",
     "static/media/bg.jpg": "/marthec/static/media/bg.99a9bb7fe69a85b04d2b.jpg",
+    "static/media/promo.png": "/marthec/static/media/promo.9c706718b86c5a258c83.png",
     "static/media/seo.png": "/marthec/static/media/seo.ab3d47ec7c71cfdc83f8.png",
     "static/media/manut.png": "/marthec/static/media/manut.7ba0db2d4edeb938287c.png",
     "static/media/dev.png": "/marthec/static/media/dev.aebdcb2615785faad370.png",
@@ -20,11 +21,11 @@
     "static/media/montserrat-vietnamese-400-normal.woff2": "/marthec/static/media/montserrat-vietnamese-400-normal.7da603c92e367751f991.woff2",
     "static/media/montserrat-vietnamese-400-normal.woff": "/marthec/static/media/montserrat-vietnamese-400-normal.c14d61c769222a9ee56c.woff",
     "index.html": "/marthec/index.html",
-    "main.4f6504de.css.map": "/marthec/static/css/main.4f6504de.css.map",
-    "main.8fb120d8.js.map": "/marthec/static/js/main.8fb120d8.js.map"
+    "main.7958b758.css.map": "/marthec/static/css/main.7958b758.css.map",
+    "main.4527daab.js.map": "/marthec/static/js/main.4527daab.js.map"
   },
   "entrypoints": [
-    "static/css/main.4f6504de.css",
-    "static/js/main.8fb120d8.js"
+    "static/css/main.7958b758.css",
+    "static/js/main.4527daab.js"
   ]
 }
