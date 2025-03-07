@@ -20,4 +20,4 @@ git commit -m "$commitMessage"
 echo "Fazendo push para a branch main..."
 git push origin main
 
-echo -e "\e Deploy concluído com sucesso!"
+echo -e "\e "Deploy concluído com sucesso!"

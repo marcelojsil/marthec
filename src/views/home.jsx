@@ -5,7 +5,9 @@ import IMG1 from "../img/dev.png";
 import IMG2 from "../img/manut.png";
 import IMG3 from "../img/responsivo.png";
 import IMG4 from "../img/seo.png";
+import IMG5 from "../img/promo.png";
 import { Link } from "react-router-dom";
+import FormLeed from "./components/formContato";
 
 
 const Home = () => {
@@ -68,21 +70,24 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            {/*
+            
             <div className="duvidas">
                 <div className="duvidas-conteudo">
-                    <div>Aqui é uma imagem</div>
-                    <div>Aqui é o formulário</div>
+                    <div>
+                        <p>Fique por dentro de nossas novidades e promoções</p>
+                        <img src={IMG5} alt=""  />
+                    </div>
+                    <div><FormLeed /></div>
                 </div>
             </div>
-
+        {/*
             <div className="parceria">
                 <div className="parceria-conteudo">
                     <div></div>
                     <div></div>
                 </div>
             </div>
-
+            
             <div className="home-planos">
                 <h4>Formas de Pagamento</h4>
                 <p>a melhor forma para favorecer o seu negócio</p>

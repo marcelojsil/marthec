@@ -1,5 +1,5 @@
      
-    const handleSubmit = async (e, name, email) => {
+    const handleSubmit = async (e, name, email, whatsapp) => {
         
         e.preventDefault();
         const response = await fetch("http://localhost:5000/api/form", {
@@ -7,7 +7,7 @@
             headers: {
                 "Content-Type": "application/json",
             },
-            body: JSON.stringify({ name, email }),
+            body: JSON.stringify({ name, email, whatsapp }),
         });
         const result = await response.json();
         alert(result.message);
