@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Marthec | Site para sua empresa</title>
+</head>
+<body>
+
+    <!-- HEADER COM MENU RESPONSIVO -->
+    <header class="navbar">
+        <div class="logo">Minha Marca</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </header>
+    
+    <!-- MAIN COM CONTEÚDO RESPONSIVO -->
+    <section>
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Soluções Digitais para Pequenos Negócios</h1>
+                    <p>Transforme sua ideia em um site profissional com nossa equipe especializada.</p>
+                    <button id="saiba-mais">Saiba Mais</button>
+                </div>
+            </section>
+    
+            <section class="services">
+                <h2>Nossos Serviços</h2>
+                <div class="service-list">
+                    <div class="service-item">
+                        <h3>Criação de Sites</h3>
+                        <p>Desenvolvemos sites responsivos e sob medida.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Otimização de SEO</h3>
+                        <p>Melhore sua visibilidade nos mecanismos de busca.</p>
+                    </div>
+                    <div class="service-item">
+                        <h3>Manutenção</h3>
+                        <p>Cuide da performance e da segurança do seu site.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <section class="lead">
+                <h2>Entre em Contato</h2>
+                <p>Preencha o formulário abaixo para solicitar um orçamento gratuito.</p>
+                <form id="lead-form">
+                    <input type="text" id="nome" placeholder="Seu Nome" required>
+                    <input type="email" id="email" placeholder="Seu Email" required>
+                    <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <script>
+                    document.getElementById('lead-form').addEventListener('submit', async (e) => {
+                        e.preventDefault();
+                
+                        const nome = document.getElementById('nome').value;
+                        const email = document.getElementById('email').value;
+                        const mensagem = document.getElementById('mensagem').value;
+                
+                        try {
+                            const response = await fetch("http://localhost:3000/lead", {
+                                method: "POST",
+                                headers: {
+                                    "Content-Type": "application/json"
+                                },
+                                body: JSON.stringify({ nome, email, mensagem })
+                            });
+                
+                            const result = await response.text();
+                            alert(result);
+                        } catch (error) {
+                            console.error("Erro ao enviar os dados:", error);
+                        }
+                    });
+                </script>
+                
+            </section>
+        </main>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-about">
+            <h3>Sobre Nós</h3>
+            <p>Somos especialistas em desenvolvimento de sites, trazendo soluções personalizadas para transformar sua presença digital.</p>
+        </div>
+        <div class="footer-links">
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer-contact">
+            <h3>Contato</h3>
+            <p>Email: contato@empresa.com</p>
+            <p>Telefone: +55 (12) 3456-7890</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Empresa de Desenvolvimento. Todos os direitos reservados.</p>
+    </div>
+    </footer>
+
+
+
+<script src="./script.js"></script>
+    
+</body>
+</html>
