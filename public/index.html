@@ -9,49 +9,75 @@
 <body>
 
     <!-- HEADER COM MENU RESPONSIVO -->
-    <header class="navbar">
-        <div class="logo">Minha Marca</div>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-        <ul class="nav-links" id="nav-links">
-            <li><a href="#home">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#servicos">Serviços</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
+    <header class="navbar" id="home">
+        <div class="header">
+            <div class="logo">Minha Marca</div>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+
+        <div class="texts">
+            <h1>Site para sua empresa</h1>
+            <h2>Deixe o seu negócio com visibilidade além do seu horizonte</h2>
+            <button>Saiba mais</button>
+        </div>
     </header>
     
     <!-- MAIN COM CONTEÚDO RESPONSIVO -->
+    <section class="cards">
+        <h2>Desenvolvemos sites para parceiros</h2>
+        <div class="card-list">
+            <div class="card-img">
+                <img src="./img/parceiros.jpg" width="320">
+            </div>
+            
+            <div class="card-item">
+                <p style="text-align: justify;">Transformando ideias em parcerias de sucesso Na Marthec, acreditamos que a verdadeira força 
+                    está na união. Por isso, não desenvolvemos sites para clientes, mas sim para parceiros. 
+                    Nosso compromisso é colaborar lado a lado com empresas e empreendedores, criando soluções 
+                    digitais que impulsionam resultados e constroem relações duradouras. Juntos, vamos mais longe 
+                    e alcançamos novos patamares, com criatividade, inovação e compromisso mútuo. </p>
+                <h3>Seja nosso parceiro e vamos construir o futuro juntos!</h3>
+            </div>
+        </div>
+    </section>
+
     <section>
         <main>
             <section class="hero">
                 <div class="hero-content">
                     <h1>Soluções Digitais para Pequenos Negócios</h1>
-                    <p>Transforme sua ideia em um site profissional com nossa equipe especializada.</p>
+                    <p>Deixe o seu negócio com mais credibilidade e esteja presente no mundo digital</p>
                     <button id="saiba-mais">Saiba Mais</button>
                 </div>
-            </section>
-    
-            <section class="services">
+            </section>        
+        
+            <section class="cards" id="servicos">
                 <h2>Nossos Serviços</h2>
-                <div class="service-list">
-                    <div class="service-item">
+                <div class="card-list">
+                    <div class="card-item">
                         <h3>Criação de Sites</h3>
-                        <p>Desenvolvemos sites responsivos e sob medida.</p>
+                        <p>Desenvolvemos sites responsivos e sob medida para seu negócio.</p>
                     </div>
-                    <div class="service-item">
+                    <div class="card-item">
                         <h3>Otimização de SEO</h3>
-                        <p>Melhore sua visibilidade nos mecanismos de busca.</p>
+                        <p>Melhore sua visibilidade nos mecanismos de busca como o Google.</p>
                     </div>
-                    <div class="service-item">
+                    <div class="card-item">
                         <h3>Manutenção</h3>
-                        <p>Cuide da performance e da segurança do seu site.</p>
+                        <p>Cuide da performance e da segurança do seu site sem riscos.</p>
                     </div>
                 </div>
             </section>
     
-            <section class="lead">
+            <section class="lead" id="contato">
                 <h2>Entre em Contato</h2>
-                <p>Preencha o formulário abaixo para solicitar um orçamento gratuito.</p>
+                <p>Preencha o formulário e solicite um orçamento sem compromisso.</p>
                 <form id="lead-form">
                     <input type="text" id="nome" placeholder="Seu Nome" required>
                     <input type="email" id="email" placeholder="Seu Email" required>
@@ -93,25 +119,28 @@
     <div class="footer-container">
         <div class="footer-about">
             <h3>Sobre Nós</h3>
-            <p>Somos especialistas em desenvolvimento de sites, trazendo soluções personalizadas para transformar sua presença digital.</p>
+            <p>Somos uma empresa especialista em desenvolvimento de sites e sistemas web, trazendo soluções personalizadas para transformar 
+                a presença de sua empresa no digital. Desenvolvemos em algumas linguagens e No-code conforme a necessidade do seu negócio. <br>
+                </p>
         </div>
         <div class="footer-links">
             <h3>Links Rápidos</h3>
             <ul>
                 <li><a href="#home">Início</a></li>
                 <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <!--<li><a href="#portfolio">Portfólio</a></li>-->
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </div>
         <div class="footer-contact">
             <h3>Contato</h3>
-            <p>Email: contato@empresa.com</p>
-            <p>Telefone: +55 (12) 3456-7890</p>
+            <p>Email: dev.marcelojs@gmail.com></dev></p>
+            <p>WhatsApp: +55 (12) 99102-2315</p>
+            <p>Pindamonhangaba / SP</p>
         </div>
     </div>
     <div class="footer-bottom">
-        <p>&copy; 2025 Empresa de Desenvolvimento. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Marthec Sistemas Web. <br>Todos os direitos reservados.</p>
     </div>
     </footer>
 
