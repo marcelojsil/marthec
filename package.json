@@ -1,5 +1,7 @@
 {
-  "name": "marthec",
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Marthec Web",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
@@ -9,12 +11,24 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "url": "https://www.seusite.com",
+  "description": "Desenvolvimento de sites institucionais, landing pages e sistemas web em Pindamonhangaba, São Paulo.",
   "dependencies": {
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "mysql2": "^3.13.0",
     "nodemailer": "^6.10.0"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.seusite.com?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Pindamonhangaba",
+    "addressRegion": "SP",
+    "addressCountry": "BR"
   }
 }

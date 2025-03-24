@@ -57,7 +57,13 @@ app.post("/lead", (req, res) => {
             from: "dev.marcelojs@gmail.com",
             to: email,
             subject: "Obrigado pelo contato!",
-            text: "Obrigado por entrar em contato, em breve um de nossos consultores te retornará."
+            text: "Obrigado por entrar em contato, em breve um de nossos consultores te retornará.",
+            html: `
+        <h1 style="color: #4CAF50;">Obrigado pelo Contato!</h1>
+        <p>Ficamos muito felizes em saber do seu interesse. Em breve, um de nossos consultores irá entrar em contato com você.</p>
+        <p>Atenciosamente,</p>
+        <p><strong>Equipe de Suporte</strong></p>
+    `
         };
 
         transporter.sendMail(mailOptions, (err, info) => {
