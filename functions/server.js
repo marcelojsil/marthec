@@ -4,13 +4,21 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require("path");
+const serverless = require('serverless-http');
 
 const app = express();
 const port = process.env.PORT || 3000; // Porta dinâmica para o Heroku
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, "public"))); // Servir arquivos estáticos
+app.use(express.static(path.join(__dirname, "../public"))); // Servir arquivos estáticos
+
+// Rota padrão
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public', 'index.html'));
+});
+
+module.exports.handler = serverless(app);
 
 // Ativando o CORS
 app.use(cors());
@@ -54,9 +62,9 @@ app.post("/lead", (req, res) => {
         });
 
         const mailOptions = {
-            from: "dev.marcelojs@gmail.com",
+            from: "noreply@igrejadacidade.com",
             to: email,
-            subject: "Obrigado pelo contato!",
+            subject: "Marthec agradece seu contato!",
             text: "Obrigado por entrar em contato, em breve um de nossos consultores te retornará.",
             html: `
         <h1 style="color: #4CAF50;">Obrigado pelo Contato!</h1>
