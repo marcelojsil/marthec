@@ -132,7 +132,7 @@
                         const mensagem = document.getElementById('mensagem').value;
                 
                         try {
-                            const response = await fetch("functions/server", {
+                            const response = await fetch("./functions/server", {
                                 method: "POST",
                                 headers: {
                                     "Content-Type": "application/json"

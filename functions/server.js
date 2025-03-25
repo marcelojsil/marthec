@@ -8,7 +8,7 @@ const serverless = require('serverless-http');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000; // Porta dinâmica para o Heroku
+//const port = process.env.PORT || 3000; // Porta dinâmica para o Heroku
 
 // Middleware
 app.use(bodyParser.json());
@@ -26,10 +26,10 @@ app.use(cors());
 
 // Configuração do Banco de Dados
 const connection = mysql.createConnection({
-    host: process.env.DB_HOST, //"localhost",
-    user: process.env.DB_USER, //"root",
-    password: process.env.DB_PASSWORD, //"",
-    database: process.env.DB_NAME //"marthec"
+    host: "//177.107.82.2",
+    user: "root",
+    password: "",
+    database: "marthec"
 });
 
 // Rota para salvar dados no banco de dados
@@ -50,8 +50,8 @@ app.post("/lead", (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: process.env.SMTP_USER, //"marcelo.igrejadacidade@gmail.com",
-                pass: process.env.SMTP_PASS //"zlma ptbc miod rhne"
+                user: "marcelo.igrejadacidade@gmail.com",
+                pass: "zlma ptbc miod rhne"
             }
         });
         transporter.verify((error, success) => {
