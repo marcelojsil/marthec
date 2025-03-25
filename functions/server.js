@@ -5,6 +5,7 @@ const nodemailer = require("nodemailer");
 const cors = require("cors");
 const path = require("path");
 const serverless = require('serverless-http');
+require('dotenv').config();
 
 const app = express();
 const port = process.env.PORT || 3000; // Porta dinâmica para o Heroku
@@ -25,10 +26,10 @@ app.use(cors());
 
 // Configuração do Banco de Dados
 const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "marthec"
+    host: process.env.DB_HOST, //"localhost",
+    user: process.env.DB_USER, //"root",
+    password: process.env.DB_PASSWORD, //"",
+    database: process.env.DB_NAME //"marthec"
 });
 
 // Rota para salvar dados no banco de dados
@@ -49,8 +50,8 @@ app.post("/lead", (req, res) => {
             port: 587,
             secure: false,
             auth: {
-                user: "marcelo.igrejadacidade@gmail.com",
-                pass: "zlma ptbc miod rhne"
+                user: process.env.SMTP_USER, //"marcelo.igrejadacidade@gmail.com",
+                pass: process.env.SMTP_PASS //"zlma ptbc miod rhne"
             }
         });
         transporter.verify((error, success) => {
@@ -62,12 +63,12 @@ app.post("/lead", (req, res) => {
         });
 
         const mailOptions = {
-            from: "noreply@igrejadacidade.com",
+            from: "noreply@gmail.com",
             to: email,
             subject: "Marthec agradece seu contato!",
             text: "Obrigado por entrar em contato, em breve um de nossos consultores te retornará.",
             html: `
-        <h1 style="color: #4CAF50;">Obrigado pelo Contato!</h1>
+        <h1 style="color: #4CAF50;">Olá ${nome}, obrigado pelo Contato!</h1>
         <p>Ficamos muito felizes em saber do seu interesse. Em breve, um de nossos consultores irá entrar em contato com você.</p>
         <p>Atenciosamente,</p>
         <p><strong>Equipe de Suporte</strong></p>
