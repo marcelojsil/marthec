@@ -1,190 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="./img/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO -->
-    <meta name="description" content="Empresa de desenvolvimento de sites institucionais, landing pages e sistemas web em Pindamonhangaba, São Paulo. Conecte-se ao mundo digital com soluções inovadoras.">
-    <meta name="keywords" content="desenvolvimento de sites, landing pages, sistemas web, Pindamonhangaba, São Paulo, Marthec, soluções digitais">
-    <meta name="author" content="Marthec Sistemas Web">
+  <head>
+    <meta charset="utf-8" />
+    <!-- FAVICON -->
+    <link rel="icon" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
 
-    <!-- GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <!--
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    -->
     
-
-    <link rel="stylesheet" href="./style.css">
-    <title>Marthec | Site para sua empresa</title>
-</head>
-<body>
-
-    <!-- HEADER COM MENU RESPONSIVO -->
-    <header class="navbar" id="home">
-        <div class="header">
-            <div class="logo"></div>
-            <button class="menu-toggle" id="menu-toggle">☰</button>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#home">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-
-        <div class="texts">
-            <h1>Site para sua empresa</h1>
-            <h2>Deixe o seu negócio com visibilidade além do seu horizonte</h2>
-            <button>Saiba mais</button>
-        </div>
-    </header>
+    <title>Marthec | Sites para empresas</title>
+  </head>
+  <body>
     
-    <!-- MAIN COM CONTEÚDO RESPONSIVO -->
-    <section class="cards">
-        <h2>Acredite, seu negócio precisa de um site!</h2>
-        <div class="card-list">
-            <div class="card-item item-1">
-                <img src="./img/necessidade.jpg" width="320" alt="Parceria em Desenvolvimento de Sites na Marthec">
-                <h3>Vantagens de ter um site</h3>
-            </div>
-            
-            <div class="card-item">
-                <p style="text-align: justify;">Com um site, sua empresa pode atingir um público maior, melhorar sua presença online e 
-                    aumentar as vendas. Um site é essencial para transmitir credibilidade, ser encontrado no Google e 
-                    gerar leads qualificados.</p><br>
-                
-                <ul>
-                    <li>1. Presença online 24/7</li>
-                    <li>2. Maior visibilidade para seu negócio</li>
-                    <li>3. Credibilidade e profissionalismo</li>
-                    <li>4. Fácil acesso aos seus produtos e serviços</li>
-                    <li>5. Possibilidade de integrar ferramentas de vendas e marketing</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="cards">
-        <h2 class="subtitle">Desenvolvemos sites para parceiros</h2>
-        <div class="card-list">
-            <div class="card-item item-1">
-                <img src="./img/parceria.png" width="320" alt="Parceria em Desenvolvimento de Sites na Marthec">
-                <h3>Seja nosso parceiro e vamos construir o futuro juntos!</h3>
-            </div>
-            
-            <div class="card-item">
-                <p style="text-align: justify;">Transformando ideias em parcerias de sucesso Na Marthec, acreditamos que a verdadeira força 
-                    está na união. Por isso, não desenvolvemos sites para clientes, mas sim para parceiros. 
-                    Nosso compromisso é colaborar lado a lado com empresas e empreendedores, criando soluções 
-                    digitais que impulsionam resultados e constroem relações duradouras. Juntos, vamos mais longe 
-                    e alcançamos novos patamares, com criatividade, inovação e compromisso mútuo. </p>
-                
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <main>
-                   
-            <section class="cards" id="servicos">
-                <h2>Nossos Serviços</h2>
-                <div class="card-list">
-                    <div class="card-item service">
-                        <h3>Criação de Sites</h3>
-                        <p>Desenvolvemos sites responsivos e sob medida para seu negócio.</p>
-                    </div>
-                    <div class="card-item service">
-                        <h3>Otimização de SEO</h3>
-                        <p>Melhore sua visibilidade nos mecanismos de busca como o Google.</p>
-                    </div>
-                    <div class="card-item service">
-                        <h3>Manutenção e Suporte</h3>
-                        <p>Cuide da performance e da segurança do seu site sem riscos.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hero">
-                <div class="hero-content">
-                    <h1>Soluções Digitais para Pequenos Negócios</h1>
-                    <p>Deixe o seu negócio com mais credibilidade e esteja presente no mundo digital</p>
-                    <button id="em-breve">Em Breve</button>
-                </div>
-            </section>  
+    <div id="root"></div>
     
-            <section class="lead" id="contato">
-                <h2>Entre em Contato</h2>
-                <p>Preencha o formulário e solicite um orçamento sem compromisso.</p>
-                <form id="lead-form" data-netlify="true">
-                    <input type="text" id="nome" placeholder="Seu Nome" required>
-                    <input type="email" id="email" placeholder="Seu Email" required>
-                    <textarea id="mensagem" placeholder="Sua Mensagem" required></textarea>
-                    <button type="submit">Enviar</button>
-                </form>
-
-                <script>
-                    document.getElementById('lead-form').addEventListener('submit', async (e) => {
-                        e.preventDefault();
-                
-                        const nome = document.getElementById('nome').value;
-                        const email = document.getElementById('email').value;
-                        const mensagem = document.getElementById('mensagem').value;
-                
-                        try {
-                            const response = await fetch("./functions/server", {
-                                method: "POST",
-                                headers: {
-                                    "Content-Type": "application/json"
-                                },
-                                body: JSON.stringify({ nome, email, mensagem })
-                            });
-                
-                            const result = await response.text();
-                            alert(result);
-                        } catch (error) {
-                            console.error("Erro ao enviar os dados:", error);
-                        }
-                    });
-                </script>
-                
-            </section>
-        </main>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-    <div class="footer-container">
-        <div class="footer-about">
-            <h3>Sobre Nós</h3>
-            <p>Somos uma empresa especialista em desenvolvimento de sites e sistemas web, trazendo soluções personalizadas para transformar 
-                a presença de sua empresa no digital. Desenvolvemos em algumas linguagens e No-code conforme a necessidade do seu negócio. <br>
-                </p>
-        </div>
-        <div class="footer-links">
-            <h3>Links Rápidos</h3>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <!--<li><a href="#portfolio">Portfólio</a></li>-->
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </div>
-        <div class="footer-contact">
-            <h3>Contato</h3>
-            <p>Email: dev.marcelojs@gmail.com></dev></p>
-            <p>WhatsApp: +55 (12) 99102-2315</p>
-            <p>Pindamonhangaba / SP</p>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <p>&copy; 2025 Marthec Sistemas Web. <br>Todos os direitos reservados.</p>
-    </div>
-    </footer>
-
-
-
-<script src="./script.js"></script>
-    
-</body>
+  </body>
 </html>
