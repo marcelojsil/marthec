@@ -3,13 +3,16 @@
 /* ================================ */
 .scroll-to-top {
   position: fixed;
-  top: 50%;
-  right: 10px;
+  /* Altura do botão */ bottom: 35px;
+  
   transform: translateY(-50%);
   background-color: #000;
-  color: var(--cor_09);
-  padding: 15px 20px;
-  border-radius: 50%;
+  color: #fff;
+
+  right: 0px;
+  padding: 5px 5px;
+  border-radius: 0%;
+
   cursor: pointer;
   z-index: 100;
 }
@@ -22,14 +25,20 @@
 /* ================================ */
 .whatsapp-button {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--cor_06);
-  padding: 10px;
-  border-radius: 50%;
+  /* Altura do botão */ bottom: 100px; 
+  background-color: #000;
+
+  right: 0px;
+  padding: 0px;
+  border-radius: 0%;
+
   z-index: 100;
 }
 .whatsapp-button img {
   width: 50px;
   height: 50px;
 }
+
+/* ================================ */
+/* ===== FORM DE LEAD ============= */
+/* ================================ */
