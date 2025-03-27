@@ -11,6 +11,8 @@ function App() {
 
       <FormLead />
 
+      <FormLead />
+
 
       <ScrollToTopButton />
       <WhatsAppButton />
