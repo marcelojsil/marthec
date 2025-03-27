@@ -11,7 +11,7 @@ function FormLead() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://seu-backend-api.com/submit', {
+      const response = await axios.post('http://marthec-beckend.vercel.app/submit', {
         name,
         email,
         whatsapp,
