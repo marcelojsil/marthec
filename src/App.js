@@ -1,4 +1,5 @@
 import './App.css';
+import FormLead from './components/FormLead';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import WhatsAppButton from './components/whatsapp';
 import Header from './header/header';
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <Header />
 
+      <FormLead />
 
 
       <ScrollToTopButton />

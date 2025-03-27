@@ -10,6 +10,20 @@ function FormLead() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    // Validação do Front em REGEX
+    if (!name || !email || !whatsapp) {
+      setMessage('Por favor, preencha todos os campos.');
+      return;
+    }
+    if (!/^\S+@\S+\.\S+$/.test(email)) {
+      setMessage('E-mail inválido.');
+      return;
+    }
+    if (!/^\+?[0-9]+$/.test(whatsapp)) {
+      setMessage('WhatsApp deve conter apenas números.');
+      return;
+    }
+
     try {
       const response = await axios.post('http://marthec-beckend.vercel.app/submit', {
         name,
