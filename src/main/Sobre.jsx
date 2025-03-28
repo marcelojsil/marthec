@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Sobre = ({ isOpen }) => {
+const Sobre = () => {
   return (
     <ul className="sobre">
     </ul>

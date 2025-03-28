@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Contato = ({ isOpen }) => {
+const Contato = () => {
   return (
     <ul className="contato">
     </ul>

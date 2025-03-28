@@ -2,3 +2,6 @@ p {
     font-size: 3em;
     color: #000;
 }
+nav {
+    height: 20vh;
+}

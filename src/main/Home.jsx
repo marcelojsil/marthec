@@ -5,7 +5,17 @@ import "./main.css";
 const Home = () => {
   return (
     <section className="home"> 
-      <p>Home</p>
+      
+      <nav><h5>PRIMEIRA SEÇÃO</h5></nav>
+
+      <nav><h5>SEGUNDA SEÇÃO</h5></nav>
+
+      <nav><h5>TERCEIRA SEÇÃO</h5></nav>
+
+      <nav><h5>QUARTA SEÇÃO</h5></nav>
+
+      <nav><h5>QUINTA SEÇÃO</h5></nav>
+
     </section>
   );
 };
