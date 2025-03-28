@@ -39,7 +39,7 @@ const Footer = () => {
           <p><a href="/contato">Contato</a></p>
         </div>
 
-        {/* Mapa */}
+        {/* Mapa 
         <div className="footer-section">
           <h3>Localização</h3>
           <iframe
@@ -48,6 +48,7 @@ const Footer = () => {
             loading="lazy"
           ></iframe>
         </div>
+        */}
 
       </div>
       <div>

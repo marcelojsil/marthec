@@ -2,7 +2,7 @@ import React from "react";
 import "./components.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import zap from "../img/logo.png";
+
 
 const WhatsAppButton = () => {
   return (
