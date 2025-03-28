@@ -9,10 +9,10 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         
-        <a href="#" className="logo">Marthec</a>
+        <a href="/home" className="logo">Marthec</a>
 
          
-         <a href="#" className="login-btn">Cliente</a>
+         <a href="/home" className="login-btn">Cliente</a>
 
         {/* BOTÃO DE MENU (MOBILE) */}
         <button className="menu-btn" onClick={() => setMenuOpen(!menuOpen)}>
