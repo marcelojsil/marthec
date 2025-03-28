@@ -31,3 +31,19 @@ editar o App.js
 editar index.js
 1. Apagar
     todo conteúdo de ReportVitals
+
+## =============
+## CONFIGURAÇÕES
+## =============
+
+1. Google fonts e Ícones
+    Adicionar em public/index.html o link da fonte desejada e a CDN dos ícones
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    EXEMPLO: <span className="material-symbols-outlined">home</span>
+
+
+### INSTALAR O TAILWIND
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+
