@@ -124,15 +124,15 @@ p {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: 8vh;
     left: 0;
     width: 100%;
-    background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
   }
 
   .nav-menu.open {
+    background: var(--cor_02);
     display: flex;
   }
 
