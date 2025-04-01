@@ -42,8 +42,6 @@ editar index.js
     EXEMPLO: <span className="material-symbols-outlined">home</span>
 
 
-### INSTALAR O TAILWIND
-npm install -D tailwindcss postcss autoprefixer
-npx tailwindcss init -p
+
 
 
