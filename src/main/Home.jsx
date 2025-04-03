@@ -11,17 +11,10 @@ const Home = () => {
     <section className="home"> 
       
       <FullScreenImg />
-
       
-
       <BackgroundEffect />
       
-
-      <DivsDeslizantes />
-
-      
-
-      
+      <DivsDeslizantes />      
 
     </section>
   );
