@@ -30,7 +30,7 @@ const MyComponent = () => {
   return (
 
         <div className={`slide-in ${isVisible ? 'active' : ''}`}>
-            <img src={Parceria} alt='Marthec sites para empresas' width={600}/>
+            <img src={Parceria} className="slide-img" alt='Marthec sites para empresas' width={600}/>
         </div>
 
     

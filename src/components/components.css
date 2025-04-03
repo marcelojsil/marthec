@@ -1,9 +1,5 @@
 @import "../style.css";
 
-p {
-    color: var(--cor01);
-}
-
 /* ================================ */
 /* ===== BOTÃO VOLTAR AO TOPO ===== */
 /* ================================ */
@@ -28,23 +24,7 @@ p {
     
 /* ================================ */
 /* ===== BOTÃO DO WHATSAPP ======== */
-/* ================================ 
-.whatsapp-button {
-  position: fixed;
-  /* Altura do botão  bottom: 100px; 
-  background-color: #000;
-
-  right: 0px;
-  padding: 0px;
-  border-radius: 0%;
-
-  z-index: 100;
-}
-.logo-whats {
-  width: 50px;
-  height: 50px;
-}
-*/
+/* ================================ */
 
 .whatsapp-button {
   position: fixed;
@@ -81,16 +61,36 @@ p {
     box-shadow: 0px 0px 10px rgba(37, 211, 102, 0.5);
   }
 }
-  
-  /* ================================ */
-  /* ===== FORM DE LEAD ============= */
-  /* ================================ */
+
+/* =================================== */
+/* ===== MENU RESPONSIVO ============= */
+/* =================================== */
+.btn {
+  width: 20vw;
+  height: 7vh;
+  border-radius: 2vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+}
+.saiba-mais {
+  background-color: var(--cor_08);
+  color: var(--cor_09);
+}
+.saiba-mais:hover {
+  background-color: var(--cor_06);
+}
 
 
+/* ================================ */
+/* ===== FORM DE LEAD ============= */
+/* ================================ */
 
-  /* =================================== */
-  /* ===== MENU RESPONSIVO ============= */
-  /* =================================== */
+
+/* =================================== */
+/* ===== MENU RESPONSIVO ============= */
+/* =================================== */
 
 /* Estilização do menu */
 .nav-menu {
@@ -122,8 +122,6 @@ p {
   border: none;
   cursor: pointer;
 }
-
-/* Responsividade */
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
@@ -138,12 +136,10 @@ p {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px 0;
   }
-
   .nav-menu.open {
     background: var(--cor_02);
     display: flex;
   }
-
   .nav-menu li {
     text-align: center;
     padding: 10px 0;
@@ -157,37 +153,237 @@ p {
 /* =================================== */
 .divs-desl {
   position: relative;
-  width: 80%; /* Ajuste conforme necessário */
-  height: 70vh;
+  width: 100%; /* Ajuste conforme necessário */
+  height: 80vh;
   overflow: hidden; /* Garante que as divs não apareçam antes da animação */
   display: flex;
+  flex-direction: column;
   align-items: center;
-  border: 1PX SOLID #000;
 }
 .slide-in, .slide-right {
-  width: 45%;
-  height: 65vh;
+  width: 50%;
+  height: 100%;
   position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  border: 1PX SOLID #000;
+  margin-top: 20px;
+  text-align: center;
+}
+.slide-in p, .slide-right p {
+  font-size: 1.8rem;
 }
 .slide-in {
   left: 0;
   transform: translateX(-100%);
   transition: transform 1s ease-out;
+  
 }
 .slide-right {
   right: 0;
-  transform: translateX(80%);
-  transition: transform 1.2s ease-in;
+  transform: translateX(100%);
+  transition: transform 1s ease-in;
+ 
 }
-.slide-in.active {
-  width: 40%w;
+.slide-in h2, .slide-right h2 {
+  color: var(cor_01);
+}
+.slide-in.active, .slide-right.active {
+  width: 45%;
   transform: translateX(0);
 }
-.slide-right.active {
-  transform: translateX(0);
+@media screen and (max-width: 768px) {
+  .divs-desl {
+    width: 95%;
+    height: auto;
+    flex-direction: column;
+  }
+  .slide-in, .slide-right {
+    width: 90%;
+    height: auto;
+    position: relative; /* Removendo o posicionamento absoluto */
+    margin-bottom: 20px; /* Garantir um espaçamento entre as divs */
+  }
+  .slide-right {
+    height: 95vh;
+  }
+  .slide-in.active, .slide-right.active {
+    width: 80%;  /* Garantir que a largura seja ajustada também na classe 'active' */
+  }
 }
+
+
+
+/* =================================== */
+/* =========== FULL IMAGE ============ */
+/* =================================== */
+.fullscreen-container {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fundo_site.png") center/cover no-repeat; /* Substitua pela sua imagem */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Importante para garantir que o overlay cubra o container */
+}
+
+/* Película escura */
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 39, 48, 0.8); /* Usando RGBA para maior controle da opacidade */
+  display: flex;
+  align-items: center;  /* Centralizando verticalmente */
+  justify-content: center; /* Centralizando horizontalmente */
+}
+
+/* Conteúdo centralizado */
+.fullscreen-conteudo {
+  width: 100%;
+  /*max-width: 600px;  Limita a largura máxima */
+  height: 50%;
+  margin-bottom: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: var(--cor_09);
+  text-align: center;
+  padding: 20px; /* Espaço interno para evitar que o texto fique muito colado nas bordas */
+}
+
+/* Títulos */
+.fullscreen-conteudo h1 {
+  font-size: 4rem; /* Ajuste do tamanho da fonte */
+  margin-bottom: 10px; /* Espaçamento entre os títulos */
+}
+
+.fullscreen-conteudo h2 {
+  font-size: 2rem; /* Ajuste do tamanho da fonte */
+  margin-bottom: 20px;
+}
+
+/* Botão */
+.btn.saiba-mais {
+  width: 20vw;
+  height: 6vh;
+  background-color: var(--cor_08);
+  color: var(--cor_09);
+  padding: 12px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn.saiba-mais:hover {
+  background-color: var(--cor_06); /* Cor do botão quando o usuário passa o mouse */
+}
+
+@media screen and (max-width: 768px) {
+  /* Ajustes para telas pequenas */
+  .fullscreen-conteudo {
+    width: 90%;
+    max-width: none; /* Remove a limitação de largura máxima */
+    padding: 15px; /* Menos padding para dispositivos menores */
+  }
+
+  .fullscreen-conteudo h1 {
+    font-size: 1.8rem; /* Menor tamanho de fonte para h1 */
+  }
+
+  .fullscreen-conteudo h2 {
+    font-size: 1.1rem; /* Menor tamanho de fonte para h2 */
+  }
+
+  .btn.saiba-mais {
+    font-size: 0.8rem; /* Ajuste do tamanho da fonte do botão */
+    padding: 10px 20px; /* Ajuste do padding do botão */
+  }
+}
+
+
+
+/* =================================== */
+/* ======== BACK TRANSITION ========== */
+/* =================================== */
+.background-container {
+  width: 100%;
+  height: 100vh;
+  background-color: #1a2730;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* Necessário para o pseudo-elemento */
+  overflow: hidden;
+  background-size: cover;
+  background-position: center center;
+  transition: background 3s ease-in-out;
+}
+
+/* Transição da imagem de fundo */
+.background-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../img/back-transition.png') no-repeat center center/cover;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+/* Quando a classe show-image é ativada, a imagem de fundo aparece */
+.background-container.show-image::after {
+  opacity: 0.2; /* A imagem se torna visível */
+}
+
+/* Estilo do conteúdo central */
+.content {
+  z-index: 1; 
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 0 20px; /* Adicionando um pequeno padding para não ficar colado nas bordas */
+}
+.content p {
+  color: var(--cor_09);
+  font-size: 2rem;
+}
+
+/* Tamanho do título */
+.content h3 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+/* Media query para telas menores */
+@media screen and (max-width: 768px) {
+  /* Ajuste para telas de dispositivos móveis (tablets e smartphones) */
+  .background-container {
+    height: 80vh; /* Menor altura para dispositivos móveis */
+    background-size: cover;
+    background-position: center center;
+  }
+  .background-container.show-image::after {
+    opacity: 0.2; /* A imagem se torna visível */
+  }
+  .content h3 {
+    font-size: 1.8rem; /* Tamanho do título ainda menor */
+  }
+  
+  .content {
+    padding: 20px 15px; /* Ajuste do padding para telas menores */
+  }
+}
+
+
+
+

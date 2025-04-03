@@ -1,24 +1,20 @@
 import React from "react";
 import "./main.css";
+import FullScreenImg from "../components/FullImage";
 import DivsDeslizantes from "../components/DivsDeslizantes";
+import BackgroundEffect from "../components/BackTransition";
+
 
 
 const Home = () => {
   return (
     <section className="home"> 
       
+      <FullScreenImg />
+
       
 
-      <nav><h5>PRIMEIRA SEÇÃO</h5></nav>
-
-      <nav><h5>SEGUNDA SEÇÃO</h5></nav>
-
-      <nav><h5>TERCEIRA SEÇÃO</h5></nav>
-
-      <nav><h5>QUARTA SEÇÃO</h5></nav>
-
-      <nav><h5>QUINTA SEÇÃO</h5></nav>
-
+      <BackgroundEffect />
       
 
       <DivsDeslizantes />
