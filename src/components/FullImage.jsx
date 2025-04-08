@@ -7,7 +7,9 @@ const FullScreenImg = () => {
       <div className="overlay">
         <div className="fullscreen-conteudo">
           <h1>Site para sua empresa</h1>
-          <h2>Seu negócio visto além do horizonte</h2>
+          <h2>expanda seu horizonte e
+              destaque seu negócio no mundo
+              digital</h2>
           <a href="/contato">
             <div className="btn saiba-mais">saiba mais</div>
           </a>

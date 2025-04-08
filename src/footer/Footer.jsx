@@ -50,7 +50,7 @@ const Footer = () => {
         */}
 
       </div>
-      <div>
+      <div className="footer-end">
         <p>Desenvolvido por Marthec | 2024 - 2025 | Direitos reservados</p>
       </div>
     </footer>

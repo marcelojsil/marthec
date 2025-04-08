@@ -62,9 +62,7 @@
   }
 }
 
-/* =================================== */
-/* ===== MENU RESPONSIVO ============= */
-/* =================================== */
+
 .btn {
   width: 20vw;
   height: 7vh;
@@ -130,7 +128,7 @@
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 8vh;
+    top: 12vh;
     left: 0;
     width: 100%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -139,6 +137,7 @@
   .nav-menu.open {
     background: var(--cor_02);
     display: flex;
+    z-index: 10;
   }
   .nav-menu li {
     text-align: center;
@@ -168,7 +167,6 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 20px;
   text-align: center;
 }
 .slide-in p, .slide-right p {
@@ -272,7 +270,7 @@
   background-color: var(--cor_08);
   color: var(--cor_09);
   padding: 12px 30px;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
@@ -321,7 +319,7 @@
   overflow: hidden;
   background-size: cover;
   background-position: center center;
-  transition: background 3s ease-in-out;
+  transition: background-color 3s ease-in-out;
 }
 
 /* Transição da imagem de fundo */
@@ -358,9 +356,9 @@
   font-size: 2rem;
 }
 
-/* Tamanho do título */
+/* Tamanho d título */
 .content h3 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 10px;
 }
 
@@ -375,6 +373,9 @@
   .background-container.show-image::after {
     opacity: 0.2; /* A imagem se torna visível */
   }
+  .content p {
+    font-size: 1.4rem;
+  }
   .content h3 {
     font-size: 1.8rem; /* Tamanho do título ainda menor */
   }
@@ -384,6 +385,24 @@
   }
 }
 
+
+
+
+
+.sub-titulos {
+  font-size: 3em;
+  font-weight: bolder;
+  text-align: center;
+  margin: 30px 10px;
+  text-shadow: 2px 2px 4px var(--cor_04);
+}
+@media screen and (max-width: 768px) {
+  
+  .sub-titulos {
+    font-size: 2.5em;
+  }
+
+}
 
 
 
