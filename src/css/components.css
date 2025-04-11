@@ -135,7 +135,7 @@
     padding: 10px 0;
   }
   .nav-menu.open {
-    background: var(--cor_02);
+    background: rgba(0, 0, 0, 0.85);
     display: flex;
     z-index: 10;
   }
@@ -184,9 +184,9 @@
   transition: transform 1s ease-in;
  
 }
-.slide-in h2, .slide-right h2 {
+/*.slide-in h2, .slide-right h2 {
   color: var(cor_01);
-}
+}*/
 .slide-in.active, .slide-right.active {
   width: 45%;
   transform: translateX(0);
@@ -213,34 +213,63 @@
 
 
 
-/* =================================== */
-/* =========== FULL IMAGE ============ */
-/* =================================== */
+/* ============================================= */
+/* =========== SECMAIN - FULL IMAGE ============ */
+/* ============================================= */
 .fullscreen-container {
   width: 100%;
   height: 100vh;
-  background: url("../img/fundo_site.png") center/cover no-repeat; /* Substitua pela sua imagem */
+  background: url("../img/fundo_site.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative; /* Importante para garantir que o overlay cubra o container */
+  position: relative;
+  overflow: hidden; /* Impede que o brilho saia da tela */
 }
-
+/* Círculo de brilho se movendo */
+.fullscreen-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9), rgba(0, 255, 255, 0.05), rgba(255, 255, 255, 0.05));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: random-move 5s ease-in-out infinite;
+  pointer-events: none; /* Faz com que o brilho não interfira com outros elementos */
+}
+@keyframes fadeInOut {
+  0% { opacity: 0;  }
+  50% { opacity: 50; }
+  100% { opacity: 0; }
+}
+@keyframes random-move {
+  0% { top: 10%; left: 10%; }
+  25% { top: 40%; left: 90%; }
+  50% { top: 70%; left: 10%; }
+  75% { top: 90%; left: 90%; }
+  100% { top: 10%; left: 10%; }
+}
+@keyframes light-glow {
+  0% {transform: translate(-50%, -50%) translateX(-200%); }
+  10% { transform: translate(-50%, -50%) translateX(200%); }
+  100% { transform: translate(-50%, -50%) translateX(-200%); }
+}
 /* Película escura */
 .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(26, 39, 48, 0.8); /* Usando RGBA para maior controle da opacidade */
+  background-color: rgba(26, 39, 48, 0.8);
   display: flex;
-  align-items: center;  /* Centralizando verticalmente */
-  justify-content: center; /* Centralizando horizontalmente */
+  align-items: center;
+  justify-content: center;
 }
-
 /* Conteúdo centralizado */
 .fullscreen-conteudo {
   width: 100%;
-  /*max-width: 600px;  Limita a largura máxima */
   height: 50%;
   margin-bottom: 250px;
   display: flex;
@@ -249,19 +278,19 @@
   align-items: center;
   color: var(--cor_09);
   text-align: center;
-  padding: 20px; /* Espaço interno para evitar que o texto fique muito colado nas bordas */
+  padding: 20px;
 }
-
 /* Títulos */
 .fullscreen-conteudo h1 {
-  font-size: 4rem; /* Ajuste do tamanho da fonte */
-  margin-bottom: 10px; /* Espaçamento entre os títulos */
+  font-size: 4rem;
+  margin-bottom: 10px;
 }
 
-.fullscreen-conteudo h2 {
-  font-size: 2rem; /* Ajuste do tamanho da fonte */
-  margin-bottom: 20px;
-}
+/* ============================================= */
+/* ============================================= */
+
+
+
 
 /* Botão */
 .btn.saiba-mais {
@@ -278,30 +307,32 @@
 }
 
 .btn.saiba-mais:hover {
-  background-color: var(--cor_06); /* Cor do botão quando o usuário passa o mouse */
+  background-color: var(--cor_06);
 }
 
 @media screen and (max-width: 768px) {
-  /* Ajustes para telas pequenas */
   .fullscreen-conteudo {
     width: 90%;
-    max-width: none; /* Remove a limitação de largura máxima */
-    padding: 15px; /* Menos padding para dispositivos menores */
+    max-width: none;
+    padding: 15px;
   }
 
   .fullscreen-conteudo h1 {
-    font-size: 1.8rem; /* Menor tamanho de fonte para h1 */
+    font-size: 1.8rem;
   }
 
+  /*
   .fullscreen-conteudo h2 {
-    font-size: 1.1rem; /* Menor tamanho de fonte para h2 */
+    font-size: 1.1rem;
   }
+    */
 
   .btn.saiba-mais {
-    font-size: 0.8rem; /* Ajuste do tamanho da fonte do botão */
-    padding: 10px 20px; /* Ajuste do padding do botão */
+    font-size: 0.8rem;
+    padding: 10px 20px;
   }
 }
+
 
 
 

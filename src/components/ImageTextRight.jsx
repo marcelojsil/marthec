@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './components.css'; // Arquivo CSS para estilos
+import '../css/components.css'; // Arquivo CSS para estilos
 
 const MyComponentRight = () => {
   const [isVisible, setIsVisible] = useState(false);

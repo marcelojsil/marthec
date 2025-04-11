@@ -1,12 +1,12 @@
 import React from 'react';
-import './components.css'; 
+import '../css/components.css'; 
 
 const SubTitulos = ({children, color}) => {
  
 
   return (
 
-    <div className="sub-titulos" style={{ color: color }}>{children}</div>
+    <div className="sub-titulos" style={{ color: color }}> {children} </div>
 
   );
 };

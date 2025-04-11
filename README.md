@@ -42,6 +42,21 @@ editar index.js
     EXEMPLO: <span className="material-symbols-outlined">home</span>
 
 
+## =============
+## DESCRÇÃO DE NECESSIDADES DOS COMPONENTES
+## =============
+
+# SECMAIN
+A primeira área que o visitante verá, então ela deve ser impactante. Inclua:
+    OK - Imagem ou vídeo de fundo: Algo que mostre seu trabalho ou o ambiente tecnológico. Pode ser uma animação    de código, pessoas trabalhando, ou imagens de sites desenvolvidos.
+    OK - Título de impacto: Algo que descreva o que a empresa faz em poucas palavras. Exemplo: "Desenvolvemos   sites personalizados para seu negócio".
+    OK - Subtítulo: Uma explicação breve, como "Crie uma presença digital incrível e aumente seu alcance com    nossos sites modernos e responsivos".
+    - Call-to-Action (CTA): Botões como “Solicite um orçamento” ou “Veja nosso portfólio”.
+    - Proposta de valor: Um pequeno texto com o diferencial da empresa, por exemplo: "Sites rápidos, responsivos    e focados em resultados."  
+  
+
+
+
 
 
 

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import Menu from "../components/Menu";
+import React , { useState }  from "react";
 import "./header.css";
 import Logo from "../img/logo-semfundo.png";
+import Menu from "../components/Menu";
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+   const [menuOpen, setMenuOpen] = useState(false); 
 
   return (
     <header className="header">

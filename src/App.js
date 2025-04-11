@@ -8,9 +8,9 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import WhatsAppButton from './components/whatsapp';
 
 import Home from './main/Home';
-import Sobre from './main/Sobre';
-import Servicos from './main/Servicos';
-import Contato from './main/Contato';
+//import Sobre from './main/Sobre';
+//import Servicos from './main/Servicos';
+//import Contato from './main/Contato';
 
 function App() {
   return (
@@ -24,9 +24,9 @@ function App() {
                   <div className="routes-app">
                     <Routes>
                       <Route path="/" element={<Home />} />
-                      <Route path="/sobre" element={<Sobre />} />
+                      {/*<Route path="/sobre" element={<Sobre />} />
                       <Route path="/servicos" element={<Servicos />} />
-                      <Route path="/contato" element={<Contato />} />
+                      <Route path="/contato" element={<Contato />} /> */}
                     </Routes>
                   </div>
     
@@ -34,7 +34,10 @@ function App() {
                 <Footer />
                 <ScrollToTopButton />
                 <WhatsAppButton />
+              
+
               </nav>
+               
             
             </Router>
   );
