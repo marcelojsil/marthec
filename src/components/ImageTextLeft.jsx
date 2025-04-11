@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import '../css/components.css'; // Arquivo CSS para estilos
+import '../css/components.css'; 
 import Parceria from '../img/solucao-1.png';
 
 

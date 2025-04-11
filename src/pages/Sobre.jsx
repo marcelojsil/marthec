@@ -1,14 +1,40 @@
 import React from "react";
-
+import "../css/components.css";
+import H2 from "../components/HTwo";
 
 const Sobre = () => {
+  const dados = [
+    {
+      titulo: "Visão",
+      descricao: "Ser referência em desenvolvimento web, entregando soluções inovadoras e sob medida para nossos clientes.",
+    },
+    {
+      titulo: "Missão",
+      descricao: "Ajudar empresas a crescerem no mundo digital por meio de sites eficientes, responsivos e estratégicos.",
+    },
+    {
+      titulo: "Valores",
+      descricao: "Compromisso com a qualidade, ética profissional, inovação constante e foco nos resultados dos clientes.",
+    },
+  ];
+
   return (
-    <ul className="sobre">
-    </ul>
+    <sectiion className="sobre">
+    <section className="vmv-container">
+      {dados.map((item, index) => (
+        <div key={index} className="vmv-card">
+          <H2 color="#1a2730" >{item.titulo}</H2>
+          
+          <p>{item.descricao}</p>
+        </div>
+      ))}
+    </section>
+    </sectiion>
   );
 };
 
 export default Sobre;
+
 
 
 {/*

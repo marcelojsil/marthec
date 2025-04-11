@@ -8,6 +8,7 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import WhatsAppButton from './components/whatsapp';
 
 import Home from './main/Home';
+
 //import Sobre from './main/Sobre';
 //import Servicos from './main/Servicos';
 //import Contato from './main/Contato';
@@ -29,7 +30,8 @@ function App() {
                       <Route path="/contato" element={<Contato />} /> */}
                     </Routes>
                   </div>
-    
+                        
+                
               
                 <Footer />
                 <ScrollToTopButton />
