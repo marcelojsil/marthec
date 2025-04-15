@@ -6,6 +6,7 @@ import DivsDeslizantes from "../components/DivsDeslizantes";
 import SubTitulos from "../components/SubTitulos";
 import SecMain from "../pages/SecMain";
 import Sobre from "../pages/Sobre";
+import Servicos from "../pages/Servicos";
 
 
 
@@ -22,6 +23,11 @@ const Home = () => {
         <SubTitulos color="#fff" >Comprometidos com o crescimento do seu negócio</SubTitulos>
       </section>
       < Sobre />
+
+      <section className="home-servicos-titulo">
+        <SubTitulos color="#e95d2c" >Serviços Prestados</SubTitulos>
+      </section>
+      <Servicos />
       
 
       {/*

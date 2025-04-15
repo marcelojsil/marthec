@@ -1,18 +1,24 @@
 import React from "react";
 import "../css/components.css";
 import H2 from "../components/HTwo";
+import visao from "../img/visao-removebg.png";
+import missao from "../img/missao-removebg.png";
+import valor from "../img/valores-removebg.png";
 
 const Sobre = () => {
   const dados = [
     {
+      image: visao,
       titulo: "Visão",
       descricao: "Ser referência em desenvolvimento web, entregando soluções inovadoras e sob medida para nossos clientes.",
     },
     {
+      image: missao,
       titulo: "Missão",
       descricao: "Ajudar empresas a crescerem no mundo digital por meio de sites eficientes, responsivos e estratégicos.",
     },
     {
+      image: valor,
       titulo: "Valores",
       descricao: "Compromisso com a qualidade, ética profissional, inovação constante e foco nos resultados dos clientes.",
     },
@@ -20,12 +26,16 @@ const Sobre = () => {
 
   return (
     <sectiion className="sobre">
-    <section className="vmv-container">
+    <section className="vmv-container container-sobre">
       {dados.map((item, index) => (
-        <div key={index} className="vmv-card">
-          <H2 color="#1a2730" >{item.titulo}</H2>
+        <div key={index} className="vmv-card card-sobre">
+
+          <div className="card-sobre-item">
+              <img src={item.image} />
+              <H2 color="#1a2730" >{item.titulo}</H2>
+          </div>
           
-          <p>{item.descricao}</p>
+          <p className="card-sobre-p">{item.descricao}</p>
         </div>
       ))}
     </section>

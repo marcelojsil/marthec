@@ -421,7 +421,7 @@
 
 
 .sub-titulos {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bolder;
   text-align: center;
   margin: 30px 10px;
@@ -430,7 +430,7 @@
 @media screen and (max-width: 768px) {
   
   .sub-titulos {
-    font-size: 2.5em;
+    font-size: 2rem;
   }
 
 }
@@ -501,19 +501,47 @@
 /* =================================== */
 /* ============= SOBRE =============== */
 /* =================================== */
+
+.sobre,.servicos {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sobre {
+  background-color: var(--cor_01);
+}
+.servicos {
+  background-color: var(--cor_09);
+}
 .vmv-container {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  height: 50vh;
+  height: auto;
   gap: 20px;
   padding: 40px 20px;
   flex-wrap: wrap;
-  background-color: var(--cor_04);
+}
+.container-sobre {
+  height: 70vh;
+  background-color: var(--cor_01);
+}
+
+.container-servicos {
+  background-color: var(--cor_09);
+}
+.card-sobre {
+  background-color: var(--cor_09);
+}
+.card-sobre:hover {
+  background-color: var(--cor_07);
+}
+.card-servicos {
+  background-color: var(--cor_01);
 }
 .vmv-card {
   flex: 1 1 300px;
-  background: white;
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -524,10 +552,21 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  text-align: center;
 }
 .vmv-card:hover {
-  transform: translateY(-10px);
+  
+  transform: translateY(-20px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.card-sobre-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-sobre img {
+  width: 20%;
 }
 
 .vmv-card h3 {
@@ -536,16 +575,19 @@
   margin-bottom: 15px;
 }
 
-.vmv-card p {
-  color: #333;
-  font-size: 1rem;
-  line-height: 1.6;
+.card-sobre-p {
+  font-size: 2rem;
+  color: var(--cor_01);
 }
+.card-servicos-p {
+  color: var(--cor_09);
+}
+
 
 /* Responsivo para tablets e celulares */
 @media screen and (max-width: 768px) {
   .vmv-container {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
   }
 
@@ -555,12 +597,4 @@
   }
 }
 
-@media screen and (max-width: 480px) {
-  .vmv-card h3 {
-    font-size: 1.3rem;
-  }
 
-  .vmv-card p {
-    font-size: 0.95rem;
-  }
-}
