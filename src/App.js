@@ -22,26 +22,23 @@ function App() {
               
                 <Header />
     
-                  <div className="routes-app">
-                    <Routes>
-                      <Route path="/" element={<Home />} />
-                      {/*<Route path="/sobre" element={<Sobre />} />
-                      <Route path="/servicos" element={<Servicos />} />
-                      <Route path="/contato" element={<Contato />} /> */}
-                    </Routes>
-                  </div>
-                        
+                <div className="routes-app">
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    {/*<Route path="/sobre" element={<Sobre />} />
+                    <Route path="/servicos" element={<Servicos />} />
+                    <Route path="/contato" element={<Contato />} /> */}
+                  </Routes>
+                </div>                
+              
                 
-              
-                <Footer />
                 <ScrollToTopButton />
-                <WhatsAppButton />
-              
+                <WhatsAppButton />              
 
-              </nav>
-               
+              </nav>               
             
             </Router>
+            
   );
 };
 

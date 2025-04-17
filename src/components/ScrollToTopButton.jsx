@@ -25,7 +25,7 @@ function ScrollToTopButton() {
 
   return visible ? (
     <button className="scroll-to-top" onClick={scrollToTop}>
-      Voltar ao Topo
+      TOPO
     </button>
   ) : null;
 }

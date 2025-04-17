@@ -25,23 +25,21 @@ const Servicos = () => {
   ];
 
   return (
-    <sectiion className="Servicos">
+    <section className="servicos">
 
             <section className="vmv-container container-servicos">
               {dados.map((item, index) => (
                 <div key={index} className="vmv-card card-servicos">
-                  
-                   
-                      <img src={item.image} />
-                      <H2 color="#e95d2c" >{item.titulo}</H2>
-                  
-
+                     
+                  <img src={item.image} />
+                  <H2 color="#e95d2c" >{item.titulo}</H2>
                   <p className="card-servicos-p">{item.descricao}</p>
+                
                 </div>
               ))}
             </section>
 
-    </sectiion>
+    </section>
   );
 };
 

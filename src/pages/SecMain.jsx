@@ -2,9 +2,11 @@ import React from "react";
 import H2 from "../components/HTwo";
 import "../css/components.css";
 
+
 const SecMain = () => {
   return (
     <div className="fullscreen-container">
+
       <div className="overlay">
         <div className="fullscreen-conteudo">
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import '../css/components.css'; // Arquivo CSS para estilos
+import SubTitulos from './SubTitulos';
 
 const MyComponentRight = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,8 +32,9 @@ const MyComponentRight = () => {
             
             <p>Com um site profissional, seu negócio alcança mais clientes 
             e expande suas oportunidades no mercado digital.</p>
+
+            <SubTitulos color="#e95d2c">Marthec, levando seu negócio além!</SubTitulos>
             
-            <h2>Marthec, levando seu negócio além!</h2>
         </div>
 
     

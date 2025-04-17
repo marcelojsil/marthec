@@ -34,7 +34,7 @@ const Sobre = () => {
               <img src={item.image} />
               <H2 color="#1a2730" >{item.titulo}</H2>
           </div>
-          
+
           <p className="card-sobre-p">{item.descricao}</p>
         </div>
       ))}

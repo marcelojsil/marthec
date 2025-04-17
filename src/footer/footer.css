@@ -1,7 +1,7 @@
 @import "../style.css";
 
 .footer {
-    background: var(--cor_01);
+    
     padding: 40px 20px;
     text-align: center;
   }
@@ -29,6 +29,7 @@
     border-bottom: 2px solid #444;
     display: inline-block;
     padding-bottom: 5px;
+    color: var(--cor_06);
   }
   
   .footer a {
