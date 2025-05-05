@@ -3,11 +3,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './style.css';
 
 import Header from './header/Header';
-import Footer from './footer/Footer';
+
 import ScrollToTopButton from './components/ScrollToTopButton';
 import WhatsAppButton from './components/whatsapp';
 
 import Home from './main/Home';
+import ClientsView from './components/supabase/ClientsView';
+import ClientEdit from './components/supabase/ClientsEdit';
+import LeadView from './components/supabase/LeadView';
 
 //import Sobre from './main/Sobre';
 //import Servicos from './main/Servicos';
@@ -28,10 +31,13 @@ function App() {
                     {/*<Route path="/sobre" element={<Sobre />} />
                     <Route path="/servicos" element={<Servicos />} />
                     <Route path="/contato" element={<Contato />} /> */}
+                    <Route path="/Clientes" element={<ClientsView />} />
+                    <Route path='/ClientesEdit:id' element={<ClientEdit />} />
+                    <Route path='/Lead' element={<LeadView />} />
                   </Routes>
                 </div>       
-                
-                         
+
+
               
                 
                 <ScrollToTopButton />

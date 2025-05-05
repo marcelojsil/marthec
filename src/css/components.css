@@ -71,6 +71,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5em;
+  margin-bottom: 2rem;
 }
 .saiba-mais {
   background-color: var(--cor_08);
@@ -669,3 +670,230 @@
 
 
 /* ====== BACKGROUND ========= */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container do formulário */
+.form {
+  width: 100%;
+  margin: 3rem 0;
+}
+.form-container {
+  max-width: 400px;
+  margin: auto;
+  
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Título */
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--cor_09);
+}
+
+/* Mensagem */
+.message {
+  background-color: #d1fae5;
+  color: #065f46;
+  border: 1px solid #10b981;
+  padding: 0.75rem 1rem;
+  border-radius: 0.375rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Grupos de input */
+.input-group {
+  margin-bottom: 1.25rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: var(--cor_09);
+}
+
+.input {
+  width: 80%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  border-color: var(--cor_08);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+  outline: none;
+}
+
+/* Botão */
+.submit-button {
+  width: 50%;
+  background-color: #2563eb;
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+  background-color: #1e40af;
+}
+
+.submit-button:disabled,
+.submit-button.loading {
+  background-color: #93c5fd;
+  cursor: not-allowed;
+}
+
+
+
+
+/* ======== SUPABASE VIEW ======= */
+
+.leads-list {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.leads-list h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: #1f2937;
+}
+
+/* Tabela desktop */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+thead {
+  background-color: #f3f4f6;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 0.95rem;
+}
+
+th {
+  font-weight: 600;
+  color: #374151;
+}
+
+td {
+  color: #4b5563;
+}
+
+tr:hover {
+  background-color: #f9fafb;
+}
+
+button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+
+/* Responsivo: modo card/mobile */
+@media (max-width: 768px) {
+  table,
+  thead,
+  tbody,
+  th,
+  td,
+  tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  td {
+    border: none;
+    padding: 0.5rem 0;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  td::before {
+    position: absolute;
+    left: 1rem;
+    top: 0.5rem;
+    width: 45%;
+    font-weight: bold;
+    white-space: nowrap;
+    color: #6b7280;
+  }
+
+  td:nth-of-type(1)::before {
+    content: 'Cliente';
+  }
+
+  td:nth-of-type(2)::before {
+    content: 'Domínio';
+  }
+
+  td:nth-of-type(3)::before {
+    content: 'Cidade';
+  }
+
+  td:nth-of-type(4)::before {
+    content: 'Ações';
+  }
+}

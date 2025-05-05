@@ -1,15 +1,11 @@
 import React from "react";
 import "../css/style.css";
-//import FullScreenImg from "../components/FullImage";
 import DivsDeslizantes from "../components/DivsDeslizantes";
-//import BackgroundEffect from "../components/BackTransition";
 import SubTitulos from "../components/SubTitulos";
 import SecMain from "../pages/SecMain";
 import Sobre from "../pages/Sobre";
 import Servicos from "../pages/Servicos";
 import ParallaxSection from "../components/Parallax";
-
-import Formulario from "../components/supabase/FormLead";
 
 
 
@@ -33,7 +29,9 @@ const Home = () => {
       </section>
       <Servicos />
 
-      <Formulario />
+      <a href="/Lead">
+        <div className="btn saiba-mais">Ver Lead</div>
+      </a>
 
       <ParallaxSection />
            
