@@ -9,7 +9,7 @@ import Sobre from "../pages/Sobre";
 import Servicos from "../pages/Servicos";
 import ParallaxSection from "../components/Parallax";
 
-import Footer from "../footer/Footer";
+import Formulario from "../components/supabase/FormLead";
 
 
 
@@ -32,6 +32,8 @@ const Home = () => {
         <SubTitulos color="#e95d2c" >Serviços Prestados</SubTitulos>
       </section>
       <Servicos />
+
+      <Formulario />
 
       <ParallaxSection />
            

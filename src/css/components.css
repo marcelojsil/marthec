@@ -520,7 +520,7 @@
   align-items: stretch;
   height: auto;
   gap: 20px;
-  
+  margin-bottom: 20px;
   flex-wrap: wrap;
 }
 .vmv-card {
@@ -581,9 +581,6 @@
 }
 .card-sobre img {
   width: 20%;
-}
-.servicos {
-  background-color: rgba(26, 39, 48, 0.5);;
 }
 .container-servicos {
   background-color: var(--cor_09);
