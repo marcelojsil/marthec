@@ -16,7 +16,7 @@ body {
 }
 a {text-decoration: none;}
 h1 {font-size: 5rem; color: var(--cor_09);}
-.text-h2 {font-size: 3em; }
+.text-h2 {width: 100%;font-size: 3em; }
 h3 {font-size: 1.8em; color: var(--cor_09);}
 h4 {font-size: 1.6em; color: var(--cor_09);}
 h5 {font-size: 1.4em; color: var(--cor_09);}

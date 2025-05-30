@@ -34,6 +34,7 @@ function App() {
                     <Route path="/Clientes" element={<ClientsView />} />
                     <Route path='/ClientesEdit:id' element={<ClientEdit />} />
                     <Route path='/Lead' element={<LeadView />} />
+                    <Route path='/admin-site' element={<LeadView />} />
                   </Routes>
                 </div>       
 

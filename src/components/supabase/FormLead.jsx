@@ -5,8 +5,8 @@ import '../../css/components.css';  // Importação do arquivo CSS
 import H2 from '../HTwo';
 
 // Inicialize o cliente Supabase
-const supabaseUrl = 'https://xlabrfblnrbgsneltjzp.supabase.co'  // Substitua pela URL do seu Supabase
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsYWJyZmJsbnJiZ3NuZWx0anpwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc0NjQ0OTM2OSwiZXhwIjoyMDYyMDI1MzY5fQ.UkOrLcZf6x-PlMKiFo9U8VLXYcn1RlKVOSxgi7XxkGY'  // Substitua pela sua chave pública do Supabase
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL  // Substitua pela URL do seu Supabase
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY  // Substitua pela sua chave pública do Supabase
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const FormLead = () => {
@@ -93,14 +93,19 @@ const FormLead = () => {
 
         <button
           type="submit"
-          className={`submit-button ${loading ? 'loading' : ''}`}
+          className={`btn saiba-mais ${loading ? 'loading' : ''}`}
           disabled={loading}
         >
-          {loading ? 'Enviando...' : 'Cadastrar'}
+          {loading ? 'Enviando...' : 'Enviar'}
         </button>
       </form>
     </div>
   );
+
+  
+
 };
+
+
 
 export default FormLead;

@@ -32,7 +32,6 @@ h5 {
 }
 .routes-app {
   width: auto;
-
 }
 
 
@@ -45,6 +44,7 @@ h5 {
 
 }
 
+
 .home {
   width: 100%;
   display: flex;
@@ -53,10 +53,6 @@ h5 {
   align-items: center;
   text-align: center;
 }
-
-
-
-
 .home-sobre-titulo {
     width: 100%;
     height: auto;
