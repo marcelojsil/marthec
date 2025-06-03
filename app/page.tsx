@@ -1,18 +1,15 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Badge } from "@/components/ui/badge"
 import { useToast } from "@/hooks/use-toast"
 import {
-  Code,
   Smartphone,
   Search,
-  Zap,
   Users,
-  Star,
   CheckCircle,
   ArrowUp,
   Phone,
@@ -30,12 +27,17 @@ import {
   Award,
   Target,
   Rocket,
+  FileText,
+  FilePen,
+  MonitorCog
 } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import type React from "react"
-import Post from "next/server"
+import Portfolio from "@/components/portifolio"
+import {AnchorButton} from "@/components/ui/link-button"
+
 
 export default function DevSitesPindaLanding() {
   const [showScrollTop, setShowScrollTop] = useState(false)
@@ -172,7 +174,7 @@ export default function DevSitesPindaLanding() {
             backgroundImage: "url('/fundo_site.png')",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-br from-[#1a2730]/95 to-[#1a2730] opacity-85"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a2730]/95 to-[#1a2730] opacity-85"></div>
           <div className="container px-4 md:px-6 relative">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-8">
@@ -191,23 +193,28 @@ export default function DevSitesPindaLanding() {
                     o seu negócio
                   </h1>
                   <p className="text-xl text-[#b0cee2] leading-relaxed">
-                    Criamos sites profissionais para prestadores de serviço, pequenas empresas e MEI. Aumente suas
-                    vendas com presença digital de qualidade.
+                    Criamos sites profissionais com foco em pequenas empresas, MEI e prestadores de serviço. Impulsione a presença digital do seu negócio.
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-[#e95d2c] to-[#ff8a5b] hover:from-[#d14f26] hover:to-[#f57f4c]"
-                  >
-                    <Rocket className="h-5 w-5 mr-2" />
-                    Impulsione seu Negócio
-                  </Button>
-                  <Button variant="outline" size="lg" className="border-[#b0cee2] text-[#b0cee2] hover:bg-[#1a2730]/20">
+                <div className="flex flex-col sm:flex-row gap-4 justify-end">
+   
+                    <AnchorButton 
+                      href="#contato" 
+                      size="lg" 
+                      className="bg-gradient-to-r from-[#e95d2c] to-[#ff8a5b] hover:from-[#d14f26] hover:to-[#f57f4c]"
+                    >
+                      <Rocket className="h-5 w-5 mr-2" />
+                      Impulsione seu Negócio 2
+                    </AnchorButton>
+
+                  
+                  {/*
+                  <Button variant="outline" size="lg" className="border-[#b0cee2] text-[#1a2730] hover:bg-[#b0cee2]/20 hover:text-[#b0cee2]">
                     <Globe className="h-5 w-5 mr-2" />
-                    Ver Portfólio
+                    Tire suas Dúvidas
                   </Button>
+                  */} 
                 </div>
 
                 <div className="flex items-center space-x-8 text-sm text-[#b0cee2]">
@@ -221,7 +228,7 @@ export default function DevSitesPindaLanding() {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#f8cc53] mr-2" />
-                    Suporte incluso
+                    SEO de qualidade
                   </div>
                 </div>
               </div>
@@ -249,7 +256,7 @@ export default function DevSitesPindaLanding() {
         <section className="py-20 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Especialistas em Sites para</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Especialistas em Sites para ...</h2>
               <p className="text-xl text-[#45586c] max-w-3xl mx-auto">
                 Desenvolvemos soluções digitais sob medida para diferentes tipos de negócio
               </p>
@@ -439,51 +446,12 @@ export default function DevSitesPindaLanding() {
         </section>
 
         {/* Portfólio */}
-        <section id="portfolio" className="py-20 bg-white">
-          <div className="container px-4 md:px-6">
-            <div className="text-center mb-16">
-              <Badge className="mb-4 bg-[#e95d2c] text-[#fff]">Nosso Trabalho</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Sites que criamos</h2>
-              <p className="text-xl text-[#45586c] max-w-3xl mx-auto">
-                Veja alguns projetos que desenvolvemos para nossos clientes
-              </p>
-            </div>
+       
+        <Portfolio />  
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
-                <Card
-                  key={item}
-                  className="border-0 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 overflow-hidden"
-                >
-                  <div className="aspect-video bg-[#b0cee2]/20">
-                    <Image
-                      src={`/placeholder.svg?height=200&width=300&text=Projeto ${item}`}
-                      width={300}
-                      height={200}
-                      alt={`Projeto ${item}`}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold text-[#1a2730] mb-2">Cliente {item}</h3>
-                    <p className="text-sm text-[#45586c] mb-4">
-                      {item % 3 === 1 ? "Prestador de Serviço" : item % 3 === 2 ? "Pequena Empresa" : "MEI"}
-                    </p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full border-[#e95d2c] text-[#e95d2c] hover:bg-[#e95d2c]/10"
-                    >
-                      Ver Projeto
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
-        {/* Depoimentos */}
+        {/*
+        {/* Depoimentos 
         <section className="py-20 bg-[#1a2730]">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
@@ -560,29 +528,34 @@ export default function DevSitesPindaLanding() {
             </div>
           </div>
         </section>
+        */}
+
 
         {/* Preços */}
         <section id="precos" className="py-20 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <Badge className="mb-4 bg-[#f8cc53] text-[#1a2730]">Planos e Preços</Badge>
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Escolha o plano ideal</h2>
+              <Badge className="mb-4 bg-[#f8cc53] text-[#1a2730]">Escolha o plano ideal</Badge>
+              
               <p className="text-xl text-[#45586c] max-w-3xl mx-auto">
-                Preços justos e transparentes para todos os tipos de negócio
+                Preço justo e transparência para todos os tipos de negócio
               </p>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4 pt-6">
+                Planos por Assinatura
+              </h2>
             </div>
 
             <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl mb-2 text-[#1a2730]">Básico</CardTitle>
-                  <div className="text-3xl font-bold text-[#1a2730]">R$ 497</div>
-                  <p className="text-sm text-[#45586c]">Ideal para MEI</p>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 34,90/mês</div>
+                  <p className="text-sm text-[#45586c]">Site institucional simples</p>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="flex-grow space-y-3">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Site de até 5 páginas</span>
+                    <span className="text-sm text-[#45586c]">Página única</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
@@ -598,88 +571,114 @@ export default function DevSitesPindaLanding() {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">SEO básico</span>
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
                   </div>
-                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
                 </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
               </Card>
 
-              <Card className="border-2 border-[#e95d2c] hover:border-[#a63e1b] transition-colors relative">
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#e95d2c] hover:border-[#a63e1b] transition-colors relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <Badge className="bg-[#e95d2c] text-[#fff]">Mais Popular</Badge>
                 </div>
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl mb-2 text-[#1a2730]">Profissional</CardTitle>
-                  <div className="text-3xl font-bold text-[#1a2730]">R$ 897</div>
-                  <p className="text-sm text-[#45586c]">Ideal para Pequenas Empresas</p>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 49,90/mês</div>
+                  <p className="text-sm text-[#45586c]">Site institucional com até 5 páginas</p>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="flex-grow space-y-3">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Site de até 10 páginas</span>
+                    <span className="text-sm text-[#45586c]">Site com até 5 páginas</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Design personalizado</span>
+                    <span className="text-sm text-[#45586c]">Design responsivo</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Sistema de agendamento</span>
+                    <span className="text-sm text-[#45586c]">Formulário de contato</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Chat WhatsApp</span>
+                    <span className="text-sm text-[#45586c]">Integração redes sociais</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">SEO avançado</span>
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">SEO Avançado</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
                     <span className="text-sm text-[#45586c]">Google Analytics</span>
                   </div>
-                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
                 </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
               </Card>
 
-              <Card className="border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
                 <CardHeader className="text-center pb-4">
                   <CardTitle className="text-xl mb-2 text-[#1a2730]">Premium</CardTitle>
-                  <div className="text-3xl font-bold text-[#1a2730]">R$ 1.497</div>
-                  <p className="text-sm text-[#45586c]">Ideal para E-commerce</p>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 69,90/mês</div>
+                  <p className="text-sm text-[#45586c]">Site com até 5 páginas e CRM Simples</p>
                 </CardHeader>
-                <CardContent className="space-y-3">
+                <CardContent className="flex-grow space-y-3">
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Loja virtual completa</span>
+                    <span className="text-sm text-[#45586c]">Site com até 5 páginas</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Até 100 produtos</span>
+                    <span className="text-sm text-[#45586c]">Design responsivo</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Gateway de pagamento</span>
+                    <span className="text-sm text-[#45586c]">Formulário de contato</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Gestão de estoque</span>
+                    <span className="text-sm text-[#45586c]">Integração redes sociais</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
-                    <span className="text-sm text-[#45586c]">Relatórios de vendas</span>
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">SEO Avançado</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Google Analytics</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Gestão de textos e Imagens</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Relatórios de Lead</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
                     <span className="text-sm text-[#45586c]">Suporte prioritário</span>
                   </div>
-                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
                 </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
               </Card>
             </div>
 
             <div className="text-center mt-12">
-              <p className="text-[#45586c] mb-4">Todos os planos incluem:</p>
+              <p className="text-[#45586c] mb-4">Todos os <b>Planos por Assinatura</b> incluem:</p>
               <div className="flex flex-wrap justify-center gap-6 text-sm text-[#45586c]">
                 <div className="flex items-center">
                   <Award className="h-4 w-4 text-[#e95d2c] mr-2" />
@@ -690,19 +689,222 @@ export default function DevSitesPindaLanding() {
                   Entrega em até 7 dias
                 </div>
                 <div className="flex items-center">
-                  <Zap className="h-4 w-4 text-[#e95d2c] mr-2" />
-                  Suporte técnico
+                  <Globe className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Domínio e hospedagem
+                </div>
+                <div className="flex items-center">
+                  <FileText className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Relatório semanal de lead
+                </div>
+                <div className="flex items-center">
+                  <FilePen className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Edições do site
+                </div>
+                <div className="flex items-center">
+                  <MonitorCog className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Suporte técnico Integral
                 </div>
               </div>
             </div>
           </div>
         </section>
 
+        <section id="precos" className="py-20 bg-white">
+        <div className="container px-4 md:px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4 pt-6">
+                Planos por Desenvolvimento
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#e95d2c] hover:border-[#a63e1b] transition-colors relative">
+                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                  <Badge className="bg-[#e95d2c] text-[#fff]">Mais Popular</Badge>
+                </div>
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl mb-2 text-[#1a2730]">Básico</CardTitle>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 499,00</div>
+                  <p className="text-sm text-[#45586c]">Em até 10x sem juros</p>
+                  <p className="text-sm text-[#45586c]">Site institucional simples</p>
+                </CardHeader>
+                <CardContent className="flex-grow space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Página única</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Design responsivo</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Formulário de contato</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Integração redes sociais</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
+                  </div>
+                </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
+               
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl mb-2 text-[#1a2730]">Profissional</CardTitle>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 699,00</div>
+                  <p className="text-sm text-[#E95D2C]">Preço promocional em 10x s/ juros</p>
+                  <p className="text-sm text-[#45586c]">Site institucional com até 5 páginas</p>
+                </CardHeader>
+                <CardContent className="flex-grow space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Site com até 5 páginas</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Design responsivo</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Formulário de contato</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Integração redes sociais</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">SEO Avançado</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Google Analytics</span>
+                  </div>
+                </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col min-h-[300px] border-2 border-[#b0cee2] hover:border-[#e95d2c] transition-colors">
+                <CardHeader className="text-center pb-4">
+                  <CardTitle className="text-xl mb-2 text-[#1a2730]">Premium</CardTitle>
+                  <div className="text-3xl font-bold text-[#1a2730]">R$ 999,00</div>
+                  <p className="text-sm text-[#E95D2C]">Preço promocional em 10x s/ juros</p>
+                  <p className="text-sm text-[#45586c]">Site com até 5 páginas e CRM Simples</p>
+                </CardHeader>
+                <CardContent className="flex-grow space-y-3">
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Site com até 5 páginas</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Design responsivo</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Formulário de contato</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Integração redes sociais</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Botão Whatsapp</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">SEO Avançado</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Google Analytics</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Gestão de textos e Imagens</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Relatórios de Lead</span>
+                  </div>
+                  <div className="flex items-center">
+                    <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-3" />
+                    <span className="text-sm text-[#45586c]">Suporte prioritário</span>
+                  </div>
+                </CardContent>
+                <CardFooter className="text-center pb-4">
+                  <Button className="w-full mt-6 bg-[#e95d2c] hover:bg-[#a63e1b] text-[#fff]">Escolher Plano</Button>
+                </CardFooter>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-[#45586c] mb-4">Todos os <b>Planos por Desenvolvimento</b> incluem:</p>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-[#45586c]">
+                <div className="flex items-center">
+                  <Award className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Garantia de 30 dias
+                </div>
+                <div className="flex items-center">
+                  <Clock className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Entrega em até 7 dias
+                </div>
+                <div className="flex items-center">
+                  <MonitorCog className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Suporte técnico para o código
+                </div>
+              </div>
+            </div>
+            <div className="text-center mt-12">
+              <p className="text-[#45586c] mb-4"><b>não</b> incluem:</p>
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-[#45586c]">
+                <div className="flex items-center">
+                  <Globe className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Domínio e hospedagem
+                </div>
+                <div className="flex items-center">
+                  <FileText className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Relatório semanal de lead
+                </div>
+                <div className="flex items-center">
+                  <FilePen className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Edições do site
+                </div>
+                <div className="flex items-center">
+                  <MonitorCog className="h-4 w-4 text-[#e95d2c] mr-2" />
+                  Suporte técnico Integral
+                </div>
+              </div>
+            </div>
+          </div>
+          </section>
+        
+
+
+
+
         {/* Contato */}
         <section id="contato" className="py-20 bg-[#b0cee2]/20">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
+              {/*
               <Badge className="mb-4 bg-[#f8cc53] text-[#1a2730]">Entre em Contato</Badge>
+              */}
               <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Vamos criar seu site?</h2>
               <p className="text-xl text-[#45586c] max-w-3xl mx-auto">
                 Entre em contato conosco e receba uma proposta personalizada
@@ -719,7 +921,7 @@ export default function DevSitesPindaLanding() {
                         <Phone className="h-6 w-6 text-[#fff]" />
                       </div>
                       <div>
-                        <p className="font-semibold text-[#1a2730]">(12) 99999-9999</p>
+                        <p className="font-semibold text-[#1a2730]">(12) 99102-2315</p>
                         <p className="text-[#45586c]">WhatsApp e ligações</p>
                       </div>
                     </div>
@@ -729,7 +931,7 @@ export default function DevSitesPindaLanding() {
                         <Mail className="h-6 w-6 text-[#b0cee2]" />
                       </div>
                       <div>
-                        <p className="font-semibold text-[#1a2730]">contato@devsitespinda.com.br</p>
+                        <p className="font-semibold text-[#1a2730]">contato@marthec.com.br</p>
                         <p className="text-[#45586c]">E-mail comercial</p>
                       </div>
                     </div>
@@ -740,7 +942,7 @@ export default function DevSitesPindaLanding() {
                       </div>
                       <div>
                         <p className="font-semibold text-[#1a2730]">Pindamonhangaba/SP</p>
-                        <p className="text-[#45586c]">Atendemos toda a região</p>
+                        <p className="text-[#45586c]">Atendemos todo o Brasil</p>
                       </div>
                     </div>
                   </div>
@@ -759,19 +961,19 @@ export default function DevSitesPindaLanding() {
                   <h4 className="font-semibold text-[#1a2730] mb-4">Redes Sociais</h4>
                   <div className="flex space-x-4">
                     <Link
-                      href="#"
+                      href="https://www.instagram.com"
                       className="w-10 h-10 bg-[#1a2730] rounded-lg flex items-center justify-center hover:bg-[#45586c] transition-colors"
                     >
                       <Instagram className="h-5 w-5 text-[#fff]" />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://www.facebook.com"
                       className="w-10 h-10 bg-[#e95d2c] rounded-lg flex items-center justify-center hover:bg-[#a63e1b] transition-colors"
                     >
                       <Facebook className="h-5 w-5 text-[#fff]" />
                     </Link>
                     <Link
-                      href="#"
+                      href="https://www.linkedin.com"
                       className="w-10 h-10 bg-[#f8cc53] rounded-lg flex items-center justify-center hover:bg-[#e7ad0c] transition-colors"
                     >
                       <Linkedin className="h-5 w-5 text-[#1a2730]" />
@@ -837,7 +1039,7 @@ export default function DevSitesPindaLanding() {
                         <option value="prestador-servico">Prestador de Serviço</option>
                         <option value="pequena-empresa">Pequena Empresa</option>
                         <option value="mei">MEI</option>
-                        <option value="ecommerce">E-commerce</option>
+                        <option value="ecommerce">Autônomo</option>
                       </select>
                     </div>
 
@@ -881,20 +1083,29 @@ export default function DevSitesPindaLanding() {
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
+                <Image
+                  src="/logo.png"
+                  width={40}
+                  height={30}
+                  alt="Desenvolvimento de sites"
+                  className="rounded-2xl shadow-2xl"
+                />
+                {/*
                 <div className="w-8 h-8 bg-[#e95d2c] rounded-lg flex items-center justify-center">
                   <Code className="h-5 w-5 text-[#fff]" />
                 </div>
-                <span className="text-xl font-bold text-[#fff]">DevSites Pinda</span>
+                */}
+                <span className="text-xl font-bold text-[#fff]">Marthec Web</span>
               </div>
-              <p className="text-[#b0cee2] mb-4">Desenvolvimento de sites profissionais em Pindamonhangaba/SP</p>
+              <p className="text-[#b0cee2] mb-4">Desenvolvimento de sites institucionais para seu negócio</p>
               <div className="flex space-x-3">
-                <Link href="#" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
+                <Link href="https://instagram.com" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
                   <Instagram className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
+                <Link href="https://www.facebook.com" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
                   <Facebook className="h-5 w-5" />
                 </Link>
-                <Link href="#" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
+                <Link href="https://www.linkedin.com" className="text-[#b0cee2] hover:text-[#fff] transition-colors">
                   <Linkedin className="h-5 w-5" />
                 </Link>
               </div>
@@ -904,9 +1115,9 @@ export default function DevSitesPindaLanding() {
               <h4 className="font-semibold mb-4 text-[#fff]">Serviços</h4>
               <div className="space-y-2 text-[#b0cee2]">
                 <p>Sites Institucionais</p>
-                <p>E-commerce</p>
                 <p>Design Responsivo</p>
-                <p>SEO</p>
+                <p>SEO de qualidade</p>
+                <p>Hospedagem</p>
               </div>
             </div>
 
@@ -916,34 +1127,42 @@ export default function DevSitesPindaLanding() {
                 <p>Prestadores de Serviço</p>
                 <p>Pequenas Empresas</p>
                 <p>MEI</p>
-                <p>E-commerce</p>
+                <p>Autônomos</p>
+                
               </div>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4 text-[#fff]">Contato</h4>
               <div className="space-y-2 text-[#b0cee2]">
-                <p>(12) 99999-9999</p>
-                <p>contato@devsitespinda.com.br</p>
+                <p>(12) 99102-2315</p>
+                <p>contato@marthec.com.br</p>
                 <p>Pindamonhangaba/SP</p>
               </div>
             </div>
           </div>
 
           <div className="border-t border-[#45586c] mt-8 pt-8 text-center text-[#b0cee2]">
-            <p>© {new Date().getFullYear()} DevSites Pinda. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} Marthec Web. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
 
-      {/* WhatsApp Button */}
-      <Link
-        href="https://wa.me/5512999999999"
-        target="_blank"
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#e95d2c] hover:bg-[#a63e1b] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
+    {/* WhatsApp Button */}
+    <Link
+      href="https://wa.me/551291022315"
+      target="_blank"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] hover:bg-[#128C7E] rounded-full flex items-center justify-center shadow-lg transition-all hover:scale-110"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-7 w-7 text-white"
+        viewBox="0 0 25 25"
+        fill="currentColor"
       >
-        <MessageCircle className="h-7 w-7 text-[#fff]" />
-      </Link>
+        <path d="M20.52 3.48a11.87 11.87 0 0 0-16.78 0 11.87 11.87 0 0 0-2.4 13.14L.02 24l7.59-1.98a11.87 11.87 0 0 0 5.64 1.44c6.56 0 11.9-5.34 11.9-11.9a11.86 11.86 0 0 0-4.63-9.08zM12.3 20.1c-1.8 0-3.57-.48-5.12-1.4l-.37-.22-4.51 1.17 1.21-4.4-.24-.38a9.81 9.81 0 0 1 1.47-11.63A9.87 9.87 0 0 1 21.6 12a9.9 9.9 0 0 1-9.3 8.1zm5.28-7.28c-.29-.14-1.7-.84-1.96-.93-.26-.1-.45-.14-.63.15s-.73.93-.9 1.12c-.17.2-.33.22-.62.07s-1.21-.45-2.3-1.42a8.54 8.54 0 0 1-1.57-1.95c-.17-.29-.02-.45.13-.6.13-.14.29-.37.44-.55.14-.18.19-.3.29-.5s.05-.37-.02-.52c-.07-.15-.63-1.52-.86-2.07s-.46-.48-.63-.49h-.54c-.18 0-.46.07-.7.3s-.91.88-.91 2.15.93 2.5 1.06 2.67c.13.17 1.83 2.79 4.45 3.91.62.27 1.1.42 1.47.54.62.2 1.18.17 1.62.1.5-.08 1.55-.63 1.77-1.24.22-.6.22-1.11.15-1.24-.08-.13-.26-.2-.55-.34z" />
+      </svg>
+    </Link>
 
       {/* Scroll to Top Button */}
       {showScrollTop && (
