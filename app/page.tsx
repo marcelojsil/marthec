@@ -256,7 +256,7 @@ export default function DevSitesPindaLanding() {
         <section className="py-20 bg-white">
           <div className="container px-4 md:px-6">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Especialistas em Sites para ...</h2>
+              <h2 className="text-3xl md:text-4xl font-bold text-[#1a2730] mb-4">Especialista em Sites para empresas</h2>
               <p className="text-xl text-[#45586c] max-w-3xl mx-auto">
                 Desenvolvemos soluções digitais sob medida para diferentes tipos de negócio
               </p>
@@ -277,15 +277,15 @@ export default function DevSitesPindaLanding() {
                   <div className="space-y-2 text-sm text-[#424048]">
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
-                      Agendamento online
-                    </div>
-                    <div className="flex items-center justify-center">
-                      <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
                       Portfólio de serviços
                     </div>
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
                       Depoimentos de clientes
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
+                      Relatório de Lead
                     </div>
                   </div>
                 </CardContent>
@@ -309,11 +309,11 @@ export default function DevSitesPindaLanding() {
                     </div>
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
-                      Sistema de pedidos
+                      Integração com WhatsApp
                     </div>
                     <div className="flex items-center justify-center">
                       <CheckCircle className="h-4 w-4 text-[#e95d2c] mr-2" />
-                      Integração WhatsApp
+                      Portfólio de serviços
                     </div>
                   </div>
                 </CardContent>
@@ -361,7 +361,7 @@ export default function DevSitesPindaLanding() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-[#1a2730] rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -371,7 +371,7 @@ export default function DevSitesPindaLanding() {
                   <p className="text-sm text-[#45586c]">Sites profissionais para apresentar sua empresa</p>
                 </CardContent>
               </Card>
-
+              {/*
               <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-[#e95d2c] rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -382,6 +382,16 @@ export default function DevSitesPindaLanding() {
                 </CardContent>
               </Card>
 
+              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-[#1a2730] rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="h-6 w-6 text-[#b0cee2]" />
+                  </div>
+                  <h3 className="font-semibold text-[#1a2730] mb-2">Analytics</h3>
+                  <p className="text-sm text-[#45586c]">Relatórios de visitantes e vendas</p>
+                </CardContent>
+              </Card>
+              */}
               <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-[#f8cc53] rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -414,21 +424,11 @@ export default function DevSitesPindaLanding() {
 
               <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 text-center">
-                  <div className="w-12 h-12 bg-[#1a2730] rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <BarChart3 className="h-6 w-6 text-[#b0cee2]" />
-                  </div>
-                  <h3 className="font-semibold text-[#1a2730] mb-2">Analytics</h3>
-                  <p className="text-sm text-[#45586c]">Relatórios de visitantes e vendas</p>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-md hover:shadow-lg transition-shadow">
-                <CardContent className="p-6 text-center">
                   <div className="w-12 h-12 bg-[#e95d2c] rounded-lg flex items-center justify-center mx-auto mb-4">
                     <MessageCircle className="h-6 w-6 text-[#fff]" />
                   </div>
-                  <h3 className="font-semibold text-[#1a2730] mb-2">Chat Online</h3>
-                  <p className="text-sm text-[#45586c]">Atendimento direto no site</p>
+                  <h3 className="font-semibold text-[#1a2730] mb-2">Integração com Whatsapp</h3>
+                  <p className="text-sm text-[#45586c]">Atendimento direto do site</p>
                 </CardContent>
               </Card>
 
