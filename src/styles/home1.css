@@ -151,3 +151,34 @@ Celular
     gap: 12px;
   }
 }
+
+/* Telas grandes (acima de 1400px) */
+@media (min-width: 1400px) {
+  .overlay {
+    max-width: 1400px; /* limita o conteúdo ao centro */
+    margin: 0 auto; /* centraliza */
+    padding: 0 5vw; /* reduz paddings laterais */
+  }
+
+  .home-left {
+    width: 45%; /* reduz um pouco para melhor equilíbrio */
+    padding-left: 30px;
+  }
+
+  .home-right {
+    width: 45%;
+  }
+
+  .home-left h1 {
+    font-size: 2.5rem; /* aumenta um pouco o destaque */
+  }
+
+  .home-left h2 {
+    font-size: 1.3rem;
+  }
+
+  .buttons {
+    gap: 25px; /* espaçamento mais confortável */
+  }
+}
+
