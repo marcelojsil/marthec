@@ -1,0 +1,163 @@
+@import "../global.css";
+
+.publico {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centraliza na horizontal */
+  align-items: center;   
+  gap: 50px;
+  padding-top: 50px;
+}
+
+/* ======= Container dos serviços ======= */
+#services {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* centraliza na horizontal */
+  align-items: center;   
+ 
+  text-align: center;
+  border-radius: 12px;
+ 
+}
+
+#services h2 {
+  font-size: 25px;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+/* ======= Cards wrapper ======= */
+.services-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* centraliza na horizontal */
+  align-items: stretch;      /* altura consistente */
+  gap: 1rem;                 /* espaçamento entre cards */
+  width: 90%;
+}
+
+/* ======= Card ======= */
+.card {
+  perspective: 1000px;
+  flex: 1 1 280px;    /* cresce até 280px mínimo, ocupa o espaço disponível */
+  width: 420px;
+  height: 440px;
+  margin: 0 auto;     /* garante centralização */
+}
+.lucide1, .lucide2, .lucide3 {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: var(--cor_09);
+}
+.lucide1 {
+  background-color: var(--cor_01);
+}
+.lucide2 {
+  background-color: var(--cor_05);
+}
+.lucide3 {
+  background-color: var(--cor_08);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 370px;
+  transition: transform 0.8s ease;
+  transform-style: preserve-3d;
+  transform-origin: center;  /* evita “pulo” no flip */
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  inset: 0;                     /* equivale a top:0; left:0; width:100%; height:100% */
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  font-size: 25px;
+  text-align: center;
+  border: 1px solid var(--cor_04);
+}
+
+.card-front {
+  background: #fff;
+  color: #222;
+  font-weight: bolder;
+  padding: 50px 0;
+}
+
+.lucide {
+  font-size: 20px;
+}
+
+.card-back {
+  background: var(--cor_01);
+  color: #fff;
+  transform: rotateY(180deg);
+  gap: 10px;
+}
+
+
+/* ======= Responsividade ======= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  #services h2 {
+    font-size: 1.8rem;
+  }
+
+  .card-inner {
+    height: 280px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+
+  #services,.publico {
+    width: auto;
+  }
+
+  #services h2 {
+    font-size: 1.5rem;
+  }
+
+  .services-flex {
+    flex-direction: column;  /* força coluna */
+    align-items: center;     /* centraliza */
+    gap: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 auto;
+    width: 80%;
+  }
+
+  .card-inner {
+    height: 240px;
+  }
+
+  .card-front,
+  .card-back {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}

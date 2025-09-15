@@ -1,0 +1,7 @@
+@import "../global.css";
+
+.footer {
+  width: 100%;
+  height: 15vh;
+  background-color: var(--cor_01);
+}

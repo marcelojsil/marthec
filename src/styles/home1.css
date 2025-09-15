@@ -1,0 +1,142 @@
+@import "../global.css";
+
+.home {
+  width: 100%;
+  min-height: 90vh;
+  background-image: url('../image/fundo_site.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--cor_09);
+}
+
+.overlay {
+  background-color: rgba(26, 39, 48, 0.95);
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.home-left {
+  width: 50%;
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.home-right {
+  width: 45%;
+  height: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #e7ad0c, #747373);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  background-clip: text;
+  color: transparent;
+}
+
+.diferenciais {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 15px;
+}
+.diferenciais div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+/* ===================== */
+/* Responsividade */
+/* ===================== */
+
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .overlay {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .home-left {
+    width: 100%;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .home-right {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .diferenciais {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .home {
+    min-height: auto;
+  }
+
+  .overlay {
+    padding: 20px 15px;
+  }
+
+  .home-left {
+    padding-left: 0px;
+  }
+
+  .home-left h1 {
+    font-size: 1.6rem;
+  }
+
+  .home-left h2 {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .buttons a {
+    width: 90%;
+    text-align: center;
+  }
+
+  .diferenciais {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
