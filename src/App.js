@@ -17,6 +17,7 @@ import Precos1 from "./sections/precos1";
 import Contact from "./components/contatos";
 
 
+
 function JSONLD() {
   return (
     <script type="application/ld+json">
@@ -51,6 +52,8 @@ function App() {
         <Header />
 
         <Home />
+
+        
 
         <Publico />
 

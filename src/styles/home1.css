@@ -10,6 +10,8 @@
   justify-content: center;
   align-items: center;
   color: var(--cor_09);
+
+  
 }
 
 .overlay {
@@ -21,6 +23,8 @@
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
+
+  padding: 0  10vw;
 }
 
 .home-left {
@@ -69,7 +73,14 @@
 
 /* ===================== */
 /* Responsividade */
-/* ===================== */
+/* 
+
+Monitor 1920x1080
+Notebook 1366x768 
+Tablet
+Celular
+
+*/
 
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
