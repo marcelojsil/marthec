@@ -29,22 +29,24 @@ body {
   --cor_10: #000;
   --grad_01: rgb(26, 39, 48);
 }
-a {text-decoration: none;}
+a {text-decoration: none;font-size: 1rem;}
+
+/*
 h1 {font-size: 3.5rem;font-weight: bolder;}
 h2 {font-size: 2rem;}
 h3 {font-size: 1.5rem;}
 p {font-size: 1.25rem;}
 h4 {font-size: 1rem;}
 h5 {font-size: 0.8rem;}
+*/
 
-/* Notebooks */
-@media (max-width: 1400px) {
+
   h1 {font-size: 3rem;font-weight: bolder;}
   h2 {font-size: 1.5rem;}
   h3 {font-size: 1.2rem;}
   p {font-size: 1rem;}
   h4 {font-size: 0.8rem;}
-}
+
 
 /* Tablets */
 @media (max-width: 1024px) { 
