@@ -8,6 +8,7 @@ const Publico = () => {
     return (
 
     <section className="publico">
+      <div className="publico-max">
         <div><SectionTitle align="center" gradient>Especialista em Sites para empresas</SectionTitle></div>
         <div>Desenvolvemos soluções digitais sob medida para diferentes tipos de negócio</div>
        
@@ -21,7 +22,6 @@ const Publico = () => {
                       <div className="lucide1">
                         <Handshake size={60} />
                       </div>
-                      
                       Prestadores de Serviço
                     </div>
                     <div className="card-back">
@@ -69,7 +69,7 @@ const Publico = () => {
 
               </div>
             </section>
-        
+      </div>
     </section>
 
     );

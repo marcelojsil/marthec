@@ -1,33 +1,36 @@
 @import "../global.css";
 
 .publico {
-  width: 98%;
+  width: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;   /* centraliza na horizontal */
+  align-items: center; 
+}
+.publico-max {
+  max-width: 1400px;
+  height: inherit;
+  flex-direction: column;
+  justify-content: center;   /* centraliza na horizontal */
   align-items: center;   
-  gap: 50px;
-  padding-top: 50px;
+
+  margin-top: 100px;
 }
 
 /* ======= Container dos serviços ======= */
 #services {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;   /* centraliza na horizontal */
   align-items: center;   
- 
+  padding-top: 100px;
   text-align: center;
   border-radius: 12px;
- 
 }
 
-#services h2 {
-  font-size: 25px;
-  margin-bottom: 2rem;
-  color: #222;
-}
+
 
 /* ======= Cards wrapper ======= */
 .services-flex {

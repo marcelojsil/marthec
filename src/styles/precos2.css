@@ -1,14 +1,22 @@
+@import "../global.css";
+
 .services-section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: #eaf3fb;
+  background: var(--cor_04);
 }
-
+.services-section-max {
+  max-width: 1400px;
+  text-align: center;
+}
 .tag {
   display: inline-block;
-  background: #fdd835;
-  color: #000;
+  background: var(--cor_07);
+  color: var(--cor_10);
   font-weight: bold;
   padding: 0.4rem 1rem;
   border-radius: 8px;
@@ -18,12 +26,12 @@
 .services-section h2 {
   font-size: 2rem;
   margin: 0.5rem 0;
-  color: #222;
+  color: var(--cor_01);
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #555;
+  color: var(--cor_03);
   margin-bottom: 2.5rem;
 }
 
@@ -32,38 +40,10 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.5rem; 
 }
 
-/* ===== Card ===== */
-.service-card {
-  flex: 1 1 280px;
-  max-width: 300px;
-  background: #fff;
-  border-radius: 12px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-}
-
-.service-card .icon {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  color: #222;
-  margin-bottom: 0.5rem;
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: #555;
+.lucide1 {
+ 
+  background-color: var(--cor_01);
 }

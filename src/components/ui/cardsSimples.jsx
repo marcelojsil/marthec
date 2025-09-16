@@ -1,3 +1,4 @@
+import "../../styles/ui.css";
 
 const CardSimples = ({ icon, title, description }) => {
   return (
