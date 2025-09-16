@@ -9,6 +9,7 @@ const Home = () => {
 
     <section className="home">
         <div className="overlay">
+            <div className="home-max">
             <div className="home-left">
                 <div><h1>Sites que <span className="gradient-text">promovem</span> o seu negócio</h1></div>
                 <div><h2>Criamos sites profissionais com foco em pequenas empresas, MEI e prestadores de serviço. 
@@ -25,6 +26,7 @@ const Home = () => {
             </div>
             <div className="home-right">
                 
+            </div>
             </div>
         </div>
     </section>
