@@ -3,11 +3,16 @@ import "../styles/precos1.css";
 const Precos1 = () => {
   return (
     <section id="pricing">
-      <h2>Nossos Planos</h2>
+      <div className="pricing-max">
+      <span className="tag-portifolio">Nossos preços</span>
+        <h2>Planos e valores</h2>
+        <p className="subtitle">
+          Valores para desenvolvimento, para mais informações solicite um orçamento sem compromisso
+        </p>
       <div className="pricing-grid">
         <div className="pricing-card">
-          <h3>Básico</h3>
-          <p className="price">R$ 499</p>
+          <h3>Site SPA - Single Page</h3>
+          <p className="price">R$ 399</p>
           <ul>
             <li>Suporte Básico</li>
             <li>Manutenção preventiva</li>
@@ -17,8 +22,8 @@ const Precos1 = () => {
         </div>
 
         <div className="pricing-card destaque">
-          <h3>Profissional</h3>
-          <p className="price">R$ 999</p>
+          <h3>Site com 5 páginas</h3>
+          <p className="price">R$ 499</p>
           <ul>
             <li>Suporte Prioritário</li>
             <li>Automação completa</li>
@@ -28,8 +33,8 @@ const Precos1 = () => {
         </div>
 
         <div className="pricing-card">
-          <h3>Premium</h3>
-          <p className="price">R$ 1.499</p>
+          <h3>Landing Page</h3>
+          <p className="price">R$ 599</p>
           <ul>
             <li>Consultoria dedicada</li>
             <li>Projetos sob medida</li>
@@ -37,6 +42,7 @@ const Precos1 = () => {
           </ul>
           <button className="btn">Contratar</button>
         </div>
+      </div>
       </div>
     </section>
   );

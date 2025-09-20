@@ -1,8 +1,17 @@
+@import "../global.css";
+
 .contact-section {
   width: 100%;
   padding: 4rem 2rem;
-  background: #eaf3fb;
+  background: var(--cor_09);
   text-align: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section-max {
+  max-width: 1400px;
 }
 
 .contact-section h2 {
@@ -62,7 +71,7 @@
 /* ===== Form ===== */
 .contact-form {
   flex: 1 1 350px;
-  background: #fff;
+  background: var(--cor_04);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);

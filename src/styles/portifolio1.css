@@ -2,7 +2,7 @@
 
 .portifolio-section {
   width: 100%;
-  padding: 4rem 0;
+  padding: 6rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,12 +11,13 @@
 }
 .portifolio-section-max {
   max-width: 1400px;
+  height: auto;
   text-align: center;
 }
-.tag {
+.tag-portifolio {
   display: inline-block;
-  background: var(--cor_07);
-  color: var(--cor_10);
+  background: var(--cor_01);
+  color: var(--cor_08);
   font-weight: bold;
   padding: 0.4rem 1rem;
   border-radius: 8px;

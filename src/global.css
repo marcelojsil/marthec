@@ -29,7 +29,7 @@ body {
   --cor_10: #000;
   --grad_01: rgb(26, 39, 48);
 }
-a {text-decoration: none;font-size: 1rem;}
+a {text-decoration: none;font-size: 1rem;color: var(--cor_01);}
 
 /*
 h1 {font-size: 3.5rem;font-weight: bolder;}

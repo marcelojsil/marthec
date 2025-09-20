@@ -2,7 +2,7 @@ import "../../styles/ui.css";
 
 const CardImage = ({ image, title, description, size = 80 }) => {
   return (
-    <div className="service-card">
+    <div className="service-card-image">
       <div className="image-card">
         <img src={image} alt={title} />
       </div>
