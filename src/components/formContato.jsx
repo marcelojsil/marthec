@@ -33,7 +33,7 @@ const ContactForm = () => {
 
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
-      <h3>Solicite um Orçamento</h3>
+      <h3>Entrar em contato</h3>
 
       <input
         type="text"
@@ -64,9 +64,13 @@ const ContactForm = () => {
 
       <select name="tipo" value={formData.tipo} onChange={handleChange} required>
         <option value="">Selecione...</option>
-        <option value="Institucional">Institucional</option>
-        <option value="Loja Virtual">Loja Virtual</option>
+        <option value="Institucional">Site Institucional</option>
+        <option value="Loja Virtual">Portifólio</option>
         <option value="Landing Page">Landing Page</option>
+        <option value="Landing Page">Hospedagem</option>
+        <option value="Landing Page">Automação WhatsApp</option>
+        <option value="Landing Page">Automação Direct Instagram</option>
+        <option value="Landing Page">Outros</option>
       </select>
 
       <textarea
@@ -77,7 +81,7 @@ const ContactForm = () => {
         required
       ></textarea>
 
-      <button type="submit">Solicitar Orçamento</button>
+      <button type="submit">Enviar</button>
 
       {status && <p className="status">{status}</p>}
     </form>

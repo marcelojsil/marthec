@@ -54,14 +54,16 @@
   color: transparent;
 }
 
-.diferenciais {
+.home-diferenciais {
   width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 10px;
   padding-bottom: 15px;
+ 
 }
-.diferenciais div {
+.home-diferenciais div {
+  width: auto;
   display: flex;
   align-items: center;
   gap: 5px;

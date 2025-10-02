@@ -2,7 +2,7 @@
 
 .contact-section {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 4rem 0;
   background: var(--cor_09);
   text-align: center;
 
@@ -71,11 +71,12 @@
 /* ===== Form ===== */
 .contact-form {
   flex: 1 1 350px;
+  width: 100%;
   background: var(--cor_04);
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  text-align: left;
+  text-align: center;
 }
 
 .contact-form h3 {
@@ -86,7 +87,7 @@
 .contact-form input,
 .contact-form select,
 .contact-form textarea {
-  width: 100%;
+  width: 80%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -95,7 +96,7 @@
 }
 
 .contact-form button {
-  width: 100%;
+  width: 50%;
   padding: 0.9rem;
   border: none;
   border-radius: 8px;

@@ -90,11 +90,17 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-.diferenciais {
+.precos-diferenciais {
   margin-top: 50px;
   display: flex;
   justify-content: center;
   gap: 100px;
+}
+.precos-diferenciais div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
 }
 .btn-informacoes {
   background-color: var(--cor_06);
@@ -105,4 +111,10 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
+}
+.promocao {
+  color: var(--cor_05);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
 }

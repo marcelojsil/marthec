@@ -25,9 +25,9 @@ const Contact = () => {
     
             <h4>Redes Sociais</h4>
             <div className="social-icons">
-              <a href="#"><Instagram size={22} /></a>
-              <a href="#"><Facebook size={22} /></a>
-              <a href="#"><Linkedin size={22} /></a>
+              <a href="https://www.instagram.com/marthec.web/" target="_blank"><Instagram size={22} /></a>
+              <a href="https://www.facebook.com/marthecweb" target="_blank"><Facebook size={22} /></a>
+              <a href="https://www.linkedin.com/in/dev-marcelo/" target="_blank"><Linkedin size={22} /></a>
             </div>
           </div>
     

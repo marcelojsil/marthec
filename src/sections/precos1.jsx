@@ -52,10 +52,18 @@ const Precos1 = () => {
         </div>
         
       
-        <div className="diferenciais">
+        <div className="precos-diferenciais">
           <div><CheckCircle size={25} color="#095f0d" /><p>Pagamento em até 12x no crédito</p></div>
           <div><CheckCircle size={25} color="#095f0d" /><p>Pagamento só na entrega</p></div>
           <div><CheckCircle size={25} color="#095f0d" /><p>Dashboard para administrador</p></div>
+          
+        </div>
+        <div className="precos-diferenciais">
+          <div>
+            <CheckCircle size={25} color="#ec1414" />
+            <p className="promocao">50% Desconto para pacote completo (Desenvolvimento / Hospedagem / Suporte)
+            </p><CheckCircle size={25} color="#ec1414" />
+          </div>
         </div>
       </div>
     </section>
