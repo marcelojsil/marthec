@@ -7,7 +7,7 @@ import Breve from "../image/breve.jpg";
 // Ícones simples usando emojis (pode trocar por lucide-react)
 const Portifolio = () => {
   return (
-    <section className="portifolio-section">
+    <section className="portifolio-section" id="portifolio">
       <div className="services-section-max">
         <span className="tag-portifolio">Nosso Portifólio</span>
         <h2>Sites e Sistemas Web</h2>
@@ -16,7 +16,7 @@ const Portifolio = () => {
         </p>
 
         <div className="services-container">
-          <a href="https:\\eletrotechbrasil.netlify.app" target="_blank">
+          <a href="https:\\eletrotechbrasil.netlify.app"  rel="noreferrer"  target="_blank">
           <CardImage
             image={Eletrotech}
             title="Eletrotech Brasil"

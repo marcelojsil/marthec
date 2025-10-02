@@ -6,15 +6,15 @@ import { Globe,MonitorSmartphone, Search, Wallpaper, MessagesSquare, PencilRuler
 // Ícones simples usando emojis (pode trocar por lucide-react)
 const Services = () => {
   return (
-    <section className="services-section">
+    <section className="services-section" id="servicos">
       <div className="services-section-max">
-          <span className="tag">Nossos Serviços</span>
+          <span className="tag" >Nossos Serviços</span>
           <h2>Tudo que seu negócio precisa</h2>
           <p className="subtitle">
             Oferecemos soluções completas para sua presença digital
           </p>
 
-          <div className="services-container">
+          <div className="services-container" >
             <CardSimples
               icon={<Globe size={80} color="#1a2730" />}
               title="Sites Institucionais"

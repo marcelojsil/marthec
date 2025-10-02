@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import seta from "../image/top_white.png";
+import { ArrowBigUp } from "lucide-react";
 
 import "../styles/totop.css";
 
@@ -27,7 +27,8 @@ function ToTopButton() {
 
   return visible ? (
     <button className="scroll-to-top" onClick={scrollToTop}>
-      <img src={seta} alt="Para o topo!"/>
+      <ArrowBigUp  size={35} color="#fff" />
+     
     </button>
   ) : null;
 }

@@ -15,11 +15,14 @@
   right: 10px;
   padding: 10px 10px;
   border-radius: 50%;
-}.scroll-to-top.show { display: block; /* O botão visível */}
 
-.scroll-to-top img {
-  width: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.scroll-to-top.show { display: block; /* O botão visível */}
+
+
 
 @media (max-width: 768px) {
   .scroll-to-top {

@@ -9,7 +9,7 @@ const Menu = ({ isOpen }) => {
       <li><a href="/">Home</a></li>
       <li><a href="#servicos">Serviços</a></li>
       <li><a href="#portifolio">Portifólio</a></li>
-      <li><a href="#precos">Preços</a></li>
+      <li><a href="#pricing">Preços</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
 

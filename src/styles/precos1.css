@@ -34,8 +34,10 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   transition: transform 0.3s;
+  width: 330px;
 }
 
 .pricing-card:hover {
@@ -58,12 +60,13 @@
   list-style: none;
   margin: 1rem 0;
   padding: 0;
-  text-align: left;
+  text-align: center;
 }
 
 .pricing-card ul li {
   margin: 0.5rem 0;
   color: #555;
+  font-size: 0.8rem;
 }
 
 .pricing-card .btn {
@@ -74,4 +77,32 @@
 .pricing-card.destaque {
   border: 2px solid #ff0000;
   transform: scale(1.05);
+}
+
+.price.original {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1rem;
+}
+
+.price.promo {
+  color: #e63946;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.diferenciais {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.btn-informacoes {
+  background-color: var(--cor_06);
+  color: var(--cor_09);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
 }

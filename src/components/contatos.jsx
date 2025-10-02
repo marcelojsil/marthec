@@ -5,7 +5,7 @@ import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react
 
 const Contact = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contato">
       <div className="contact-section-max">
         <h2>Vamos criar seu site?</h2>
         <p>Entre em contato conosco e receba uma proposta personalizada</p>
