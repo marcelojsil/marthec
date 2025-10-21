@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes /*, Route*/} from "react-router-dom";
+import { BrowserRouter as Router, Routes , Route, Navigate} from "react-router-dom";
 import config from "./config";
 import "./global.css";
 
@@ -15,6 +15,9 @@ import Precos from "./sections/precos2";
 import Portifolio from "./sections/portifolio1";
 import Precos1 from "./sections/precos1";
 import Contact from "./components/contatos";
+//ROTAS
+import Login from "./sections/login"; 
+import Admin from "./sections/admin";
 
 
 
@@ -39,6 +42,11 @@ function App() {
   useEffect(() => { document.querySelector('meta[property="og:title"]').setAttribute("content", config.siteTitle); }, []);
   useEffect(() => { document.querySelector('meta[property="og:image"]').setAttribute("content", config.logo); }, []);
 
+  const PrivateRoute = ({ children }) => {
+    const isAuth = localStorage.getItem("isAuthenticated") === "true";
+    return isAuth ? children : <Navigate to="/admin" />;
+  };
+
   return (
     
     <Router>
@@ -49,42 +57,51 @@ function App() {
 
         <title>{config.siteTitle}</title>
 
-        <Header />
+       
 
-        <Home />
-
-        <Publico />
-
-        <Precos />
-
-        <Portifolio />
-
-        <Precos1 />
-
-        <Contact />
-
-        <div className="routes-app">
+        
 
           <Routes>
 
-            {/*
-            <Route path="/" element={
-              <Home />
-            } />
-             <Route path="/servicos" element={
-              <Servicos />
-            } />
-            */}
             
+            {/* Página principal */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <Home />
+              <Publico />
+              <Precos />
+              <Portifolio />
+              <Precos1 />
+              <Contact />
+              <Footer />
+              <ToTopButton />
+              <WhatsAppButton />
+            </>
+          }
+        />
+
+        {/* Página Admin */}
+        <Route path="/admin" element={<Login />} />
+
+         {/* Dashboard protegido */}
+        <Route
+          path="/admin/dashboard"
+          element={
+            <PrivateRoute>
+              <Admin />
+            </PrivateRoute>
+          }
+        />
+                       
 
           </Routes>
 
-        </div>    
+    
         
-        <Footer />
-
-        <ToTopButton />
-        <WhatsAppButton />  
+ 
 
       </nav>               
     
