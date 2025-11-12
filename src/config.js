@@ -7,11 +7,11 @@ const config = {
     ogURL: "https://www.marthec.com.br",
 
     contactEmail: "contato@marthec.com",
-    contactFone: "12991022315",
+    contactFone: "5512991367024",
     contactFacebook: "https://www.facebook.com/marthec",
     contactInstagram: "https://www.instagram.com/marthec.web",
     contactLinkedin: "",
-    contactWhatsapp: "5512991022315",
+    contactWhatsapp: "5512991367024",
 
     bairro: "Centro",
     cidade: "Pindamonhangaba",
