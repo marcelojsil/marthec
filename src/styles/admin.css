@@ -32,7 +32,7 @@
   margin-bottom: 2rem;
 }
 
-.card {
+.admin-card {
   flex: 1;
   background: #f8f9fa;
   padding: 1.5rem;
@@ -41,13 +41,13 @@
   text-align: center;
 }
 
-.card h3 {
+.admin-card h3 {
   font-size: 1rem;
   margin-bottom: 0.5rem;
   color: #333;
 }
 
-.card p {
+.admin-card p {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2d6cdf;
