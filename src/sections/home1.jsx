@@ -11,17 +11,17 @@ const Home = () => {
         <div className="overlay">
             <div className="home-max">
             <div className="home-left">
-                <div><h1>Sites que <span className="gradient-text">promovem</span> o seu negócio</h1></div>
-                <div><h2>Criamos sites profissionais com foco em pequenas empresas, MEI e prestadores de serviço. 
-                    Impulsione a presença digital do seu negócio.</h2></div>
+                <div><h1>Criação de <span className="gradient-text">sites profissionais</span> para empresas que querem crescer</h1></div>
+                <div><h2>Soluções digitais sob medida para pequenas empresas, MEI e prestadores de serviço,
+  focadas em presença online e geração de resultados.</h2></div>
                 <div className="buttons">
                     <LinkButton href="#contato" variant="outline">mais informações</LinkButton>
                     <LinkButton href="#pricing" variant="primary">Impulsione seu negócio</LinkButton>
                 </div>
                 <div className="home-diferenciais">
                     <div><CheckCircle size={20} color="#e7ad0c" /><p>Sites responsivos</p></div>
-                    <div><CheckCircle size={20} color="#e7ad0c" /><p>Entrega em 10 dias</p></div>
                     <div><CheckCircle size={20} color="#e7ad0c" /><p>SEO de qualidade</p></div>
+                    <div><CheckCircle size={20} color="#e7ad0c" /><p>Online em 10 dias</p></div>
                 </div>
             </div>
             <div className="home-right">

@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+
 import { BrowserRouter as Router, Routes , Route, Navigate} from "react-router-dom";
-import config from "./config";
+//import config from "./config";
 import "./global.css";
 
 
@@ -19,28 +19,7 @@ import Contact from "./components/contatos";
 import Login from "./sections/login"; 
 import Admin from "./sections/admin";
 
-
-
-function JSONLD() {
-  return (
-    <script type="application/ld+json">
-      {JSON.stringify(config.businessInfo)}
-    </script>
-  );
-}
-
 function App() {
-
-  // Informações vindas do arquivo config.js
-  useEffect(() => { document.querySelector('link[rel="icon"]').setAttribute("href", config.favicon); }, []);
-  useEffect(() => { document.title = config.siteTitle; }, []);
-  useEffect(() => { document.querySelector('meta[name="description"]').setAttribute("content", config.nameDescription); }, []);
-  useEffect(() => { document.querySelector('meta[name="keywords"]').setAttribute("content", config.nameKeywords); }, []);
-  useEffect(() => { document.querySelector('meta[property="og:title"]').setAttribute("content", config.siteTitle); }, []);
-   useEffect(() => { document.querySelector('meta[property="og:description"]').setAttribute("content", config.nameDescription); }, []);
-  useEffect(() => { document.querySelector('meta[property="og:url"]').setAttribute("content", config.ogURL); }, []);
-  useEffect(() => { document.querySelector('meta[property="og:title"]').setAttribute("content", config.siteTitle); }, []);
-  useEffect(() => { document.querySelector('meta[property="og:image"]').setAttribute("content", config.logo); }, []);
 
   const PrivateRoute = ({ children }) => {
     const isAuth = localStorage.getItem("isAuthenticated") === "true";
@@ -51,19 +30,10 @@ function App() {
     
     <Router>
 
-      <JSONLD />
-
       <nav className="App">
 
-        <title>{config.siteTitle}</title>
-
-       
-
-        
-
           <Routes>
-
-            
+      
             {/* Página principal */}
         <Route
           path="/"
@@ -96,12 +66,7 @@ function App() {
           }
         />
                        
-
-          </Routes>
-
-    
-        
- 
+        </Routes>
 
       </nav>               
     
