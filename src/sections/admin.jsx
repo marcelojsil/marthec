@@ -69,15 +69,15 @@ const Admin = () => {
 
       {/* Cards de Resumo */}
       <div className="cards-container">
-        <div className="card">
+        <div className="admin-card">
           <h3>Total de Leads</h3>
           <p>{totalLeads}</p>
         </div>
-        <div className="card">
+        <div className="admin-card">
           <h3>Leads de Hoje</h3>
           <p>{todayLeads}</p>
         </div>
-        <div className="card">
+        <div className="admin-card">
           <h3>Plano mais solicitado</h3>
           <p>{mostRequested}</p>
         </div>
