@@ -2,6 +2,10 @@
   "name": "marthec",
   "version": "0.1.0",
   "private": true,
+
+  "engines": {
+    "node": "18.x"
+  },
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^3.0.2",
