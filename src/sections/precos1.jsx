@@ -16,7 +16,7 @@ const Precos1 = () => {
         <div className="pricing-grid">
           <PricingCard
             title="Página Única (SPA)"
-            price={799}
+            //price={799}
             //promoPrice={349}
             features={[
               "Estrutura One Page responsiva",
@@ -28,7 +28,7 @@ const Precos1 = () => {
 
           <PricingCard
             title="Páginas Múltiplas"
-            price={999}
+            //price={999}
             //promoPrice={999}
             destaque
             features={[
@@ -41,7 +41,7 @@ const Precos1 = () => {
 
           <PricingCard
             title="Landing Page"
-            price={899}
+            //price={899}
             features={[
               "Estrutura focada em conversão",
               "Seções otimizadas para marketing",
