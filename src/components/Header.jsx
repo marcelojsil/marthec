@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import Menu from './ui/Menu'
+import Menu from './ui/menu'
 import '@/styles/header.css'
 
 import Logo from '../image/logo.png'
