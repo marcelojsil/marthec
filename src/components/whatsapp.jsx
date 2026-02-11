@@ -1,20 +1,31 @@
-import "../styles/whatsapp.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
-import config from "../config";
+'use client'
 
-const WhatsAppButton = () => {
+import Image from 'next/image'
+import '@/styles/whatsapp.css'
 
+export default function WhatsAppButton() {
+  const phone = '551291022315' // DDI + DDD + número
+  const message = 'Olá! Vim pelo site da Marthec e gostaria de um orçamento.'
+
+  const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
 
   return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="whatsapp-button"
+      aria-label="Falar no WhatsApp"
+    >
 
-    <a href={`https://wa.me/${config.contactWhatsapp}?text=Olá,%20gostaria%20de%20um%20orçamento?`} target="_blank" rel="noopener noreferrer" className="whatsapp-button">
+      <span className="whatsapp-tooltip">Fale conosco</span>
 
-      <FontAwesomeIcon icon={faWhatsapp} className="logo-whats"/>
-      
+      <Image
+        src="/whatsapp.png"
+        alt="WhatsApp"
+        width={56}
+        height={56}
+      />
     </a>
-    
-  );
-};
-
-export default WhatsAppButton;
+  )
+}

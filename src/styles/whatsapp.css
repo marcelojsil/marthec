@@ -1,10 +1,13 @@
+@import '../app/globals.css';
+
 /* ===== BOTÃO DO WHATSAPP ======== */
 .whatsapp-button {
   position: fixed;
   bottom: 10px;
   right: 10px;
-  background-color: #25d366;
+  
   color: white;
+  background-color: var(--grad_02);
   font-size: 35px;
   font-weight: bolder;
   width: 60px;
@@ -13,14 +16,16 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 10px rgba(37, 211, 102, 0.5);
   text-decoration: none;
   animation: pulse 1.5s infinite;
   z-index: 10;
 }
+
 .whatsapp-button:hover {
-  background-color: #1ebe5d;
+  background-color: var(--cor_09);
 }
+
 
 
 @keyframes pulse {
@@ -37,3 +42,39 @@
     box-shadow: 0px 0px 10px rgba(37, 211, 102, 0.5);
   }
 }
+
+
+/* TOOLTIP */
+
+.whatsapp-tooltip {
+  position: absolute;
+  right: 70px;
+  white-space: nowrap;
+
+  background: #01C603;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+
+  padding: 8px 12px;
+  border-radius: 8px;
+
+  opacity: 0;
+  transform: translateY(5px);
+  pointer-events: none;
+
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.whatsapp-button:hover .whatsapp-tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  
+  .whatsapp-tooltip {
+    display: none;
+  }
+}
+  

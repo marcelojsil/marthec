@@ -1,4 +1,4 @@
-@import "../global.css";
+@import '../app/globals.css';
 
 .header {
   width: 100%;
@@ -73,7 +73,7 @@
     padding: 10px 0;
   }
   .nav-menu.open {
-    background: rgba(0, 0, 0, 0.85);
+    background: var(--grad_01);
     display: flex;
     z-index: 10;
   }
