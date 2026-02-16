@@ -1,0 +1,68 @@
+@import '../app/globals.css';
+
+/* ===== Card ===== */
+.service-card {
+  flex: 1 1 280px;
+  max-width: 420px;
+  background: var(--cor_09);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.service-card-image {
+  flex: 1 1 280px;
+  max-width: 420px;
+  background: var(--cor_04);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover, .service-card-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.service-card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  color: var(--cor_09);
+}
+
+.service-card h3 {
+  font-size: 1.2rem;
+  color: var(--cor_03);
+  margin-bottom: 0.5rem;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: var(--cor_03não);
+}
+
+.image-card img {
+  width: 100%;
+}

@@ -1,5 +1,7 @@
 import './globals.css'
 import Hero from './hero/Hero'
+import Portifolio from './portifolio/portifolio';
+import Publico from './publico/public';
 import Servicos from './servicos/Servicos'
 
 export const metadata = {
@@ -15,7 +17,11 @@ export default function Home() {
 
       <Hero />
 
+      <Publico />
+
       <Servicos />
+
+      <Portifolio />
 
     </section>
   )

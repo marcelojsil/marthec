@@ -1,4 +1,7 @@
+import config from '../../config'
 import './servicos.css'
+import { Globe, MonitorSmartphone, Search, Wallpaper, MessagesSquare, PencilRuler } from 'lucide-react';
+import CardSimples from '../../components/CardSimples';
 
 export default function Servicos() {
   return (
@@ -10,7 +13,6 @@ export default function Servicos() {
             Oferecemos soluções completas para sua presença digital
           </p>
 
-          {/*
           <div className="services-container" >
             <CardSimples
               icon={<Globe size={80} color="#1a2730" />}
@@ -44,7 +46,7 @@ export default function Servicos() {
             />
             
           </div>
-          */}
+          
       </div>
     </section>
   );

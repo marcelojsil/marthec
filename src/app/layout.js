@@ -4,8 +4,8 @@ import config from "@/config";
 
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import WhatsAppButton from "../components/whatsapp";
-import BackToTop from "../components/BackTop";
+import WhatsAppButton from '@/components/whatsapp.jsx'
+import BackToTop from "../components/BackTop"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
