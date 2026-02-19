@@ -24,9 +24,9 @@ export default function ChatBotModal({ open, onClose }) {
   // Mensagem inicial
   useEffect(() => {
     if (open && messages.length === 0) {
-      simulateBotMessage("Olá 👋 Seja bem-vindo à Marthec!")
+      simulateBotMessage("Olá 👋 Seja bem-vindo à Marthec! \n Meu nome é Marcelo e irei te atender.")
       setTimeout(() => {
-        simulateBotMessage("Qual seu nome?")
+        simulateBotMessage("Qual seu nome por favor?")
       }, 800)
     }
   }, [open])
@@ -44,9 +44,10 @@ export default function ChatBotModal({ open, onClose }) {
 
     setMessages(prev => [...prev, { sender: 'user', text: input }])
 
+    // Lógica de fluxo do chatbot
     if (step === 1) {
       setFormData(prev => ({ ...prev, name: input }))
-      simulateBotMessage("Qual serviço você deseja?\n1️⃣ Site\n2️⃣ Landing Page\n3️⃣ E-commerce")
+      simulateBotMessage(`Muito prazer, ${input}! 😊 \n\nQual serviço você deseja?\n\n1 - Site\n2 - Landing Page\n3 - Automação de WhatsApp\n4 - E-commerce`)
       setStep(2)
     }
 
@@ -54,7 +55,8 @@ export default function ChatBotModal({ open, onClose }) {
       const services = {
         "1": "Site institucional",
         "2": "Landing Page",
-        "3": "E-commerce"
+        "3": "Automação de WhatsApp",
+        "4": "E-commerce"
       }
 
       const service = services[input] || input

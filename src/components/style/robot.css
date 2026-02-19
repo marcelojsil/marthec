@@ -2,21 +2,21 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
-  color: white;
   border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  font-size: 26px;
   cursor: pointer;
   z-index: 1000;
+  border-radius: 50%;
+}
+.whatsapp-float .avatar {
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
 }
 
 .chat-container {
   position: fixed;
   bottom: 90px;
-  right: 20px;
+  right: 100px;
   width: 340px;
   height: 480px;
   background: #ece5dd;
@@ -73,6 +73,7 @@
 .msg.bot {
   background: white;
   align-self: flex-start;
+  white-space: pre-line;
 }
 
 .msg.user {
@@ -83,6 +84,7 @@
 .msg.typing {
   font-style: italic;
   opacity: 0.6;
+ 
 }
 
 .chat-input {
