@@ -1,0 +1,120 @@
+@import '../globals.css';
+
+/* Pricing */
+#pricing {
+ width: 100%;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--cor_07);
+  text-align: center;
+}
+.pricing-max {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.pricing-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem; 
+}
+
+.pricing-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s;
+  width: 330px;
+}
+
+.pricing-card:hover {
+  transform: scale(1.05);
+}
+
+.pricing-card h3 {
+  margin-bottom: 1rem;
+  color: #111;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ff0000;
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  text-align: center;
+}
+
+.pricing-card ul li {
+  margin: 0.5rem 0;
+  color: #555;
+  font-size: 0.8rem;
+}
+
+.pricing-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.pricing-card.destaque {
+  border: 2px solid #ff0000;
+  transform: scale(1.05);
+}
+
+.price.original {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1rem;
+}
+
+.price.promo {
+  color: #e63946;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.precos-diferenciais {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+.precos-diferenciais div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+.btn-informacoes {
+  background-color: var(--cor_06);
+  color: var(--cor_09);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+.promocao {
+  color: var(--cor_05);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}

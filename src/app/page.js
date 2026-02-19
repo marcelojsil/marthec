@@ -1,8 +1,11 @@
+
+
 import './globals.css'
 import Hero from './hero/Hero'
 import Portifolio from './portifolio/portifolio';
 import Publico from './publico/public';
 import Servicos from './servicos/Servicos'
+import Valores from './valores/Valores';
 
 export const metadata = {
   title: "Criação de sites profissionais",
@@ -22,6 +25,8 @@ export default function Home() {
       <Servicos />
 
       <Portifolio />
+
+      <Valores />
 
     </section>
   )
