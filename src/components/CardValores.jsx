@@ -2,7 +2,7 @@
 
 // components/CardValores.jsx
 import { useState } from "react";
-import '../app/valores/valores.css';
+import './style/cardvalores.css';
 import Modal from "./Modal";
 
 const CardValores = ({ title, price, promoPrice, features, destaque }) => {

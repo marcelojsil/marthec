@@ -1,0 +1,133 @@
+@import "../../app/globals.css";
+
+
+
+/* ================= PREÇO ================= */
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--cor_01);
+  margin-bottom: 1rem;
+}
+
+.price.original {
+  text-decoration: line-through;
+  color: var(--cor_05);
+  font-size: 1rem;
+}
+
+.price.promo {
+  color: var(--cor_01);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+/* ================= LISTA ================= */
+
+.pricing-card ul {
+  list-style: none;
+  margin: 1rem 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.pricing-card ul li {
+  margin: 0.6rem 0;
+  color: var(--cor_03);
+  font-size: 0.9rem;
+}
+
+/* ================= BOTÃO ================= */
+
+.pricing-card .btn {
+  margin-top: auto;
+  width: 100%;
+}
+
+.btn-informacoes {
+  background-color: var(--cor_06);
+  color: var(--cor_09);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-informacoes:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* ================= DESTAQUE ================= */
+
+.pricing-card.destaque {
+  border: 2px solid var(--cor_05);
+  transform: scale(1.03);
+}
+
+/* ================= PROMOÇÃO ================= */
+
+.promocao {
+  color: var(--cor_05);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+
+
+/* ================= RESPONSIVIDADE ================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .pricing-card {
+    max-width: 300px;
+ 
+  }
+
+  .pricing-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .pricing-card {
+    max-width: 90%;
+ 
+  }
+
+  .pricing-card.destaque {
+    transform: none; /* evita quebrar layout no mobile */
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+
+  .pricing-card ul li {
+    font-size: 0.85rem;
+  }
+
+
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .pricing-card {
+    width: 90%;
+  }
+
+  .pricing-card h3 {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.1rem;
+  }
+}

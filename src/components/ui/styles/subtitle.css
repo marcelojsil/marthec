@@ -1,0 +1,35 @@
+@import "../../../app/globals.css";
+
+.subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--cor_03);
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem 1rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+  .subtitle {
+    font-size: 0.85rem;
+  }
+}

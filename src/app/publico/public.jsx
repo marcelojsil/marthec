@@ -1,4 +1,5 @@
 import SectionTitle from '../../components/ui/SectionTitle';
+import Subtitle from '../../components/ui/SubTitle';
 import { CheckCircle,Store,ChartNoAxesCombined,Handshake } from "lucide-react";
 import './publico1.css';
 
@@ -11,7 +12,9 @@ const Publico = () => {
       <div className="publico-max">
         <span className="tag" >Nosso Público</span>
         <div><SectionTitle align="center" gradient>Especialista em Sites para empresas</SectionTitle></div>
-        <div>Desenvolvemos soluções digitais sob medida para diferentes tipos de negócio</div>
+        <Subtitle>
+          Desenvolvemos soluções digitais sob medida para diferentes tipos de negócio
+        </Subtitle>
        
             <section id="services">
               
