@@ -6,6 +6,8 @@
   cursor: pointer;
   z-index: 1000;
   border-radius: 50%;
+
+  
 }
 .whatsapp-float .avatar {
   width: 100px;

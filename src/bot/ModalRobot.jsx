@@ -1,6 +1,6 @@
 'use client'
 import { useState, useEffect, useRef } from 'react'
-import { supabase } from '../Supabase'
+import { supabase } from '../components/Supabase'
 
 export default function ChatBotModal({ open, onClose }) {
   const [step, setStep] = useState(1)

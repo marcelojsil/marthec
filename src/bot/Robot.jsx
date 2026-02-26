@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
-import ChatBotModal from './modal/ModalRobot'
+import ChatBotModal from './ModalRobot'
 import Image from 'next/image'
 
-import './style/robot.css'
+import './robot.css'
 
 export default function RobotButton() {
   const [open, setOpen] = useState(false)
@@ -16,7 +16,7 @@ export default function RobotButton() {
       >
         
         <Image className='avatar'
-          src="/robot_button.png"
+          src="/img_bot.png"
           alt="Chatbot"
           width={100}
           height={100}

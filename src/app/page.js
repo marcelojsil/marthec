@@ -1,5 +1,6 @@
 
 
+import Contato from './contato/Contato';
 import './globals.css'
 import Hero from './hero/Hero'
 import Portifolio from './portifolio/portifolio';
@@ -27,6 +28,8 @@ export default function Home() {
       <Portifolio />
 
       <Valores />
+
+      <Contato />
 
     </section>
   )
