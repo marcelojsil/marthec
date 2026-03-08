@@ -12,8 +12,11 @@ body {margin: 0;font-size:1rem;font-family: 'Montserrat', sans-serif;-webkit-fon
   --cor_08: #e7ad0c;
   --cor_09: #fff;
   --cor_10: #000;
-  --grad_01: rgb(26, 39, 48, 0.97);
-  --grad_02: rgba(247, 248, 245, 0.85);
+
+  --grad_01: linear-gradient(90deg, var(--cor_01), var(--cor_02));
+  --grad_02: linear-gradient(90deg, var(--cor_03), var(--cor_04));
+  --grad_03: linear-gradient(90deg, var(--cor_05), var(--cor_06));
+  --grad_03: linear-gradient(90deg, var(--cor_07), var(--cor_08));
 }
 /* Computador */
   h1 {font-size: 2rem;font-weight: bolder;}

@@ -1,0 +1,76 @@
+@import "../../../app/globals.css";
+
+.tag {
+  
+  background: var(--cor_01);
+  color: var(--cor_09);
+   display: inline-block;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+/*
+.tag {
+  display: inline-block;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  padding: 6px 14px;
+  transition: all 0.2s ease;
+}
+
+/* ===== Variants ===== 
+
+.tag-default {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.tag-success {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.tag-warning {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.tag-info {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.tag-danger {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* ===== Sizes ===== 
+
+.tag-sm {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+}
+
+.tag-md {
+  font-size: 0.85rem;
+  padding: 6px 14px;
+}
+
+.tag-lg {
+  font-size: 1rem;
+  padding: 8px 18px;
+}
+
+/* ===== Border option ===== 
+
+.tag-border {
+  border: 1px solid currentColor;
+  background: transparent;
+}
+
+*/

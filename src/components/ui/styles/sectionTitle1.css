@@ -1,0 +1,109 @@
+@import "../../../app/globals.css";
+
+/* Container base do título */
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 0.8rem;
+  color: var(--cor_01); /* cinza escuro elegante */
+  transition: all 0.3s ease;
+}
+
+/* Alinhamentos */
+.section-title-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title-left {
+  text-align: left;
+}
+
+.section-title-right {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* Linha decorativa moderna */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  height: 4px;
+  border-radius: 4px;
+  background: var(--cor_01);
+  transition: width 0.4s ease;
+}
+
+/* Ajuste da linha conforme alinhamento */
+.section-title-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section-title-right::after {
+  left: auto;
+  right: 0;
+}
+
+/* Hover elegante */
+.section-title:hover::after {
+  width: 90px;
+}
+
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+}
+
+
+/* Gradiente azul moderno */
+.gradient-primary {
+  background: var(--cor_01);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradiente roxo */
+.gradient-secondary {
+  background: var(--grad_02);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradiente sunset */
+.gradient-tertiary {
+  background: var(--grad_03);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradiente verde */
+.gradient-quaternary {
+  background: linear-gradient(90deg, #10b981, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

@@ -1,3 +1,6 @@
+import SectionTitle from '../../components/ui/SectionTitle';
+import Subtitle from '../../components/ui/SubTitle';
+import Tag from '../../components/ui/Tag';
 
 import CardImage from '../../components/CardImage';
 import './portifolio.css';
@@ -9,13 +12,21 @@ const Portifolio = () => {
   return (
     <section className="portifolio-section" id="portifolio">
       <div className="services-section-max">
-        <span className="tag-portifolio">Nosso Portifólio</span>
-        <h2>Sites e Sistemas Web</h2>
-        <p className="subtitle">
-          Trabalhos para clientes e projetos que realizamos
-        </p>
 
-        <div className="services-container">
+        <Tag >
+          Nosso Portifólio
+        </Tag>
+                
+        <SectionTitle align="center" gradient="primary">
+          Sites e sistemas web
+        </SectionTitle>
+        
+        <Subtitle>
+          Sites desenvolvidos para clientes e projetos que realizamos
+        </Subtitle>
+
+
+       <div className="services-container">
           <Link href="https://eletrotechbrasil.netlify.app"  rel="noreferrer"  target="_blank">
           <CardImage
             image='/eletrotech.png'

@@ -14,17 +14,6 @@
   max-width: 1400px;
 }
 
-.contact-section h2 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-
-.contact-section p {
-  color: #555;
-  margin-bottom: 2rem;
-}
-
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -85,9 +74,17 @@
 }
 
 .contact-form input,
-.contact-form select,
 .contact-form textarea {
   width: 80%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+.contact-form select {
+  width: 85%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border-radius: 8px;

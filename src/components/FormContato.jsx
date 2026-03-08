@@ -67,17 +67,16 @@ const ContactForm = () => {
       <select name="tipo" value={formData.tipo} onChange={handleChange} required>
         <option value="">Selecione...</option>
         <option value="Institucional">Site Institucional</option>
-        <option value="Loja Virtual">Portifólio</option>
+        <option value="Portifólio">Portifólio</option>
         <option value="Landing Page">Landing Page</option>
-        <option value="Landing Page">Hospedagem</option>
-        <option value="Landing Page">Automação WhatsApp</option>
-        <option value="Landing Page">Automação Direct Instagram</option>
-        <option value="Landing Page">Outros</option>
+        <option value="Migrar meu site">Migrar meu site</option>
+        <option value="Duvidas">Dúvidas</option>
+        <option value="Outros">Outros</option>
       </select>
 
       <textarea
         name="mensagem"
-        placeholder="Conte-nos sobre seu projeto..."
+        placeholder="(Opcional) Conte-nos um pouco mais..."
         value={formData.mensagem}
         onChange={handleChange}
         required

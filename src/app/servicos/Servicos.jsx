@@ -1,4 +1,7 @@
-import config from '../../config'
+import SectionTitle from '../../components/ui/SectionTitle';
+import Subtitle from '../../components/ui/SubTitle';
+import Tag from '../../components/ui/Tag';
+
 import './servicos.css'
 import { Globe, MonitorSmartphone, Search, Wallpaper, MessagesSquare, PencilRuler } from 'lucide-react';
 import CardSimples from '../../components/CardSimples';
@@ -7,11 +10,18 @@ export default function Servicos() {
   return (
     <section className="services-section" id="servicos">
       <div className="services-section-max">
-          <span className="tag" >Nossos Serviços</span>
-          <h2>Tudo que seu negócio precisa</h2>
-          <p className="subtitle">
-            Oferecemos soluções completas para sua presença digital
-          </p>
+
+        <Tag>
+          Quais são os nossos serviços?
+        </Tag>
+                
+        <SectionTitle align="center" gradient="primary">
+          Tudo que seu negócio precisa para ir além
+        </SectionTitle>
+        
+        <Subtitle>
+          Oferecemos soluções completas para sua presença digital
+        </Subtitle>
 
           <div className="services-container" >
             <CardSimples

@@ -17,11 +17,11 @@ const CardValores = ({ title, price, promoPrice, features, destaque }) => {
       <div className="pricing-values">
         {promoPrice ? (
           <>
-            <p className="price original">R$ {price}</p>
-            <p className="price promo">R$ {promoPrice}</p>
+            <p className="price original">R$ {Number(price).toFixed(2)}</p>
+            <p className="price promo">R$ {Number(promoPrice).toFixed(2)}</p>
           </>
         ) : (
-          <p className="price">R$ {price}</p>
+          <p className="price">R$ {Number(price).toFixed(2)}</p>
         )}
       </div>
 

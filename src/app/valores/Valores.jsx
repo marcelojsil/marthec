@@ -1,8 +1,10 @@
 'use client'
 
-// pages/Precos1.jsx
-import CardValores from '../../components/CardValores';
+import SectionTitle from '../../components/ui/SectionTitle';
 import Subtitle from '../../components/ui/SubTitle';
+import Tag from '../../components/ui/Tag';
+
+import CardValores from '../../components/CardValores';
 import './valores.css';
 import { CheckCircle } from "lucide-react";
 
@@ -10,12 +12,15 @@ const Valores = () => {
   return (
     <section id="pricing">
       <div className="pricing-max">
-        <span className="tag-portifolio">Nossos valores</span>
-        <h2>Planos de Presença Digital</h2>
-        {/*<p className="subtitle">
-          Escolha o plano ideal para seu negócioe deixe a Marthec cuidar de tudo para você.
-        </p>*/}
 
+        <Tag >
+          Nossos valores
+        </Tag>
+                
+        <SectionTitle align="center" gradient="primary">
+          Planos para sua Presença Digital
+        </SectionTitle>
+        
         <Subtitle>
           Escolha o plano ideal para seu negócio e deixe a Marthec cuidar de tudo para você.
         </Subtitle>
@@ -24,7 +29,7 @@ const Valores = () => {
           <CardValores
             title="Plano Start Digital"
             price={149.90}
-            promoPrice={74.90}
+            promoPrice={49.90}
             features={[
               "Site profissional de 1 página",
               "Atualizações simples de conteúdo",
@@ -51,7 +56,7 @@ const Valores = () => {
           <CardValores
             title="Plano Autoridade"
             price={249.90}
-            promoPrice={129.90}
+            promoPrice={149.90}
             features={[
               "Plano Crescimento +",
               "Página administrativa básica",

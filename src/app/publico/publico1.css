@@ -25,7 +25,7 @@
   flex-wrap: wrap;
   justify-content: center;   /* centraliza na horizontal */
   align-items: center;   
-  padding-top: 100px;
+  
   text-align: center;
   border-radius: 12px;
 }

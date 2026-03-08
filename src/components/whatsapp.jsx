@@ -4,7 +4,7 @@ import Image from 'next/image'
 import '@/styles/whatsapp.css'
 
 export default function WhatsAppButton() {
-  const phone = '551291022315' // DDI + DDD + número
+  const phone = '5512991022315' // DDI + DDD + número
   const message = 'Olá! Vim pelo site da Marthec e gostaria de um orçamento.'
 
   const url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`

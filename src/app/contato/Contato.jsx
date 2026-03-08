@@ -1,3 +1,7 @@
+import SectionTitle from '../../components/ui/SectionTitle';
+import Subtitle from '../../components/ui/SubTitle';
+import Tag from '../../components/ui/Tag';
+
 import ContactForm from "../../components/FormContato";
 import "./contato.css";
 import { Phone, Mail, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
@@ -6,9 +10,19 @@ const Contato = () => {
   return (
     <section className="contact-section" id="contato">
       <div className="contact-section-max">
-        <h2>Vamos criar seu site?</h2>
-        <p>Entre em contato conosco e receba uma proposta personalizada</p>
-    
+
+        <Tag >
+          Nossos contatos
+        </Tag>
+                
+        <SectionTitle align="center" gradient="primary">
+          Vamos criar seu site?
+        </SectionTitle>
+        
+        <Subtitle>
+          Entre em contato conosco e receba uma proposta personalizada
+        </Subtitle>
+        
         <div className="contact-container">
           {/* Lado esquerdo - Informações */}
           <div className="contact-info">
