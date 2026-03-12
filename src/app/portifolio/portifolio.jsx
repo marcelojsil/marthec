@@ -54,12 +54,14 @@ const Portifolio = () => {
           />
           </Link>
 
+          <Link href="https://corretoresdeimoveis.netlify.app"  rel="noreferrer"  target="_blank">  
           <CardImage
             image='/breve.jpg'
             title="Em Breve"
             description="Um novo site ou sistema web"
             size = {130}
           />
+          </Link>
 
           
 

@@ -4,12 +4,13 @@
   
   background: var(--cor_01);
   color: var(--cor_09);
-   display: inline-block;
+  display: inline-block;
   border-radius: 999px;
   font-weight: 600;
   letter-spacing: 0.3px;
   padding: 6px 14px;
   transition: all 0.2s ease;
+  margin-bottom: 30px;
 }
 
 /*

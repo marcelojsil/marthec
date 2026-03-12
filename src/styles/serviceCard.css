@@ -2,6 +2,7 @@
 
 /* ===== Card ===== */
 .service-card {
+  width: 80%;
   flex: 1 1 280px;
   max-width: 420px;
   background: var(--cor_09);
@@ -21,7 +22,7 @@
   max-width: 420px;
   background: var(--cor_04);
   border-radius: 12px;
-  padding: 2rem 1.5rem;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

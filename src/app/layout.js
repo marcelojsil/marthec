@@ -6,7 +6,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 //import WhatsAppButton from '@/components/whatsapp.jsx'
 import BackToTop from "../components/BackTop"
-import RobotButton from "../bot/Robot";
+import RobotButton from "../saas/bot/Robot";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -75,6 +76,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        
         <RobotButton />
         {/*<WhatsAppButton />*/}
         <BackToTop />

@@ -48,3 +48,16 @@
  
   background-color: var(--cor_01);
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-card {
+    width: 100%;
+    max-width: 400px;
+  }
+}

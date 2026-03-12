@@ -1,8 +1,8 @@
 @import "../globals.css";
 
 .contact-section {
-  width: 100%;
-  padding: 4rem 0;
+
+  padding: 4rem 1.5rem;
   background: var(--cor_09);
   text-align: center;
 
@@ -10,10 +10,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .contact-section-max {
   max-width: 1400px;
+  width: 100%;
 }
 
+/* ===== Layout ===== */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
@@ -24,11 +27,12 @@
 
 /* ===== Left side ===== */
 .contact-info {
-  flex: 1 1 300px;
+  flex: 1 1 320px;
   text-align: left;
 }
 
-.contact-info h3, .contact-info h4 {
+.contact-info h3,
+.contact-info h4 {
   margin-top: 1rem;
   color: #111;
 }
@@ -59,8 +63,9 @@
 
 /* ===== Form ===== */
 .contact-form {
-  flex: 1 1 350px;
+  flex: 1 1 380px;
   width: 100%;
+  max-width: 500px;
   background: var(--cor_04);
   border-radius: 12px;
   padding: 2rem;
@@ -74,17 +79,9 @@
 }
 
 .contact-form input,
-.contact-form textarea {
-  width: 80%;
-  padding: 0.8rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 0.95rem;
-}
-
+.contact-form textarea,
 .contact-form select {
-  width: 85%;
+  width: 90%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border-radius: 8px;
@@ -93,7 +90,7 @@
 }
 
 .contact-form button {
-  width: 50%;
+  width: 100%;
   padding: 0.9rem;
   border: none;
   border-radius: 8px;
@@ -113,3 +110,46 @@
   font-size: 0.9rem;
   color: green;
 }
+
+/* ===== Responsividade ===== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+
+  .contact-container {
+    gap: 1.5rem;
+  }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1rem 0.5rem;
+  }
+  .contact-section-max {
+    width: 100%;
+  }
+  .contact-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-info {
+    text-align: center;
+  }
+
+  .contact-info p {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
+

@@ -25,7 +25,7 @@
   flex-wrap: wrap;
   justify-content: center;   /* centraliza na horizontal */
   align-items: center;   
-  
+  margin-bottom: 30px;
   text-align: center;
   border-radius: 12px;
 }
@@ -47,7 +47,7 @@
   perspective: 1000px;
   flex: 1 1 280px;    /* cresce até 280px mínimo, ocupa o espaço disponível */
   width: 420px;
-  height: 44vh;
+ 
   margin: 0 auto;     /* garante centralização */
 }
 .lucide1, .lucide2, .lucide3 {
@@ -134,9 +134,13 @@
 
 /* Celulares */
 @media (max-width: 768px) {
+  .publico-max {
+    margin-top: 30px;
+  }
 
   #services,.publico {
     width: auto;
+    height: auto;
   }
 
   #services h2 {
