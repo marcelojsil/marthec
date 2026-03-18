@@ -286,7 +286,8 @@ Digite o número da opção:
           conversation: messages
         }])
 
-      simulateBotMessage("Perfeito! Vou te direcionar para o WhatsApp 🚀 /n Caso ainda tenha alguma dúvida, estamos à disposição!")
+      simulateBotMessage(`Perfeito! Vou te direcionar para o WhatsApp 🚀 
+        Caso ainda tenha alguma dúvida, estamos à disposição!`)
 
       setTimeout(() => {
 
@@ -313,7 +314,7 @@ Vim pelo site da Marthec.
 
         onClose()
 
-      }, 2000)
+      }, 900)
 
     }
 

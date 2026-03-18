@@ -113,3 +113,28 @@
   margin-left: 6px;
   cursor: pointer;
 }
+
+/* RESPONSIVIDADE */
+
+
+/* Celulares */
+@media (max-width: 768px) {
+  .chat-container {
+    right: 10px;
+    bottom: 70px;
+    width: calc(100% - 20px);
+    height: 70vh;
+    border-radius: 12px;
+  }
+
+  .whatsapp-float {
+    right: 15px;
+    bottom: 15px;
+  }
+
+  .whatsapp-float .avatar {
+    width: 70px;
+    height: 70px;
+  }
+}
+
