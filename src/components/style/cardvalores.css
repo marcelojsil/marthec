@@ -82,52 +82,18 @@
 
 
 /* ================= RESPONSIVIDADE ================= */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .pricing-card {
-    max-width: 300px;
- 
-  }
-
-  .pricing-card h3 {
-    font-size: 1.3rem;
-  }
-}
-
 /* Mobile */
 @media (max-width: 768px) {
   .pricing-card {
     max-width: 90%;
- 
   }
-
   .pricing-card.destaque {
     transform: none; /* evita quebrar layout no mobile */
   }
-
   .price {
     font-size: 1.5rem;
   }
-
   .pricing-card ul li {
     font-size: 0.85rem;
-  }
-
-
-}
-
-/* Mobile pequeno */
-@media (max-width: 480px) {
-  .pricing-card {
-    width: 90%;
-  }
-
-  .pricing-card h3 {
-    font-size: 1rem;
-  }
-
-  .price {
-    font-size: 1.1rem;
   }
 }

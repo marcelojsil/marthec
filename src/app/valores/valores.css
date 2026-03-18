@@ -94,7 +94,10 @@
     flex-direction: column;
     gap: 20px;
   }
-    .precos-diferenciais {
+  .precos-diferenciais {
     gap: 30px;
+  }
+  .pricing-card {
+    max-width: 80%;
   }
 }

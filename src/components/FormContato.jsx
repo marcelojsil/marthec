@@ -65,7 +65,7 @@ const ContactForm = () => {
       />
 
       <select name="tipo" value={formData.tipo} onChange={handleChange} required>
-        <option value="">Selecione...</option>
+        <option value="" disabled hidden>Selecione...</option>
         <option value="Institucional">Site Institucional</option>
         <option value="Portifólio">Portifólio</option>
         <option value="Landing Page">Landing Page</option>
@@ -76,7 +76,7 @@ const ContactForm = () => {
 
       <textarea
         name="mensagem"
-        placeholder="(Opcional) Conte-nos um pouco mais..."
+        placeholder="Conte-nos um pouco mais..."
         value={formData.mensagem}
         onChange={handleChange}
         required

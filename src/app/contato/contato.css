@@ -79,14 +79,35 @@
 }
 
 .contact-form input,
-.contact-form textarea,
-.contact-form select {
+.contact-form textarea {
   width: 90%;
   padding: 0.8rem;
   margin-bottom: 1rem;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 0.95rem;
+}
+
+.contact-form select {
+  width: 97%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+input,
+select {
+  color: #000;
+}
+
+input::placeholder {
+  color: #999;
+}
+
+select:invalid {
+  color: #999;
 }
 
 .contact-form button {
@@ -112,16 +133,6 @@
 }
 
 /* ===== Responsividade ===== */
-
-/* Tablet */
-@media (max-width: 1024px) {
-
-
-  .contact-container {
-    gap: 1.5rem;
-  }
-}
-
 /* Celular */
 @media (max-width: 768px) {
   .contact-section {
@@ -148,8 +159,8 @@
   }
 
   .contact-form {
-    width: 90%;
-    padding: 1.5rem;
+    width: 80%;
+    
   }
 }
 

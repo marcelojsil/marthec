@@ -28,7 +28,7 @@ const Valores = () => {
         <div className="pricing-grid">
           <CardValores
             title="Plano Start Digital"
-            price={149.90}
+            price={99.90}
             promoPrice={49.90}
             features={[
               "Site profissional de 1 página",
@@ -41,8 +41,8 @@ const Valores = () => {
 
           <CardValores
             title="Plano Crescimento (Recomendado)"
-            price={199.90}
-            promoPrice={99.90}
+            price={149.90}
+            promoPrice={74.90}
             destaque
             features={[
               "Plano Start Digital +",
@@ -55,8 +55,8 @@ const Valores = () => {
 
           <CardValores
             title="Plano Autoridade"
-            price={249.90}
-            promoPrice={149.90}
+            price={199.90}
+            promoPrice={99.90}
             features={[
               "Plano Crescimento +",
               "Página administrativa básica",

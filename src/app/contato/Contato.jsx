@@ -27,9 +27,9 @@ const Contato = () => {
           {/* Lado esquerdo - Informações */}
           <div className="contact-info">
             <h3>Informações de Contato</h3>
-            <p><Phone size={18} /> (12) 99102-2315 <br /><small>WhatsApp e ligações</small></p>
-            <p><Mail size={18} /> contato@marthec.com.br <br /><small>E-mail comercial</small></p>
-            <p><MapPin size={18} /> Pindamonhangaba/SP <br /><small>Atendemos todo o Brasil</small></p>
+            <p><Phone size={18} /> (12) 99102-2315 <br /></p>
+            <p><Mail size={18} /> contato@marthec.com.br <br /></p>
+            <p><MapPin size={18} /> Pindamonhangaba/SP <br /></p>
     
             <h4>Horário de Atendimento</h4>
             <p>Segunda a Sexta: 8h às 18h</p>
