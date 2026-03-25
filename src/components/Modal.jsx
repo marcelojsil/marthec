@@ -28,7 +28,7 @@ const Modal = ({ isOpen, onClose, title, price, promoPrice, planId }) => {
     setLoading(true);
     setSuccessMsg("");
 
-    const { error } = await supabase.from("quero_este_plano").insert([
+    const { error } = await supabase.from("marthec_quero_este_plano").insert([
       {
         nome: formData.nome,
         whatsapp: formData.whatsapp,
@@ -41,10 +41,16 @@ const Modal = ({ isOpen, onClose, title, price, promoPrice, planId }) => {
 
     setLoading(false);
 
+    //if (error) {
+    //  console.error(error);
+    //  alert("Erro ao enviar, tente novamente.");
+    //} 
     if (error) {
-      console.error(error);
-      alert("Erro ao enviar, tente novamente.");
-    } else {
+  console.error("Erro Supabase:", error);
+  alert(error.message);
+}
+    
+    else {
       setSuccessMsg("Solicitação enviada com sucesso! 🚀");
       setFormData({ nome: "", whatsapp: "", email: "" });
     }

@@ -29,7 +29,7 @@ const Valores = () => {
           <CardValores
             title="Plano Start Digital"
             price={99.90}
-            promoPrice={49.90}
+            promoPrice={39.90}
             features={[
               "Site profissional de 1 página",
               "Atualizações simples de conteúdo",
@@ -42,14 +42,14 @@ const Valores = () => {
           <CardValores
             title="Plano Crescimento (Recomendado)"
             price={149.90}
-            promoPrice={74.90}
+            promoPrice={54.90}
             destaque
             features={[
               "Plano Start Digital +",
               "Até 5 páginas",
               "Integração com formulário de lead",
               "Relatório simples mensal",
-              "Suporte e auterações básicas via WhatsApp"
+              "Suporte e alterações básicas"
             ]}
           />
 
@@ -62,7 +62,7 @@ const Valores = () => {
               "Página administrativa básica",
               "Landing page mensal para campanhas",
               "Configuração Google Meu Negócio",
-              "Bot de conversação para atendimento inicial"
+              "Bot para atendimento inicial"
             ]}
           />
         </div>

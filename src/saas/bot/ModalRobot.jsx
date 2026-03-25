@@ -14,7 +14,7 @@ export default function ChatBotModal({ open, onClose }) {
   const [formData, setFormData] = useState({
     name: '',
     service: '',
-    businessType: '',
+    businesstype: '',
     goal: '',
     website: '',
     deadline: '',
@@ -140,14 +140,14 @@ Digite o número da opção:
         "4": "Startup"
       }
 
-      const businessType = types[userInput]
+      const businesstype = types[userInput]
 
-      if (!businessType) {
+      if (!businesstype) {
         simulateBotMessage("Digite um número de 1 a 4.")
         return
       }
 
-      setFormData(prev => ({ ...prev, businessType }))
+      setFormData(prev => ({ ...prev, businesstype }))
 
       simulateBotMessage(
 `Qual é o principal objetivo do site?
@@ -279,12 +279,34 @@ Digite o número da opção:
 
       setFormData(updated) 
 
-      await supabase
-        .from('leads_marthec')
-        .insert([{
-          ...updated,
-          conversation: messages
-        }])
+  //    const { error } = await supabase
+  //    .from('marthec_leads')
+  //  .insert([{
+  //   ...updated,
+  //    conversation: messages
+  //  }])
+
+  const { data, error } = await supabase
+  .from('marthec_leads')
+  .insert([
+    {
+      name: updated.name,
+      service: updated.service,
+      businesstype: updated.businesstype,
+      goal: updated.goal,
+      website: updated.website,
+      deadline: updated.deadline,
+      budget: updated.budget
+    }
+  ])
+  //.select()
+
+console.log("DATA:", data)
+console.log("ERROR:", error)
+
+  if (error) {
+    console.error("Erro ao salvar lead:", error)
+  }
 
       simulateBotMessage(`Perfeito! Vou te direcionar para o WhatsApp 🚀 
         Caso ainda tenha alguma dúvida, estamos à disposição!`)
@@ -296,7 +318,7 @@ Olá, sou ${updated.name}.
 
 Tenho interesse em ${updated.service}.
 
-Tipo de empresa: ${updated.businessType}
+Tipo de empresa: ${updated.businesstype}
 
 Objetivo: ${updated.goal}
 
@@ -314,7 +336,7 @@ Vim pelo site da Marthec.
 
         onClose()
 
-      }, 900)
+      }, 5)
 
     }
 

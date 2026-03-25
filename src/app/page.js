@@ -3,6 +3,7 @@
 import Contato from './contato/Contato';
 import './globals.css'
 import Hero from './hero/Hero'
+//import Hero_1 from './hero/Hero_1'
 import Portifolio from './portifolio/portifolio';
 import Publico from './publico/public';
 import Servicos from './servicos/Servicos'
@@ -45,6 +46,8 @@ export default function Home() {
       
 
       <Hero />
+
+     
 
       <Publico />
 

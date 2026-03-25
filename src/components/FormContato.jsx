@@ -22,12 +22,17 @@ const ContactForm = () => {
     e.preventDefault();
     setStatus("Enviando...");
 
-    const { error } = await supabase.from("orcamentos").insert([formData]);
+    const { error } = await supabase.from("marthec_orcamentos").insert([formData]);
 
+  //  if (error) {
+  //    console.error(error);
+  //    setStatus("Erro ao enviar. Tente novamente.");
+  //  } 
+    
     if (error) {
-      console.error(error);
-      setStatus("Erro ao enviar. Tente novamente.");
-    } else {
+  console.error("Erro Supabase:", error);
+  alert(error.message);
+} else {
       setStatus("Enviado com sucesso!");
       setFormData({ nome: "", telefone: "", email: "", tipo: "", mensagem: "" });
     }
