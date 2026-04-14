@@ -73,3 +73,12 @@
   margin-top: 1rem;
   font-weight: bold;
 }
+
+/* ================= RESPONSIVIDADE ================= */
+/* Mobile */
+@media (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    padding: 1rem;
+  }
+}

@@ -129,7 +129,7 @@ select:invalid {
 .status {
   margin-top: 0.8rem;
   font-size: 0.9rem;
-  color: green;
+ 
 }
 
 /* ===== Responsividade ===== */
@@ -150,6 +150,15 @@ select:invalid {
     text-align: center;
   }
 
+  .contact-info h3,
+  .contact-info h4 {
+    font-size: 1.2rem;
+  }
+
+.contact-info p {
+  font-size: 0.8rem;
+}
+
   .contact-info p {
     justify-content: center;
   }
@@ -158,6 +167,7 @@ select:invalid {
     justify-content: center;
   }
 
+ 
   .contact-form {
     width: 80%;
     
