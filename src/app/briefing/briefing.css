@@ -1,0 +1,74 @@
+@import "../globals.css";
+
+.briefing-container {
+  min-height: 100vh;
+  background: var(--cor_09);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.briefing-card {
+  width: 100%;
+  max-width: 900px;
+  background: var(--cor_09);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.briefing-card h1 {
+  margin-bottom: 10px;
+}
+
+.briefing-card p {
+  margin-bottom: 30px;
+  color: var(--cor_04);
+}
+
+.briefing-form input,
+.briefing-form textarea,
+.briefing-form select {
+  width: 90%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.briefing-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.briefing-form button {
+  background: var(--cor_06);
+  color:var(--cor_09);
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.briefing-form > * {
+  margin-bottom: 16px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .briefing-card {
+    padding: 20px;
+  }
+}
