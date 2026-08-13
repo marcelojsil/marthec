@@ -1,0 +1,269 @@
+╔════════════════════════════════════════════════════════════════════════════╗
+║                 MARTHEC WEBSITE - QUICK REFERENCE CARD                      ║
+╚════════════════════════════════════════════════════════════════════════════╝
+
+🚀 INÍCIO RÁPIDO (5 MINUTOS)
+────────────────────────────────────────────────────────────────────────────
+
+1. INSTALAR
+   $ npm install
+
+2. CONFIGURAR
+   $ cp .env.example .env.local
+   Edite .env.local com:
+   - NEXT_PUBLIC_SUPABASE_URL
+   - NEXT_PUBLIC_SUPABASE_ANON_KEY
+   - NEXT_PUBLIC_WHATSAPP_NUMBER
+
+3. RODAR
+   $ npm run dev
+   Acesse: http://localhost:3000
+
+4. TESTAR
+   ✓ Modal de oferta abre automaticamente
+   ✓ Botões "Solicitar Orçamento" funcionam
+   ✓ Formulário envia para Supabase
+   ✓ Botões flutuantes aparecem
+
+5. DEPLOY
+   $ npm run build
+   Push para GitHub → Netlify faz deploy
+
+
+📁 ARQUIVOS IMPORTANTES
+────────────────────────────────────────────────────────────────────────────
+
+COMPONENTES NOVOS:
+  • components/sections/pricing.tsx         - Seção de planos
+  • components/modals/offer-modal.tsx       - Modal de oferta
+  • components/modals/budget-modal.tsx      - Modal de orçamento
+  • components/floating-buttons.tsx         - Botões flutuantes
+
+DATABASE:
+  • scripts/001_create_marthec_orcamento.sql - Criar tabela
+
+CONFIGURAÇÃO:
+  • netlify.toml                            - Deploy config
+  • .env.example                            - Env template
+
+DOCUMENTAÇÃO:
+  • README_PT.md (⭐ LEIA PRIMEIRO)
+  • SETUP.md
+  • DEPLOYMENT.md
+  • TESTES.md
+  • INDEX.md (mapa completo)
+
+
+⚙️ VARIÁVEIS DE AMBIENTE
+────────────────────────────────────────────────────────────────────────────
+
+.env.local (copie de .env.example):
+
+NEXT_PUBLIC_SUPABASE_URL=https://seu-projeto.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anonima
+NEXT_PUBLIC_WHATSAPP_NUMBER=5511999999999
+
+
+🎯 FLUXOS PRINCIPAIS
+────────────────────────────────────────────────────────────────────────────
+
+MODAL DE OFERTA:
+  1. Abre automaticamente ao carregar
+  2. Apresenta "20% de desconto"
+  3. Fecha ao clicar fora ou no X
+  Arquivo: components/modals/offer-modal.tsx
+
+SOLICITAR ORÇAMENTO:
+  1. Clique em "Fale Conosco" ou "Solicitar Orçamento"
+  2. Modal abre com formulário
+  3. Preencha: nome, email, telefone, empresa, tipo, descrição
+  4. Clique em "Solicitar Orçamento"
+  5. Dados salvam no Supabase automaticamente
+  Arquivo: components/modals/budget-modal.tsx
+
+BOTÃO WHATSAPP:
+  1. Sempre visível no canto inferior direito
+  2. Abre chat do WhatsApp
+  3. Número configurável em .env
+  Arquivo: components/floating-buttons.tsx
+
+BOTÃO VOLTAR AO TOPO:
+  1. Aparece após 300px de scroll
+  2. Click faz scroll smooth até topo
+  Arquivo: components/floating-buttons.tsx
+
+
+🔧 PERSONALIZAÇÃO RÁPIDA
+────────────────────────────────────────────────────────────────────────────
+
+MUDAR NÚMERO WHATSAPP:
+  → Edite: .env.local
+  → Procure: NEXT_PUBLIC_WHATSAPP_NUMBER=seu_numero
+
+CUSTOMIZAR PLANOS:
+  → Arquivo: components/sections/pricing.tsx
+  → Procure: const plans = [
+  → Edite: names, prices, features
+
+CUSTOMIZAR OFERTA:
+  → Arquivo: components/modals/offer-modal.tsx
+  → Procure: "20% de Desconto"
+  → Mude para sua oferta
+
+MUDAR EMAIL DE CONTATO:
+  → Arquivo: components/sections/cta.tsx
+  → Procure: mailto:contato@marthec.com.br
+
+
+🐛 TROUBLESHOOTING
+────────────────────────────────────────────────────────────────────────────
+
+❌ "NEXT_PUBLIC_SUPABASE_URL is not defined"
+   ✓ Verifique .env.local
+   ✓ Reinicie: Ctrl+C e npm run dev
+
+❌ "Failed to insert into marthec_orcamento"
+   ✓ Confirme que tabela foi criada no Supabase
+   ✓ Verifique credenciais
+
+❌ Botão WhatsApp não funciona
+   ✓ Teste URL: https://wa.me/seu_numero
+   ✓ Remove caracteres especiais do número
+
+❌ Modal não abre
+   ✓ Verifique console do navegador (F12)
+   ✓ Procure por erros em vermelho
+
+
+📊 ESTRUTURA TABELA SUPABASE
+────────────────────────────────────────────────────────────────────────────
+
+Tabela: marthec_orcamento
+
+Colunas:
+  • id (UUID) - ID único
+  • nome (TEXT) - Nome do cliente
+  • email (TEXT) - Email do cliente
+  • telefone (TEXT) - Telefone do cliente
+  • empresa (TEXT) - Empresa do cliente
+  • tipo_projeto (TEXT) - Tipo de projeto
+  • descricao (TEXT) - Descrição do projeto
+  • criado_em (TIMESTAMP) - Data de criação
+
+
+📱 RESPONSIVIDADE
+────────────────────────────────────────────────────────────────────────────
+
+MOBILE (< 768px):
+  ✓ Menu hambúrguer
+  ✓ Layout empilhado
+  ✓ Formulário responsivo
+  ✓ Botões tocáveis
+
+TABLET (768px - 1024px):
+  ✓ Layout 2 colunas
+  ✓ Cards dispostos bem
+  ✓ Navegação adaptada
+
+DESKTOP (> 1024px):
+  ✓ Layout 3 colunas completo
+  ✓ Hover effects
+  ✓ Animações suaves
+
+
+🚀 DEPLOY NO NETLIFY
+────────────────────────────────────────────────────────────────────────────
+
+1. FAZER PUSH PARA GITHUB
+   $ git add .
+   $ git commit -m "Initial commit"
+   $ git push origin main
+
+2. CONECTAR NETLIFY
+   1. netlify.com → New site from Git
+   2. Selecione seu repositório GitHub
+   3. Deixe default build settings
+   4. Deploy
+
+3. ADICIONAR VARIÁVEIS
+   Netlify Dashboard → Settings → Build & deploy → Environment
+   Adicione:
+   - NEXT_PUBLIC_SUPABASE_URL
+   - NEXT_PUBLIC_SUPABASE_ANON_KEY
+   - NEXT_PUBLIC_WHATSAPP_NUMBER
+
+4. REDEPLOY
+   Clique em "Redeploy" após adicionar variáveis
+
+
+📊 CORES DO SITE
+────────────────────────────────────────────────────────────────────────────
+
+Primary (CTAs):      #e95d2c (Laranja vibrante)
+Background:          #1a2730 (Azul escuro)
+Card:                #45586c (Azul médio)
+Accent (Destaque):   #f8cc53 (Amarelo brilhante)
+Text:                #ffffff (Branco)
+Muted:               #424048 (Cinza)
+
+
+✅ PRÉ-DEPLOY CHECKLIST
+────────────────────────────────────────────────────────────────────────────
+
+FUNCIONALIDADE:
+  ☐ Modal oferta abre ao carregar
+  ☐ Formulário envia para Supabase
+  ☐ Botão WhatsApp funciona
+  ☐ Botão top funciona
+  ☐ Seção de planos carrega
+
+CONFIGURAÇÃO:
+  ☐ .env.local com credenciais corretas
+  ☐ netlify.toml no root do projeto
+  ☐ Variáveis adicionadas no Netlify
+
+SEGURANÇA:
+  ☐ Não há credenciais no código
+  ☐ Apenas .env.example no Git
+  ☐ Supabase RLS configurado
+
+MOBILE:
+  ☐ Testa em dispositivo real
+  ☐ Buttons tocáveis (min 44x44px)
+  ☐ Texto legível
+
+
+🔗 LINKS ÚTEIS
+────────────────────────────────────────────────────────────────────────────
+
+Documentação:
+  • README_PT.md        - Guia rápido (5 min)
+  • SETUP.md            - Setup detalhado
+  • DEPLOYMENT.md       - Deploy no Netlify
+  • INDEX.md            - Mapa completo
+
+Referências:
+  • https://nextjs.org/docs
+  • https://supabase.com/docs
+  • https://docs.netlify.com
+  • https://www.framer.com/motion
+
+
+📞 CONTATO & SUPORTE
+────────────────────────────────────────────────────────────────────────────
+
+Para dúvidas:
+  1. Leia README_PT.md (5 minutos)
+  2. Confira SETUP.md (15 minutos)
+  3. Verifique TESTES.md para debug
+  4. Consulte INDEX.md para navegação
+
+
+╔════════════════════════════════════════════════════════════════════════════╗
+║ ✅ IMPLEMENTAÇÃO COMPLETA - PRONTO PARA DEPLOY                            ║
+║                                                                            ║
+║ Status:  ✓ Seção Planos  ✓ Modal Orçamento  ✓ Botões  ✓ Oferta            ║
+║         ✓ Supabase      ✓ Netlify Config    ✓ Documentação               ║
+║                                                                            ║
+║ Versão: 1.0 | Março 2024 | Marthec Team                                   ║
+╚════════════════════════════════════════════════════════════════════════════╝
