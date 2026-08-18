@@ -20,7 +20,7 @@ export function FloatingButtons() {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5512991022315'
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5512991319315'
   const whatsappLink = `https://wa.me/${whatsappNumber}`
 
   return (

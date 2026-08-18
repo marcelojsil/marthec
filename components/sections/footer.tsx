@@ -92,7 +92,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Mail className="w-4 h-4" />
-                  contato@marthec.com.br
+                  marthec.sistemas@gmail.com
                 </a>
               </li>
               <li>
@@ -101,7 +101,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (00) 00000-0000
+                  (12) 99131-9315
                 </a>
               </li>
               <li>
@@ -117,7 +117,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="py-6 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Marthec. Todos os direitos reservados.
+            Victor de Paula © {new Date().getFullYear()} Marthec. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
             <a

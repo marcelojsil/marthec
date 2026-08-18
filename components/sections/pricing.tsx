@@ -18,31 +18,29 @@ export function Pricing({ onOpenBudget }: PricingPlanProps) {
   const plans = [
     {
       name: 'Iniciante',
-      description: 'Perfeito para pequenos negócios',
-      price: 'A partir de R$ 3.500',
+      description: 'Perfeito para autonomos e MEI',
+      price: 'A partir de R$ 990,00',
       features: [
         'Website responsivo',
         'Design moderno',
-        'SEO otimizado',
-        'Integração com email',
-        'Analytics básico',
+        'SEO técnico',
+        'botão whatsapp',
+        'Até 5 páginas',
         'Suporte por 3 meses',
       ],
       highlight: false,
     },
     {
       name: 'Profissional',
-      description: 'Para empresas em crescimento',
-      price: 'A partir de R$ 8.500',
+      description: 'Para pequenas empresas que querem crescer',
+      price: 'A partir de R$ 1.490,00',
       features: [
         'Tudo do Iniciante',
-        'Sistema de gerenciamento',
-        'Integração com CRM',
-        'Painel de controle',
         'Formulários avançados',
+        'Relatórios personalizados',
+        'Bot para Whatsapp',
+        'SEO avançado',
         'Suporte por 6 meses',
-        'Treinamento de uso',
-        'Atualizações mensais',
       ],
       highlight: true,
     },
@@ -54,11 +52,9 @@ export function Pricing({ onOpenBudget }: PricingPlanProps) {
         'Tudo do Profissional',
         'API customizada',
         'Integrações múltiplas',
-        'Dashboard executivo',
-        'Suporte 24/7',
-        'Suporte contínuo',
+        'Painel administrativo',
         'Consultoria estratégica',
-        'Manutenção contínua',
+        'Suporte por 12 meses',
       ],
       highlight: false,
     },
@@ -123,7 +119,7 @@ export function Pricing({ onOpenBudget }: PricingPlanProps) {
 
               <div className="p-8 lg:p-10">
                 {plan.highlight && (
-                  <div className="inline-flex px-3 py-1 rounded-full bg-accent text-accent-foreground text-xs font-semibold mb-4">
+                  <div className="inline-flex px-3 py-1 rounded-full bg-primary text-accent-foreground text-xs font-semibold mb-4">
                     MAIS POPULAR
                   </div>
                 )}
@@ -164,7 +160,7 @@ export function Pricing({ onOpenBudget }: PricingPlanProps) {
                   size="lg"
                   className={`w-full h-12 font-semibold ${
                     plan.highlight
-                      ? 'bg-accent hover:bg-highlight-hover text-accent-foreground'
+                      ? 'bg-accent hover:bg-highlight-hover text-background'
                       : 'bg-primary hover:bg-primary/90 text-primary-foreground'
                   }`}
                 >

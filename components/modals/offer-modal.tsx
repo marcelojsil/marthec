@@ -58,7 +58,7 @@ export function OfferModal() {
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}
                   transition={{ delay: 0.2, duration: 0.3 }}
-                  className="inline-block px-4 py-1.5 rounded-full bg-accent text-accent-foreground font-semibold text-sm mb-6"
+                  className="inline-block px-4 py-1.5 rounded-full bg-primary text-accent-foreground font-semibold text-sm mb-6"
                 >
                   ⚡ Oferta Especial
                 </motion.div>
@@ -70,7 +70,7 @@ export function OfferModal() {
                   transition={{ delay: 0.3, duration: 0.4 }}
                   className="text-3xl md:text-4xl font-bold text-white mb-4 text-balance"
                 >
-                  20% de Desconto
+                  50% de Desconto
                 </motion.h2>
 
                 {/* Subtitle */}
@@ -80,7 +80,7 @@ export function OfferModal() {
                   transition={{ delay: 0.4, duration: 0.4 }}
                   className="text-lg text-white/80 mb-8"
                 >
-                  Em sua primeira solução digital com a Marthec
+                  No desenvolvimento do seu site e/ou serviço
                 </motion.p>
 
                 {/* Highlight text */}
@@ -104,7 +104,7 @@ export function OfferModal() {
                   <Button
                     onClick={() => setIsOpen(false)}
                     size="lg"
-                    className="w-full bg-accent hover:bg-highlight-hover text-accent-foreground font-semibold h-12 text-base"
+                    className="w-full bg-primary hover:bg-highlight-hover text-accent-foreground font-semibold h-12 text-base"
                   >
                     Aproveitar Oferta
                   </Button>

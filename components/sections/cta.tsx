@@ -86,7 +86,7 @@ export function CTA({ onOpenBudget }: CTAProps) {
               className="border-white/30 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 h-14 text-lg backdrop-blur-sm"
             >
               <a
-                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5511999999999'}`}
+                href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '5512991319315'}`}
                 target="_blank"
                 rel="noopener noreferrer"
               >
